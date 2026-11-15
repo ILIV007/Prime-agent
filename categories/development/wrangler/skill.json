@@ -1,0 +1,25 @@
+{
+  "name": "wrangler",
+  "title": "wrangler",
+  "description": "Run or troubleshoot Wrangler CLI commands in projects that have a wrangler.jsonc, wrangler.json, or wrangler.toml file, including local development, Previews, deployment, and resource management. For new projects and projects without a Wrangler configuration file, use the cf CLI instead.",
+  "why": "The fleet's actual CLI: deploy/manage Workers, KV, R2, D1, Queues — every live project (TradeAgent, IVAI-bot, Fredy, Proxiv3) ships via wrangler.toml.",
+  "category": "development",
+  "source": {
+    "repo": "cloudflare/skills",
+    "url": "https://github.com/cloudflare/skills",
+    "path": "skills/wrangler",
+    "commit": "cbf893b954222276bf1af57e5f23379231e0efb9"
+  },
+  "license": "Apache-2.0",
+  "stars_at_import": 3370,
+  "added": "2026-11-15",
+  "requires": [],
+  "entry": "full",
+  "adapted": false,
+  "adaptations": "",
+  "tags": [
+    "api",
+    "automation"
+  ],
+  "special": false
+}

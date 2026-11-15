@@ -1,0 +1,24 @@
+{
+  "name": "cloudflare",
+  "title": "cloudflare",
+  "description": "Discover and choose Cloudflare products for apps, APIs, AI agents, storage, networking, and security. Use for architecture and product selection, including when the user describes a need without naming a Cloudflare product; then find the relevant skill or documentation. Also use when a Cloudflare-proxied site shows a Cloudflare error page, a `52x` status, a 1xxx error code, or a Cloudflare `403`, to decide whether to fix Cloudflare configuration or the origin.",
+  "why": "The router/flagship: discovers which Cloudflare product fits a need and routes to the right skill — the entry point the whole set is built around.",
+  "category": "development",
+  "source": {
+    "repo": "cloudflare/skills",
+    "url": "https://github.com/cloudflare/skills",
+    "path": "skills/cloudflare",
+    "commit": "cbf893b954222276bf1af57e5f23379231e0efb9"
+  },
+  "license": "Apache-2.0",
+  "stars_at_import": 3370,
+  "added": "2026-11-15",
+  "requires": [],
+  "entry": "full",
+  "adapted": false,
+  "adaptations": "",
+  "tags": [
+    "api"
+  ],
+  "special": false
+}
