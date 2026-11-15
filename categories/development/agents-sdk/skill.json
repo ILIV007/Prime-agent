@@ -1,0 +1,25 @@
+{
+  "name": "agents-sdk",
+  "title": "agents-sdk",
+  "description": "Build, debug, or review Cloudflare Agents SDK applications using the agents package.",
+  "why": "Cloudflare's agent framework (state, scheduling, RPC, MCP servers, streaming chat) — directly on-strategy for someone who builds AI agents on Workers.",
+  "category": "development",
+  "source": {
+    "repo": "cloudflare/skills",
+    "url": "https://github.com/cloudflare/skills",
+    "path": "skills/agents-sdk",
+    "commit": "cbf893b954222276bf1af57e5f23379231e0efb9"
+  },
+  "license": "Apache-2.0",
+  "stars_at_import": 3370,
+  "added": "2026-11-15",
+  "requires": [],
+  "entry": "full",
+  "adapted": false,
+  "adaptations": "",
+  "tags": [
+    "generative",
+    "harness"
+  ],
+  "special": false
+}

@@ -1,0 +1,24 @@
+{
+  "name": "frameworks-on-cloudflare",
+  "title": "frameworks-on-cloudflare",
+  "description": "Build, migrate, and deploy web-framework applications on Cloudflare Workers. Use when a framework project such as Astro, SvelteKit, React Router, TanStack Start, Nuxt, Hono, or a React or Vue SPA targets Cloudflare, or when a framework repository contains Workers deployment configuration.",
+  "why": "Framework apps on Workers (Astro, SvelteKit, React Router, TanStack, Nuxt, Hono, SPAs) — the deploy side his vercel-react-best-practices (code rules) doesn't cover.",
+  "category": "development",
+  "source": {
+    "repo": "cloudflare/skills",
+    "url": "https://github.com/cloudflare/skills",
+    "path": "skills/frameworks-on-cloudflare",
+    "commit": "cbf893b954222276bf1af57e5f23379231e0efb9"
+  },
+  "license": "Apache-2.0",
+  "stars_at_import": 3370,
+  "added": "2026-11-15",
+  "requires": [],
+  "entry": "full",
+  "adapted": false,
+  "adaptations": "",
+  "tags": [
+    "workflow"
+  ],
+  "special": false
+}
