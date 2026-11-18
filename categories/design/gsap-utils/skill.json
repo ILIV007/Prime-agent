@@ -1,0 +1,24 @@
+{
+  "name": "gsap-utils",
+  "title": "gsap-utils",
+  "description": "The official GreenSock skill for gsap.utils: clamp, mapRange, interpolate, random, snap, wrap and pipe helpers.",
+  "why": "The small utility layer that keeps animation math declarative instead of hand-rolled.",
+  "category": "design",
+  "source": {
+    "repo": "greensock/gsap-skills",
+    "url": "https://github.com/greensock/gsap-skills",
+    "path": "skills/gsap-utils",
+    "commit": "aed9cfd3277740755f6bfc1155c7aa645403b760"
+  },
+  "license": "MIT",
+  "stars_at_import": 18690,
+  "added": "2026-11-18",
+  "requires": [],
+  "entry": "full",
+  "adapted": false,
+  "adaptations": "",
+  "tags": [
+    "generative"
+  ],
+  "special": false
+}

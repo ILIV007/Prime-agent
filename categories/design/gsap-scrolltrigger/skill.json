@@ -1,0 +1,24 @@
+{
+  "name": "gsap-scrolltrigger",
+  "title": "gsap-scrolltrigger",
+  "description": "The official GreenSock skill for ScrollTrigger: scroll-linked animation, pinning, scrub and parallax done right.",
+  "why": "Scroll-driven pages are the owner's site style (CV, donate page, this collection's own site); ScrollTrigger is the standard tool — and the easiest one to misuse.",
+  "category": "design",
+  "source": {
+    "repo": "greensock/gsap-skills",
+    "url": "https://github.com/greensock/gsap-skills",
+    "path": "skills/gsap-scrolltrigger",
+    "commit": "aed9cfd3277740755f6bfc1155c7aa645403b760"
+  },
+  "license": "MIT",
+  "stars_at_import": 18690,
+  "added": "2026-11-18",
+  "requires": [],
+  "entry": "full",
+  "adapted": false,
+  "adaptations": "",
+  "tags": [
+    "generative"
+  ],
+  "special": false
+}

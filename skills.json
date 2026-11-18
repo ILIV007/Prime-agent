@@ -1,5 +1,5 @@
 {
-  "count": 104,
+  "count": 112,
   "skills": [
     {
       "adaptations": "Original skill, authored in this repository (the Cookbook section's first entry) by Rick on 2026-11-18 — not imported from upstream. It distils production practice from the fleet's own Telegram bots; facts drawn from public third-party references are credited at the end of SKILL.md and all text is original. source.commit records main's HEAD at authoring time; the skill's own history is this repo's history.",
@@ -274,6 +274,199 @@
       "tags": [
         "react",
         "design-systems"
+      ],
+      "special": false
+    },
+    {
+      "name": "gsap-core",
+      "title": "gsap-core",
+      "description": "The official GreenSock skill for the GSAP core API: tweens, easing, stagger, defaults and matchMedia for responsive, reduced-motion-safe animation.",
+      "why": "GSAP is the web's reference animation engine and this is the vendor's own correct-usage layer — the base the other seven GSAP skills in this set build on.",
+      "category": "design",
+      "source": {
+        "repo": "greensock/gsap-skills",
+        "url": "https://github.com/greensock/gsap-skills",
+        "path": "skills/gsap-core",
+        "commit": "aed9cfd3277740755f6bfc1155c7aa645403b760"
+      },
+      "license": "MIT",
+      "stars_at_import": 18690,
+      "added": "2026-11-18",
+      "requires": [],
+      "entry": "full",
+      "adapted": false,
+      "adaptations": "",
+      "tags": [
+        "generative"
+      ],
+      "special": false
+    },
+    {
+      "name": "gsap-frameworks",
+      "title": "gsap-frameworks",
+      "description": "The official GreenSock skill for GSAP in Vue, Nuxt, Svelte and SvelteKit: lifecycle integration, scoped selectors and unmount cleanup.",
+      "why": "The non-React half of framework animation, straight from the vendor — completes the set for any frontend stack.",
+      "category": "design",
+      "source": {
+        "repo": "greensock/gsap-skills",
+        "url": "https://github.com/greensock/gsap-skills",
+        "path": "skills/gsap-frameworks",
+        "commit": "aed9cfd3277740755f6bfc1155c7aa645403b760"
+      },
+      "license": "MIT",
+      "stars_at_import": 18690,
+      "added": "2026-11-18",
+      "requires": [],
+      "entry": "full",
+      "adapted": false,
+      "adaptations": "",
+      "tags": [
+        "generative"
+      ],
+      "special": false
+    },
+    {
+      "name": "gsap-performance",
+      "title": "gsap-performance",
+      "description": "The official GreenSock skill for animation performance: transform-first animation, avoiding layout thrash, will-change and batching for a stable 60fps.",
+      "why": "Jank is what makes animated sites feel cheap; this is the performance discipline behind smooth motion.",
+      "category": "design",
+      "source": {
+        "repo": "greensock/gsap-skills",
+        "url": "https://github.com/greensock/gsap-skills",
+        "path": "skills/gsap-performance",
+        "commit": "aed9cfd3277740755f6bfc1155c7aa645403b760"
+      },
+      "license": "MIT",
+      "stars_at_import": 18690,
+      "added": "2026-11-18",
+      "requires": [],
+      "entry": "full",
+      "adapted": false,
+      "adaptations": "",
+      "tags": [
+        "generative"
+      ],
+      "special": false
+    },
+    {
+      "name": "gsap-plugins",
+      "title": "gsap-plugins",
+      "description": "The official GreenSock skill for the GSAP plugin ecosystem: registration, Flip, Draggable, SplitText, ScrollTo, ScrollSmoother, SVG and physics plugins.",
+      "why": "Half of GSAP's power lives in its plugins; this is the vendor's map of which plugin solves which motion problem.",
+      "category": "design",
+      "source": {
+        "repo": "greensock/gsap-skills",
+        "url": "https://github.com/greensock/gsap-skills",
+        "path": "skills/gsap-plugins",
+        "commit": "aed9cfd3277740755f6bfc1155c7aa645403b760"
+      },
+      "license": "MIT",
+      "stars_at_import": 18690,
+      "added": "2026-11-18",
+      "requires": [],
+      "entry": "full",
+      "adapted": false,
+      "adaptations": "",
+      "tags": [
+        "generative"
+      ],
+      "special": false
+    },
+    {
+      "name": "gsap-react",
+      "title": "gsap-react",
+      "description": "The official GreenSock skill for GSAP in React and Next.js: the useGSAP hook, refs, context scoping and cleanup on unmount.",
+      "why": "React is where GSAP most often leaks or double-fires; the vendor's own pattern prevents the classic bugs.",
+      "category": "design",
+      "source": {
+        "repo": "greensock/gsap-skills",
+        "url": "https://github.com/greensock/gsap-skills",
+        "path": "skills/gsap-react",
+        "commit": "aed9cfd3277740755f6bfc1155c7aa645403b760"
+      },
+      "license": "MIT",
+      "stars_at_import": 18690,
+      "added": "2026-11-18",
+      "requires": [],
+      "entry": "full",
+      "adapted": false,
+      "adaptations": "",
+      "tags": [
+        "generative",
+        "react"
+      ],
+      "special": false
+    },
+    {
+      "name": "gsap-scrolltrigger",
+      "title": "gsap-scrolltrigger",
+      "description": "The official GreenSock skill for ScrollTrigger: scroll-linked animation, pinning, scrub and parallax done right.",
+      "why": "Scroll-driven pages are the owner's site style (CV, donate page, this collection's own site); ScrollTrigger is the standard tool — and the easiest one to misuse.",
+      "category": "design",
+      "source": {
+        "repo": "greensock/gsap-skills",
+        "url": "https://github.com/greensock/gsap-skills",
+        "path": "skills/gsap-scrolltrigger",
+        "commit": "aed9cfd3277740755f6bfc1155c7aa645403b760"
+      },
+      "license": "MIT",
+      "stars_at_import": 18690,
+      "added": "2026-11-18",
+      "requires": [],
+      "entry": "full",
+      "adapted": false,
+      "adaptations": "",
+      "tags": [
+        "generative"
+      ],
+      "special": false
+    },
+    {
+      "name": "gsap-timeline",
+      "title": "gsap-timeline",
+      "description": "The official GreenSock skill for GSAP timelines: sequencing, the position parameter, nesting and playback control.",
+      "why": "Choreography is where hand-rolled animation falls apart; timelines are GSAP's core advantage, and this teaches them properly.",
+      "category": "design",
+      "source": {
+        "repo": "greensock/gsap-skills",
+        "url": "https://github.com/greensock/gsap-skills",
+        "path": "skills/gsap-timeline",
+        "commit": "aed9cfd3277740755f6bfc1155c7aa645403b760"
+      },
+      "license": "MIT",
+      "stars_at_import": 18690,
+      "added": "2026-11-18",
+      "requires": [],
+      "entry": "full",
+      "adapted": false,
+      "adaptations": "",
+      "tags": [
+        "generative"
+      ],
+      "special": false
+    },
+    {
+      "name": "gsap-utils",
+      "title": "gsap-utils",
+      "description": "The official GreenSock skill for gsap.utils: clamp, mapRange, interpolate, random, snap, wrap and pipe helpers.",
+      "why": "The small utility layer that keeps animation math declarative instead of hand-rolled.",
+      "category": "design",
+      "source": {
+        "repo": "greensock/gsap-skills",
+        "url": "https://github.com/greensock/gsap-skills",
+        "path": "skills/gsap-utils",
+        "commit": "aed9cfd3277740755f6bfc1155c7aa645403b760"
+      },
+      "license": "MIT",
+      "stars_at_import": 18690,
+      "added": "2026-11-18",
+      "requires": [],
+      "entry": "full",
+      "adapted": false,
+      "adaptations": "",
+      "tags": [
+        "generative"
       ],
       "special": false
     },
