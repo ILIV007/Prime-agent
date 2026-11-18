@@ -1,0 +1,25 @@
+{
+  "name": "hunt-llm-ai",
+  "title": "hunt-llm-ai",
+  "description": "Hunting vulnerabilities in LLM/AI features: prompt injection, data leakage, unsafe tool use and AI-specific attack chains.",
+  "why": "The owner's fleet is AI bots; this is the offensive checklist for the exact feature class they ship.",
+  "category": "security",
+  "source": {
+    "repo": "elementalsouls/Claude-BugHunter",
+    "url": "https://github.com/elementalsouls/Claude-BugHunter",
+    "path": "skills/hunt-llm-ai",
+    "commit": "b63ae349afad88772e6d854a277ae9965fd4c369"
+  },
+  "license": "MIT + CC BY 4.0",
+  "stars_at_import": 11036,
+  "added": "2026-11-18",
+  "requires": [],
+  "entry": "full",
+  "adapted": false,
+  "adaptations": "",
+  "tags": [
+    "security-testing",
+    "api"
+  ],
+  "special": false
+}

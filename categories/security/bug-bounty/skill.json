@@ -1,0 +1,25 @@
+{
+  "name": "bug-bounty",
+  "title": "bug-bounty",
+  "description": "The bundle's master workflow: a full bug-bounty pipeline from recon and scope through per-class hunting, validation and reporting.",
+  "why": "One umbrella workflow that routes the whole hunt; the per-class hunt skills in this collection plug into it.",
+  "category": "security",
+  "source": {
+    "repo": "elementalsouls/Claude-BugHunter",
+    "url": "https://github.com/elementalsouls/Claude-BugHunter",
+    "path": "skills/bug-bounty",
+    "commit": "b63ae349afad88772e6d854a277ae9965fd4c369"
+  },
+  "license": "MIT + CC BY 4.0",
+  "stars_at_import": 11036,
+  "added": "2026-11-18",
+  "requires": [],
+  "entry": "full",
+  "adapted": false,
+  "adaptations": "",
+  "tags": [
+    "security-testing",
+    "workflow"
+  ],
+  "special": false
+}

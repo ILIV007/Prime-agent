@@ -1,5 +1,5 @@
 {
-  "count": 92,
+  "count": 104,
   "skills": [
     {
       "adaptations": "Original skill, authored in this repository (the Cookbook section's first entry) by Rick on 2026-11-18 — not imported from upstream. It distils production practice from the fleet's own Telegram bots; facts drawn from public third-party references are credited at the end of SKILL.md and all text is original. source.commit records main's HEAD at authoring time; the skill's own history is this repo's history.",
@@ -2221,6 +2221,231 @@
       "special": false
     },
     {
+      "name": "bb-methodology",
+      "title": "bb-methodology",
+      "description": "Bug-bounty methodology and mindset: choosing targets, reading scope, prioritising vulnerability classes and pacing an engagement.",
+      "why": "The thinking layer under the hunt skills — target-selection and prioritisation discipline distilled from 681 disclosed reports.",
+      "category": "security",
+      "source": {
+        "repo": "elementalsouls/Claude-BugHunter",
+        "url": "https://github.com/elementalsouls/Claude-BugHunter",
+        "path": "skills/bb-methodology",
+        "commit": "b63ae349afad88772e6d854a277ae9965fd4c369"
+      },
+      "license": "MIT + CC BY 4.0",
+      "stars_at_import": 11036,
+      "added": "2026-11-18",
+      "requires": [],
+      "entry": "full",
+      "adapted": false,
+      "adaptations": "",
+      "tags": [
+        "security-testing",
+        "workflow"
+      ],
+      "special": false
+    },
+    {
+      "name": "bug-bounty",
+      "title": "bug-bounty",
+      "description": "The bundle's master workflow: a full bug-bounty pipeline from recon and scope through per-class hunting, validation and reporting.",
+      "why": "One umbrella workflow that routes the whole hunt; the per-class hunt skills in this collection plug into it.",
+      "category": "security",
+      "source": {
+        "repo": "elementalsouls/Claude-BugHunter",
+        "url": "https://github.com/elementalsouls/Claude-BugHunter",
+        "path": "skills/bug-bounty",
+        "commit": "b63ae349afad88772e6d854a277ae9965fd4c369"
+      },
+      "license": "MIT + CC BY 4.0",
+      "stars_at_import": 11036,
+      "added": "2026-11-18",
+      "requires": [],
+      "entry": "full",
+      "adapted": false,
+      "adaptations": "",
+      "tags": [
+        "security-testing",
+        "workflow"
+      ],
+      "special": false
+    },
+    {
+      "name": "evidence-hygiene",
+      "title": "evidence-hygiene",
+      "description": "PoC capture and redaction discipline: evidence handling, screenshot hygiene and PII redaction for security reports.",
+      "why": "Clean, safe evidence is what separates accepted reports from closed ones — and keeps engagements inside scope.",
+      "category": "security",
+      "source": {
+        "repo": "elementalsouls/Claude-BugHunter",
+        "url": "https://github.com/elementalsouls/Claude-BugHunter",
+        "path": "skills/evidence-hygiene",
+        "commit": "b63ae349afad88772e6d854a277ae9965fd4c369"
+      },
+      "license": "MIT + CC BY 4.0",
+      "stars_at_import": 11036,
+      "added": "2026-11-18",
+      "requires": [],
+      "entry": "full",
+      "adapted": false,
+      "adaptations": "",
+      "tags": [
+        "security-testing",
+        "workflow"
+      ],
+      "special": false
+    },
+    {
+      "name": "hunt-api-misconfig",
+      "title": "hunt-api-misconfig",
+      "description": "API security misconfiguration hunting: verbose errors, permissive CORS, missing rate limits and exposed debug surface.",
+      "why": "The misconfiguration companion to api-security's scenario playbooks — the checklist half of API testing.",
+      "category": "security",
+      "source": {
+        "repo": "elementalsouls/Claude-BugHunter",
+        "url": "https://github.com/elementalsouls/Claude-BugHunter",
+        "path": "skills/hunt-api-misconfig",
+        "commit": "b63ae349afad88772e6d854a277ae9965fd4c369"
+      },
+      "license": "MIT + CC BY 4.0",
+      "stars_at_import": 11036,
+      "added": "2026-11-18",
+      "requires": [],
+      "entry": "full",
+      "adapted": false,
+      "adaptations": "",
+      "tags": [
+        "security-testing",
+        "api"
+      ],
+      "special": false
+    },
+    {
+      "name": "hunt-auth-bypass",
+      "title": "hunt-auth-bypass",
+      "description": "Authentication bypass hunting: login flows, session handling, password-reset flaws and privilege-boundary failures.",
+      "why": "Every admin flow in the owner's fleet is an auth boundary; this is the attacker's class-by-class view of it.",
+      "category": "security",
+      "source": {
+        "repo": "elementalsouls/Claude-BugHunter",
+        "url": "https://github.com/elementalsouls/Claude-BugHunter",
+        "path": "skills/hunt-auth-bypass",
+        "commit": "b63ae349afad88772e6d854a277ae9965fd4c369"
+      },
+      "license": "MIT + CC BY 4.0",
+      "stars_at_import": 11036,
+      "added": "2026-11-18",
+      "requires": [],
+      "entry": "full",
+      "adapted": false,
+      "adaptations": "",
+      "tags": [
+        "security-testing",
+        "api"
+      ],
+      "special": false
+    },
+    {
+      "name": "hunt-idor",
+      "title": "hunt-idor",
+      "description": "Insecure direct object reference hunting: identifier enumeration, cross-account access patterns and bypass techniques.",
+      "why": "IDOR is the most common critical in API-backed apps; the owner's bots expose object IDs in every callback and command.",
+      "category": "security",
+      "source": {
+        "repo": "elementalsouls/Claude-BugHunter",
+        "url": "https://github.com/elementalsouls/Claude-BugHunter",
+        "path": "skills/hunt-idor",
+        "commit": "b63ae349afad88772e6d854a277ae9965fd4c369"
+      },
+      "license": "MIT + CC BY 4.0",
+      "stars_at_import": 11036,
+      "added": "2026-11-18",
+      "requires": [],
+      "entry": "full",
+      "adapted": false,
+      "adaptations": "",
+      "tags": [
+        "security-testing",
+        "api"
+      ],
+      "special": false
+    },
+    {
+      "name": "hunt-llm-ai",
+      "title": "hunt-llm-ai",
+      "description": "Hunting vulnerabilities in LLM/AI features: prompt injection, data leakage, unsafe tool use and AI-specific attack chains.",
+      "why": "The owner's fleet is AI bots; this is the offensive checklist for the exact feature class they ship.",
+      "category": "security",
+      "source": {
+        "repo": "elementalsouls/Claude-BugHunter",
+        "url": "https://github.com/elementalsouls/Claude-BugHunter",
+        "path": "skills/hunt-llm-ai",
+        "commit": "b63ae349afad88772e6d854a277ae9965fd4c369"
+      },
+      "license": "MIT + CC BY 4.0",
+      "stars_at_import": 11036,
+      "added": "2026-11-18",
+      "requires": [],
+      "entry": "full",
+      "adapted": false,
+      "adaptations": "",
+      "tags": [
+        "security-testing",
+        "api"
+      ],
+      "special": false
+    },
+    {
+      "name": "hunt-rag-vector",
+      "title": "hunt-rag-vector",
+      "description": "Attacks on RAG pipelines and vector stores: embedding weaknesses, retrieval poisoning and cross-tenant leakage (OWASP LLM08).",
+      "why": "RAG is the planned architecture for the owner's research agent; this maps its failure modes before they ship.",
+      "category": "security",
+      "source": {
+        "repo": "elementalsouls/Claude-BugHunter",
+        "url": "https://github.com/elementalsouls/Claude-BugHunter",
+        "path": "skills/hunt-rag-vector",
+        "commit": "b63ae349afad88772e6d854a277ae9965fd4c369"
+      },
+      "license": "MIT + CC BY 4.0",
+      "stars_at_import": 11036,
+      "added": "2026-11-18",
+      "requires": [],
+      "entry": "full",
+      "adapted": false,
+      "adaptations": "",
+      "tags": [
+        "security-testing",
+        "api"
+      ],
+      "special": false
+    },
+    {
+      "name": "hunt-ssrf",
+      "title": "hunt-ssrf",
+      "description": "Server-side request forgery hunting: cloud metadata endpoints, internal-service reachability, bypass tables and chain templates.",
+      "why": "A crown-jewel class for URL-fetching bots and workers — the owner's services fetch external content constantly.",
+      "category": "security",
+      "source": {
+        "repo": "elementalsouls/Claude-BugHunter",
+        "url": "https://github.com/elementalsouls/Claude-BugHunter",
+        "path": "skills/hunt-ssrf",
+        "commit": "b63ae349afad88772e6d854a277ae9965fd4c369"
+      },
+      "license": "MIT + CC BY 4.0",
+      "stars_at_import": 11036,
+      "added": "2026-11-18",
+      "requires": [],
+      "entry": "full",
+      "adapted": false,
+      "adaptations": "",
+      "tags": [
+        "security-testing",
+        "api"
+      ],
+      "special": false
+    },
+    {
       "name": "incident-runbook-templates",
       "title": "Incident Runbook Templates",
       "description": "Production-ready incident response runbook templates: severity levels, triage and escalation paths, step-by-step recovery, and communication structure.",
@@ -2241,6 +2466,56 @@
       "adaptations": "",
       "tags": [
         "workflow"
+      ],
+      "special": false
+    },
+    {
+      "name": "recon-scope-triage",
+      "title": "recon-scope-triage",
+      "description": "Recon and scope triage: mapping the attack surface and deciding what is in scope before any testing starts.",
+      "why": "Scope discipline is the legal and practical foundation of any hunt — and of authorised testing on the owner's own systems.",
+      "category": "security",
+      "source": {
+        "repo": "elementalsouls/Claude-BugHunter",
+        "url": "https://github.com/elementalsouls/Claude-BugHunter",
+        "path": "skills/recon-scope-triage",
+        "commit": "b63ae349afad88772e6d854a277ae9965fd4c369"
+      },
+      "license": "MIT + CC BY 4.0",
+      "stars_at_import": 11036,
+      "added": "2026-11-18",
+      "requires": [],
+      "entry": "full",
+      "adapted": false,
+      "adaptations": "",
+      "tags": [
+        "security-testing",
+        "research-methods"
+      ],
+      "special": false
+    },
+    {
+      "name": "report-writing",
+      "title": "report-writing",
+      "description": "Writing bug-bounty and security reports that triage fast: impact-first structure, clear reproduction, honest severity framing.",
+      "why": "The delivery layer of the bundle; a finding that reads badly gets graded badly.",
+      "category": "security",
+      "source": {
+        "repo": "elementalsouls/Claude-BugHunter",
+        "url": "https://github.com/elementalsouls/Claude-BugHunter",
+        "path": "skills/report-writing",
+        "commit": "b63ae349afad88772e6d854a277ae9965fd4c369"
+      },
+      "license": "MIT + CC BY 4.0",
+      "stars_at_import": 11036,
+      "added": "2026-11-18",
+      "requires": [],
+      "entry": "full",
+      "adapted": false,
+      "adaptations": "",
+      "tags": [
+        "security-testing",
+        "content"
       ],
       "special": false
     },
@@ -2339,6 +2614,31 @@
       "adapted": false,
       "adaptations": "",
       "tags": [
+        "workflow"
+      ],
+      "special": false
+    },
+    {
+      "name": "triage-validation",
+      "title": "triage-validation",
+      "description": "A 7-question validation gate for findings, with VRT-aware severity, applied before anything gets reported.",
+      "why": "Kills weak findings before they cost triager trust; doubles as a pre-ship self-review gate for the owner's own services.",
+      "category": "security",
+      "source": {
+        "repo": "elementalsouls/Claude-BugHunter",
+        "url": "https://github.com/elementalsouls/Claude-BugHunter",
+        "path": "skills/triage-validation",
+        "commit": "b63ae349afad88772e6d854a277ae9965fd4c369"
+      },
+      "license": "MIT + CC BY 4.0",
+      "stars_at_import": 11036,
+      "added": "2026-11-18",
+      "requires": [],
+      "entry": "full",
+      "adapted": false,
+      "adaptations": "",
+      "tags": [
+        "security-testing",
         "workflow"
       ],
       "special": false

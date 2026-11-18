@@ -138,15 +138,15 @@ h1{font-family:"Press Start 2P","Courier New",monospace;font-size:2.1rem;line-he
     <p class="kicker">★ Curated agent skills ★</p>
     <h1>Prime Skill</h1>
     <p class="tagline">A curated collection of genuinely useful agent skills — one representative per capability, vetted for quality, categorized by function.</p>
-    <p class="count-line"><b>92</b> skills · <b>8</b> categories · <b>8</b> ⭐ specials · <b>6</b> link-only</p>
+    <p class="count-line"><b>104</b> skills · <b>8</b> categories · <b>8</b> ⭐ specials · <b>6</b> link-only</p>
     <a class="btn" href="https://github.com/ILIV007/prime-skill">View on GitHub</a>
   </div>
 </header>
 <div class="wrap">
 <div class="controls">
   <input id="search" type="search" placeholder="Search skills, descriptions, tags, categories…" aria-label="Search skills">
-  <div class="chips"><span class="lbl">Category</span><button class="chip active" data-cat="all">All<span class="n">92</span></button><button class="chip" data-cat="development" style="--catc:#22d3ee">development<span class="n">31</span></button><button class="chip" data-cat="design" style="--catc:#ff2e63">design<span class="n">14</span></button><button class="chip" data-cat="marketing" style="--catc:#ffd319">marketing<span class="n">12</span></button><button class="chip" data-cat="media" style="--catc:#a855f7">media<span class="n">9</span></button><button class="chip" data-cat="research" style="--catc:#22c55e">research<span class="n">17</span></button><button class="chip" data-cat="security" style="--catc:#dc2626">security<span class="n">6</span></button><button class="chip" data-cat="reverse-engineering" style="--catc:#fb923c">reverse-engineering<span class="n">2</span></button><button class="chip" data-cat="cookbook" style="--catc:#f472b6">cookbook<span class="n">1</span></button><button class="chip star" id="chip-special">⭐ Specials<span class="n">8</span></button></div>
-  <div class="chips tagchips"><span class="lbl">Tags</span><button class="chip" data-tag="workflow">#workflow<span class="n">19</span></button><button class="chip" data-tag="content">#content<span class="n">17</span></button><button class="chip" data-tag="social-data">#social-data<span class="n">16</span></button><button class="chip" data-tag="automation">#automation<span class="n">10</span></button><button class="chip" data-tag="api">#api<span class="n">9</span></button><button class="chip" data-tag="design-systems">#design-systems<span class="n">9</span></button><button class="chip" data-tag="generative">#generative<span class="n">9</span></button><button class="chip" data-tag="harness">#harness<span class="n">9</span></button><button class="chip" data-tag="research-methods">#research-methods<span class="n">8</span></button><button class="chip" data-tag="video">#video<span class="n">7</span></button><button class="chip" data-tag="react">#react<span class="n">5</span></button><button class="chip" data-tag="tokens">#tokens<span class="n">4</span></button><button class="chip" data-tag="competitor">#competitor<span class="n">3</span></button><button class="chip" data-tag="security-testing">#security-testing<span class="n">3</span></button><button class="chip" data-tag="web-search">#web-search<span class="n">3</span></button><button class="chip" data-tag="3d">#3d<span class="n">2</span></button></div>
+  <div class="chips"><span class="lbl">Category</span><button class="chip active" data-cat="all">All<span class="n">104</span></button><button class="chip" data-cat="development" style="--catc:#22d3ee">development<span class="n">31</span></button><button class="chip" data-cat="design" style="--catc:#ff2e63">design<span class="n">14</span></button><button class="chip" data-cat="marketing" style="--catc:#ffd319">marketing<span class="n">12</span></button><button class="chip" data-cat="media" style="--catc:#a855f7">media<span class="n">9</span></button><button class="chip" data-cat="research" style="--catc:#22c55e">research<span class="n">17</span></button><button class="chip" data-cat="security" style="--catc:#dc2626">security<span class="n">18</span></button><button class="chip" data-cat="reverse-engineering" style="--catc:#fb923c">reverse-engineering<span class="n">2</span></button><button class="chip" data-cat="cookbook" style="--catc:#f472b6">cookbook<span class="n">1</span></button><button class="chip star" id="chip-special">⭐ Specials<span class="n">8</span></button></div>
+  <div class="chips tagchips"><span class="lbl">Tags</span><button class="chip" data-tag="workflow">#workflow<span class="n">23</span></button><button class="chip" data-tag="content">#content<span class="n">18</span></button><button class="chip" data-tag="social-data">#social-data<span class="n">16</span></button><button class="chip" data-tag="api">#api<span class="n">15</span></button><button class="chip" data-tag="security-testing">#security-testing<span class="n">15</span></button><button class="chip" data-tag="automation">#automation<span class="n">10</span></button><button class="chip" data-tag="design-systems">#design-systems<span class="n">9</span></button><button class="chip" data-tag="generative">#generative<span class="n">9</span></button><button class="chip" data-tag="harness">#harness<span class="n">9</span></button><button class="chip" data-tag="research-methods">#research-methods<span class="n">9</span></button><button class="chip" data-tag="video">#video<span class="n">7</span></button><button class="chip" data-tag="react">#react<span class="n">5</span></button><button class="chip" data-tag="tokens">#tokens<span class="n">4</span></button><button class="chip" data-tag="competitor">#competitor<span class="n">3</span></button><button class="chip" data-tag="web-search">#web-search<span class="n">3</span></button><button class="chip" data-tag="3d">#3d<span class="n">2</span></button></div>
   <p id="result-count"></p>
 </div>
 <main class="grid">
@@ -822,6 +822,78 @@ h1{font-family:"Press Start 2P","Courier New",monospace;font-size:2.1rem;line-he
   
   <div class="tags"><button class="tag" data-tag="security-testing">#security-testing</button><button class="tag" data-tag="api">#api</button></div>
   <footer><a href="https://github.com/ILIV007/prime-skill/tree/main/categories/security/api-security" target="_blank" rel="noopener">Files ↗</a><a href="https://github.com/transilienceai/communitytools/tree/95fdc128af4ca1ae16b3226f9430f1bad97b0656/skills/api-security" target="_blank" rel="noopener">Source ↗</a></footer>
+</article><article class="card" style="--catc:#dc2626" data-category="security" data-tags="security-testing workflow" data-special="" data-search="bb-methodology bb-methodology bug-bounty methodology and mindset: choosing targets, reading scope, prioritising vulnerability classes and pacing an engagement. the thinking layer under the hunt skills — target-selection and prioritisation discipline distilled from 681 disclosed reports. security security-testing workflow  elementalsouls/claude-bughunter">
+  <h3>bb-methodology <span class="badge cat">security</span></h3>
+  <p class="desc">Bug-bounty methodology and mindset: choosing targets, reading scope, prioritising vulnerability classes and pacing an engagement.</p>
+  <p class="why">The thinking layer under the hunt skills — target-selection and prioritisation discipline distilled from 681 disclosed reports.</p>
+  <div class="meta"><span>License: MIT + CC BY 4.0</span><span>★ 11,036 at import</span></div>
+  
+  <div class="tags"><button class="tag" data-tag="security-testing">#security-testing</button><button class="tag" data-tag="workflow">#workflow</button></div>
+  <footer><a href="https://github.com/ILIV007/prime-skill/tree/main/categories/security/bb-methodology" target="_blank" rel="noopener">Files ↗</a><a href="https://github.com/elementalsouls/Claude-BugHunter/tree/b63ae349afad88772e6d854a277ae9965fd4c369/skills/bb-methodology" target="_blank" rel="noopener">Source ↗</a></footer>
+</article><article class="card" style="--catc:#dc2626" data-category="security" data-tags="security-testing workflow" data-special="" data-search="bug-bounty bug-bounty the bundle&#x27;s master workflow: a full bug-bounty pipeline from recon and scope through per-class hunting, validation and reporting. one umbrella workflow that routes the whole hunt; the per-class hunt skills in this collection plug into it. security security-testing workflow  elementalsouls/claude-bughunter">
+  <h3>bug-bounty <span class="badge cat">security</span></h3>
+  <p class="desc">The bundle&#x27;s master workflow: a full bug-bounty pipeline from recon and scope through per-class hunting, validation and reporting.</p>
+  <p class="why">One umbrella workflow that routes the whole hunt; the per-class hunt skills in this collection plug into it.</p>
+  <div class="meta"><span>License: MIT + CC BY 4.0</span><span>★ 11,036 at import</span></div>
+  
+  <div class="tags"><button class="tag" data-tag="security-testing">#security-testing</button><button class="tag" data-tag="workflow">#workflow</button></div>
+  <footer><a href="https://github.com/ILIV007/prime-skill/tree/main/categories/security/bug-bounty" target="_blank" rel="noopener">Files ↗</a><a href="https://github.com/elementalsouls/Claude-BugHunter/tree/b63ae349afad88772e6d854a277ae9965fd4c369/skills/bug-bounty" target="_blank" rel="noopener">Source ↗</a></footer>
+</article><article class="card" style="--catc:#dc2626" data-category="security" data-tags="security-testing workflow" data-special="" data-search="evidence-hygiene evidence-hygiene poc capture and redaction discipline: evidence handling, screenshot hygiene and pii redaction for security reports. clean, safe evidence is what separates accepted reports from closed ones — and keeps engagements inside scope. security security-testing workflow  elementalsouls/claude-bughunter">
+  <h3>evidence-hygiene <span class="badge cat">security</span></h3>
+  <p class="desc">PoC capture and redaction discipline: evidence handling, screenshot hygiene and PII redaction for security reports.</p>
+  <p class="why">Clean, safe evidence is what separates accepted reports from closed ones — and keeps engagements inside scope.</p>
+  <div class="meta"><span>License: MIT + CC BY 4.0</span><span>★ 11,036 at import</span></div>
+  
+  <div class="tags"><button class="tag" data-tag="security-testing">#security-testing</button><button class="tag" data-tag="workflow">#workflow</button></div>
+  <footer><a href="https://github.com/ILIV007/prime-skill/tree/main/categories/security/evidence-hygiene" target="_blank" rel="noopener">Files ↗</a><a href="https://github.com/elementalsouls/Claude-BugHunter/tree/b63ae349afad88772e6d854a277ae9965fd4c369/skills/evidence-hygiene" target="_blank" rel="noopener">Source ↗</a></footer>
+</article><article class="card" style="--catc:#dc2626" data-category="security" data-tags="security-testing api" data-special="" data-search="hunt-api-misconfig hunt-api-misconfig api security misconfiguration hunting: verbose errors, permissive cors, missing rate limits and exposed debug surface. the misconfiguration companion to api-security&#x27;s scenario playbooks — the checklist half of api testing. security security-testing api  elementalsouls/claude-bughunter">
+  <h3>hunt-api-misconfig <span class="badge cat">security</span></h3>
+  <p class="desc">API security misconfiguration hunting: verbose errors, permissive CORS, missing rate limits and exposed debug surface.</p>
+  <p class="why">The misconfiguration companion to api-security&#x27;s scenario playbooks — the checklist half of API testing.</p>
+  <div class="meta"><span>License: MIT + CC BY 4.0</span><span>★ 11,036 at import</span></div>
+  
+  <div class="tags"><button class="tag" data-tag="security-testing">#security-testing</button><button class="tag" data-tag="api">#api</button></div>
+  <footer><a href="https://github.com/ILIV007/prime-skill/tree/main/categories/security/hunt-api-misconfig" target="_blank" rel="noopener">Files ↗</a><a href="https://github.com/elementalsouls/Claude-BugHunter/tree/b63ae349afad88772e6d854a277ae9965fd4c369/skills/hunt-api-misconfig" target="_blank" rel="noopener">Source ↗</a></footer>
+</article><article class="card" style="--catc:#dc2626" data-category="security" data-tags="security-testing api" data-special="" data-search="hunt-auth-bypass hunt-auth-bypass authentication bypass hunting: login flows, session handling, password-reset flaws and privilege-boundary failures. every admin flow in the owner&#x27;s fleet is an auth boundary; this is the attacker&#x27;s class-by-class view of it. security security-testing api  elementalsouls/claude-bughunter">
+  <h3>hunt-auth-bypass <span class="badge cat">security</span></h3>
+  <p class="desc">Authentication bypass hunting: login flows, session handling, password-reset flaws and privilege-boundary failures.</p>
+  <p class="why">Every admin flow in the owner&#x27;s fleet is an auth boundary; this is the attacker&#x27;s class-by-class view of it.</p>
+  <div class="meta"><span>License: MIT + CC BY 4.0</span><span>★ 11,036 at import</span></div>
+  
+  <div class="tags"><button class="tag" data-tag="security-testing">#security-testing</button><button class="tag" data-tag="api">#api</button></div>
+  <footer><a href="https://github.com/ILIV007/prime-skill/tree/main/categories/security/hunt-auth-bypass" target="_blank" rel="noopener">Files ↗</a><a href="https://github.com/elementalsouls/Claude-BugHunter/tree/b63ae349afad88772e6d854a277ae9965fd4c369/skills/hunt-auth-bypass" target="_blank" rel="noopener">Source ↗</a></footer>
+</article><article class="card" style="--catc:#dc2626" data-category="security" data-tags="security-testing api" data-special="" data-search="hunt-idor hunt-idor insecure direct object reference hunting: identifier enumeration, cross-account access patterns and bypass techniques. idor is the most common critical in api-backed apps; the owner&#x27;s bots expose object ids in every callback and command. security security-testing api  elementalsouls/claude-bughunter">
+  <h3>hunt-idor <span class="badge cat">security</span></h3>
+  <p class="desc">Insecure direct object reference hunting: identifier enumeration, cross-account access patterns and bypass techniques.</p>
+  <p class="why">IDOR is the most common critical in API-backed apps; the owner&#x27;s bots expose object IDs in every callback and command.</p>
+  <div class="meta"><span>License: MIT + CC BY 4.0</span><span>★ 11,036 at import</span></div>
+  
+  <div class="tags"><button class="tag" data-tag="security-testing">#security-testing</button><button class="tag" data-tag="api">#api</button></div>
+  <footer><a href="https://github.com/ILIV007/prime-skill/tree/main/categories/security/hunt-idor" target="_blank" rel="noopener">Files ↗</a><a href="https://github.com/elementalsouls/Claude-BugHunter/tree/b63ae349afad88772e6d854a277ae9965fd4c369/skills/hunt-idor" target="_blank" rel="noopener">Source ↗</a></footer>
+</article><article class="card" style="--catc:#dc2626" data-category="security" data-tags="security-testing api" data-special="" data-search="hunt-llm-ai hunt-llm-ai hunting vulnerabilities in llm/ai features: prompt injection, data leakage, unsafe tool use and ai-specific attack chains. the owner&#x27;s fleet is ai bots; this is the offensive checklist for the exact feature class they ship. security security-testing api  elementalsouls/claude-bughunter">
+  <h3>hunt-llm-ai <span class="badge cat">security</span></h3>
+  <p class="desc">Hunting vulnerabilities in LLM/AI features: prompt injection, data leakage, unsafe tool use and AI-specific attack chains.</p>
+  <p class="why">The owner&#x27;s fleet is AI bots; this is the offensive checklist for the exact feature class they ship.</p>
+  <div class="meta"><span>License: MIT + CC BY 4.0</span><span>★ 11,036 at import</span></div>
+  
+  <div class="tags"><button class="tag" data-tag="security-testing">#security-testing</button><button class="tag" data-tag="api">#api</button></div>
+  <footer><a href="https://github.com/ILIV007/prime-skill/tree/main/categories/security/hunt-llm-ai" target="_blank" rel="noopener">Files ↗</a><a href="https://github.com/elementalsouls/Claude-BugHunter/tree/b63ae349afad88772e6d854a277ae9965fd4c369/skills/hunt-llm-ai" target="_blank" rel="noopener">Source ↗</a></footer>
+</article><article class="card" style="--catc:#dc2626" data-category="security" data-tags="security-testing api" data-special="" data-search="hunt-rag-vector hunt-rag-vector attacks on rag pipelines and vector stores: embedding weaknesses, retrieval poisoning and cross-tenant leakage (owasp llm08). rag is the planned architecture for the owner&#x27;s research agent; this maps its failure modes before they ship. security security-testing api  elementalsouls/claude-bughunter">
+  <h3>hunt-rag-vector <span class="badge cat">security</span></h3>
+  <p class="desc">Attacks on RAG pipelines and vector stores: embedding weaknesses, retrieval poisoning and cross-tenant leakage (OWASP LLM08).</p>
+  <p class="why">RAG is the planned architecture for the owner&#x27;s research agent; this maps its failure modes before they ship.</p>
+  <div class="meta"><span>License: MIT + CC BY 4.0</span><span>★ 11,036 at import</span></div>
+  
+  <div class="tags"><button class="tag" data-tag="security-testing">#security-testing</button><button class="tag" data-tag="api">#api</button></div>
+  <footer><a href="https://github.com/ILIV007/prime-skill/tree/main/categories/security/hunt-rag-vector" target="_blank" rel="noopener">Files ↗</a><a href="https://github.com/elementalsouls/Claude-BugHunter/tree/b63ae349afad88772e6d854a277ae9965fd4c369/skills/hunt-rag-vector" target="_blank" rel="noopener">Source ↗</a></footer>
+</article><article class="card" style="--catc:#dc2626" data-category="security" data-tags="security-testing api" data-special="" data-search="hunt-ssrf hunt-ssrf server-side request forgery hunting: cloud metadata endpoints, internal-service reachability, bypass tables and chain templates. a crown-jewel class for url-fetching bots and workers — the owner&#x27;s services fetch external content constantly. security security-testing api  elementalsouls/claude-bughunter">
+  <h3>hunt-ssrf <span class="badge cat">security</span></h3>
+  <p class="desc">Server-side request forgery hunting: cloud metadata endpoints, internal-service reachability, bypass tables and chain templates.</p>
+  <p class="why">A crown-jewel class for URL-fetching bots and workers — the owner&#x27;s services fetch external content constantly.</p>
+  <div class="meta"><span>License: MIT + CC BY 4.0</span><span>★ 11,036 at import</span></div>
+  
+  <div class="tags"><button class="tag" data-tag="security-testing">#security-testing</button><button class="tag" data-tag="api">#api</button></div>
+  <footer><a href="https://github.com/ILIV007/prime-skill/tree/main/categories/security/hunt-ssrf" target="_blank" rel="noopener">Files ↗</a><a href="https://github.com/elementalsouls/Claude-BugHunter/tree/b63ae349afad88772e6d854a277ae9965fd4c369/skills/hunt-ssrf" target="_blank" rel="noopener">Source ↗</a></footer>
 </article><article class="card" style="--catc:#dc2626" data-category="security" data-tags="workflow" data-special="" data-search="incident-runbook-templates incident runbook templates production-ready incident response runbook templates: severity levels, triage and escalation paths, step-by-step recovery, and communication structure. when a live bot or worker goes down at 3 am, a written runbook beats improvisation; this is the template set to write them from. security workflow  wshobson/agents">
   <h3>Incident Runbook Templates <span class="badge cat">security</span></h3>
   <p class="desc">Production-ready incident response runbook templates: severity levels, triage and escalation paths, step-by-step recovery, and communication structure.</p>
@@ -830,6 +902,22 @@ h1{font-family:"Press Start 2P","Courier New",monospace;font-size:2.1rem;line-he
   
   <div class="tags"><button class="tag" data-tag="workflow">#workflow</button></div>
   <footer><a href="https://github.com/ILIV007/prime-skill/tree/main/categories/security/incident-runbook-templates" target="_blank" rel="noopener">Files ↗</a><a href="https://github.com/wshobson/agents/tree/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/incident-response/skills/incident-runbook-templates" target="_blank" rel="noopener">Source ↗</a></footer>
+</article><article class="card" style="--catc:#dc2626" data-category="security" data-tags="security-testing research-methods" data-special="" data-search="recon-scope-triage recon-scope-triage recon and scope triage: mapping the attack surface and deciding what is in scope before any testing starts. scope discipline is the legal and practical foundation of any hunt — and of authorised testing on the owner&#x27;s own systems. security security-testing research-methods  elementalsouls/claude-bughunter">
+  <h3>recon-scope-triage <span class="badge cat">security</span></h3>
+  <p class="desc">Recon and scope triage: mapping the attack surface and deciding what is in scope before any testing starts.</p>
+  <p class="why">Scope discipline is the legal and practical foundation of any hunt — and of authorised testing on the owner&#x27;s own systems.</p>
+  <div class="meta"><span>License: MIT + CC BY 4.0</span><span>★ 11,036 at import</span></div>
+  
+  <div class="tags"><button class="tag" data-tag="security-testing">#security-testing</button><button class="tag" data-tag="research-methods">#research-methods</button></div>
+  <footer><a href="https://github.com/ILIV007/prime-skill/tree/main/categories/security/recon-scope-triage" target="_blank" rel="noopener">Files ↗</a><a href="https://github.com/elementalsouls/Claude-BugHunter/tree/b63ae349afad88772e6d854a277ae9965fd4c369/skills/recon-scope-triage" target="_blank" rel="noopener">Source ↗</a></footer>
+</article><article class="card" style="--catc:#dc2626" data-category="security" data-tags="security-testing content" data-special="" data-search="report-writing report-writing writing bug-bounty and security reports that triage fast: impact-first structure, clear reproduction, honest severity framing. the delivery layer of the bundle; a finding that reads badly gets graded badly. security security-testing content  elementalsouls/claude-bughunter">
+  <h3>report-writing <span class="badge cat">security</span></h3>
+  <p class="desc">Writing bug-bounty and security reports that triage fast: impact-first structure, clear reproduction, honest severity framing.</p>
+  <p class="why">The delivery layer of the bundle; a finding that reads badly gets graded badly.</p>
+  <div class="meta"><span>License: MIT + CC BY 4.0</span><span>★ 11,036 at import</span></div>
+  
+  <div class="tags"><button class="tag" data-tag="security-testing">#security-testing</button><button class="tag" data-tag="content">#content</button></div>
+  <footer><a href="https://github.com/ILIV007/prime-skill/tree/main/categories/security/report-writing" target="_blank" rel="noopener">Files ↗</a><a href="https://github.com/elementalsouls/Claude-BugHunter/tree/b63ae349afad88772e6d854a277ae9965fd4c369/skills/report-writing" target="_blank" rel="noopener">Source ↗</a></footer>
 </article><article class="card" style="--catc:#dc2626" data-category="security" data-tags="automation" data-special="" data-search="secrets-management secrets management secrets management for ci/cd pipelines using vault, aws secrets manager, and native platform tooling: storage, rotation, and least-privilege access. every project here juggles bot tokens and api keys; this is the disciplined way to store and rotate them instead of scattering them across configs. security automation  wshobson/agents">
   <h3>Secrets Management <span class="badge cat">security</span></h3>
   <p class="desc">Secrets management for CI/CD pipelines using Vault, AWS Secrets Manager, and native platform tooling: storage, rotation, and least-privilege access.</p>
@@ -862,6 +950,14 @@ h1{font-family:"Press Start 2P","Courier New",monospace;font-size:2.1rem;line-he
   
   <div class="tags"><button class="tag" data-tag="workflow">#workflow</button></div>
   <footer><a href="https://github.com/ILIV007/prime-skill/tree/main/categories/security/stride-analysis-patterns" target="_blank" rel="noopener">Files ↗</a><a href="https://github.com/wshobson/agents/tree/7e2fb559cf4b824b27f1fec49fe88f7511066d26/plugins/security-scanning/skills/stride-analysis-patterns" target="_blank" rel="noopener">Source ↗</a></footer>
+</article><article class="card" style="--catc:#dc2626" data-category="security" data-tags="security-testing workflow" data-special="" data-search="triage-validation triage-validation a 7-question validation gate for findings, with vrt-aware severity, applied before anything gets reported. kills weak findings before they cost triager trust; doubles as a pre-ship self-review gate for the owner&#x27;s own services. security security-testing workflow  elementalsouls/claude-bughunter">
+  <h3>triage-validation <span class="badge cat">security</span></h3>
+  <p class="desc">A 7-question validation gate for findings, with VRT-aware severity, applied before anything gets reported.</p>
+  <p class="why">Kills weak findings before they cost triager trust; doubles as a pre-ship self-review gate for the owner&#x27;s own services.</p>
+  <div class="meta"><span>License: MIT + CC BY 4.0</span><span>★ 11,036 at import</span></div>
+  
+  <div class="tags"><button class="tag" data-tag="security-testing">#security-testing</button><button class="tag" data-tag="workflow">#workflow</button></div>
+  <footer><a href="https://github.com/ILIV007/prime-skill/tree/main/categories/security/triage-validation" target="_blank" rel="noopener">Files ↗</a><a href="https://github.com/elementalsouls/Claude-BugHunter/tree/b63ae349afad88772e6d854a277ae9965fd4c369/skills/triage-validation" target="_blank" rel="noopener">Source ↗</a></footer>
 </article><article class="card special" style="--catc:#fb923c" data-category="reverse-engineering" data-tags="automation" data-special="1" data-search="blind-llm-agents blind-llm-agents hardens release artifacts against ai reverse-engineering agents with decoys, analysis-budget exhaustion and dead ends, driven by the bla-agents cli. the defensive mirror of rea: rea takes artifacts apart; this protects your own releases from being taken apart. reverse-engineering automation special qybaihe/bla">
   <h3>blind-llm-agents <span class="badge star">⭐ special</span><span class="badge cat">reverse-engineering</span></h3>
   <p class="desc">Hardens release artifacts against AI reverse-engineering agents with decoys, analysis-budget exhaustion and dead ends, driven by the bla-agents CLI.</p>
