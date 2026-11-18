@@ -1,0 +1,25 @@
+{
+  "name": "cost-aware-llm-pipeline",
+  "title": "cost-aware-llm-pipeline",
+  "description": "Model routing by task complexity, immutable budget tracking, retry logic and prompt caching composed into one pipeline pattern for LLM-API products.",
+  "why": "There was no LLM-spend engineering skill at all — Ponytail cuts code tokens and workers-profiling is Worker performance. This matches the owner's credit discipline and his bots' multi-model fallback chains.",
+  "category": "development",
+  "source": {
+    "repo": "affaan-m/ECC",
+    "url": "https://github.com/affaan-m/ECC",
+    "path": "skills/cost-aware-llm-pipeline",
+    "commit": "3f14a103a8694e51c1df9a806217a6d0b5f7a6f7"
+  },
+  "license": "MIT",
+  "stars_at_import": 306343,
+  "added": "2026-11-18",
+  "requires": [],
+  "entry": "full",
+  "adapted": false,
+  "adaptations": "",
+  "tags": [
+    "api",
+    "workflow"
+  ],
+  "special": false
+}

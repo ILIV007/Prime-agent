@@ -1,0 +1,24 @@
+{
+  "name": "agent-security-hardening",
+  "title": "agent-security-hardening",
+  "description": "Defensive hardening workflow for agent runtimes that ingest untrusted content and turn model output into tool, file and network actions: trust-boundary mapping, fail-closed rules, per-capability write grants.",
+  "why": "The security shelf was almost entirely offensive (the BugHunter hunts) or API-generic; this is the missing defensive counterpart, and its threat model is exactly the owner's Telegram bots — untrusted messages in, actions out.",
+  "category": "security",
+  "source": {
+    "repo": "affaan-m/ECC",
+    "url": "https://github.com/affaan-m/ECC",
+    "path": "skills/agent-security-hardening",
+    "commit": "3f14a103a8694e51c1df9a806217a6d0b5f7a6f7"
+  },
+  "license": "MIT",
+  "stars_at_import": 306343,
+  "added": "2026-11-18",
+  "requires": [],
+  "entry": "full",
+  "adapted": false,
+  "adaptations": "",
+  "tags": [
+    "security-testing"
+  ],
+  "special": false
+}

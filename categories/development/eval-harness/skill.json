@@ -1,0 +1,25 @@
+{
+  "name": "eval-harness",
+  "title": "eval-harness",
+  "description": "Eval-driven development for AI agent work: capability and regression evals defined before coding, code/model/rule/human graders, and pass@k / pass^k reliability tracking. Vendored as-is from ECC, where it is framed for Claude Code sessions; the methodology is harness-agnostic.",
+  "why": "The collection had zero eval methodology for prompt or agent changes — the exact gap behind flagship-validation failures in the owner's bots, where a change ships on vibes instead of a regression suite.",
+  "category": "development",
+  "source": {
+    "repo": "affaan-m/ECC",
+    "url": "https://github.com/affaan-m/ECC",
+    "path": "skills/eval-harness",
+    "commit": "3f14a103a8694e51c1df9a806217a6d0b5f7a6f7"
+  },
+  "license": "MIT",
+  "stars_at_import": 306343,
+  "added": "2026-11-18",
+  "requires": [],
+  "entry": "full",
+  "adapted": false,
+  "adaptations": "",
+  "tags": [
+    "harness",
+    "workflow"
+  ],
+  "special": false
+}

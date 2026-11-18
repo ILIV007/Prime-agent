@@ -1,0 +1,25 @@
+{
+  "name": "agent-architecture-audit",
+  "title": "agent-architecture-audit",
+  "description": "A 12-layer diagnostic stack for LLM apps — system prompt, session history, long-term memory, tool layer and more — hunting wrapper regression, memory pollution and hidden repair loops, with severity-ranked code-first fixes.",
+  "why": "Nothing else in the collection diagnoses a misbehaving agent product layer by layer; directly applicable to the owner's bot checkups, where the same model works in a playground and breaks inside the bot.",
+  "category": "development",
+  "source": {
+    "repo": "affaan-m/ECC",
+    "url": "https://github.com/affaan-m/ECC",
+    "path": "skills/agent-architecture-audit",
+    "commit": "3f14a103a8694e51c1df9a806217a6d0b5f7a6f7"
+  },
+  "license": "MIT",
+  "stars_at_import": 306343,
+  "added": "2026-11-18",
+  "requires": [],
+  "entry": "full",
+  "adapted": false,
+  "adaptations": "",
+  "tags": [
+    "harness",
+    "workflow"
+  ],
+  "special": false
+}

@@ -1,0 +1,25 @@
+{
+  "name": "prompt-caching-strategy",
+  "title": "prompt-caching-strategy",
+  "description": "Restructuring prompts for cache reuse — stable prefix, dynamic suffix — with provider-aware guidance and honest treatment of unmeasured savings.",
+  "why": "Prompt size is the known biggest cost lever in the owner's bot fleet (established by his own audits) and nothing in the collection covered cache-oriented prompt structure.",
+  "category": "development",
+  "source": {
+    "repo": "affaan-m/ECC",
+    "url": "https://github.com/affaan-m/ECC",
+    "path": "skills/prompt-caching-strategy",
+    "commit": "3f14a103a8694e51c1df9a806217a6d0b5f7a6f7"
+  },
+  "license": "MIT",
+  "stars_at_import": 306343,
+  "added": "2026-11-18",
+  "requires": [],
+  "entry": "full",
+  "adapted": false,
+  "adaptations": "",
+  "tags": [
+    "api",
+    "workflow"
+  ],
+  "special": false
+}

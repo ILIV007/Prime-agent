@@ -1,0 +1,24 @@
+{
+  "name": "scientific-thinking-scholar-evaluation",
+  "title": "scientific-thinking-scholar-evaluation",
+  "description": "A repeatable rubric for grading papers and proposals: evidence quality, citation support, methods and limitations.",
+  "why": "The planned research agent's core value is verifying credible sources; the collection had review-writing skills but no source-grading rubric. Pairs with the OpenAlex skill.",
+  "category": "research",
+  "source": {
+    "repo": "affaan-m/ECC",
+    "url": "https://github.com/affaan-m/ECC",
+    "path": "skills/scientific-thinking-scholar-evaluation",
+    "commit": "3f14a103a8694e51c1df9a806217a6d0b5f7a6f7"
+  },
+  "license": "MIT",
+  "stars_at_import": 306343,
+  "added": "2026-11-18",
+  "requires": [],
+  "entry": "full",
+  "adapted": false,
+  "adaptations": "",
+  "tags": [
+    "research-methods"
+  ],
+  "special": false
+}

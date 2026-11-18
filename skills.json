@@ -1,5 +1,5 @@
 {
-  "count": 112,
+  "count": 120,
   "skills": [
     {
       "adaptations": "Original skill, authored in this repository (the Cookbook section's first entry) by Rick on 2026-11-18 — not imported from upstream. It distils production practice from the fleet's own Telegram bots; facts drawn from public third-party references are credited at the end of SKILL.md and all text is original. source.commit records main's HEAD at authoring time; the skill's own history is this repo's history.",
@@ -573,6 +573,31 @@
       "special": true
     },
     {
+      "name": "agent-architecture-audit",
+      "title": "agent-architecture-audit",
+      "description": "A 12-layer diagnostic stack for LLM apps — system prompt, session history, long-term memory, tool layer and more — hunting wrapper regression, memory pollution and hidden repair loops, with severity-ranked code-first fixes.",
+      "why": "Nothing else in the collection diagnoses a misbehaving agent product layer by layer; directly applicable to the owner's bot checkups, where the same model works in a playground and breaks inside the bot.",
+      "category": "development",
+      "source": {
+        "repo": "affaan-m/ECC",
+        "url": "https://github.com/affaan-m/ECC",
+        "path": "skills/agent-architecture-audit",
+        "commit": "3f14a103a8694e51c1df9a806217a6d0b5f7a6f7"
+      },
+      "license": "MIT",
+      "stars_at_import": 306343,
+      "added": "2026-11-18",
+      "requires": [],
+      "entry": "full",
+      "adapted": false,
+      "adaptations": "",
+      "tags": [
+        "harness",
+        "workflow"
+      ],
+      "special": false
+    },
+    {
       "name": "agents-sdk",
       "title": "agents-sdk",
       "description": "Build, debug, or review Cloudflare Agents SDK applications using the agents package.",
@@ -617,6 +642,31 @@
       "adapted": false,
       "adaptations": "",
       "tags": [
+        "workflow"
+      ],
+      "special": false
+    },
+    {
+      "name": "canary-watch",
+      "title": "canary-watch",
+      "description": "A post-deploy verification ritual: watch a live URL for HTTP, console, network, performance and content regressions against a baseline during a launch window.",
+      "why": "A small but real gap — the owner's Workers deploy constantly and post-deploy verification was manual. Nothing else in the collection covers the launch window.",
+      "category": "development",
+      "source": {
+        "repo": "affaan-m/ECC",
+        "url": "https://github.com/affaan-m/ECC",
+        "path": "skills/canary-watch",
+        "commit": "3f14a103a8694e51c1df9a806217a6d0b5f7a6f7"
+      },
+      "license": "MIT",
+      "stars_at_import": 306343,
+      "added": "2026-11-18",
+      "requires": [],
+      "entry": "full",
+      "adapted": false,
+      "adaptations": "",
+      "tags": [
+        "automation",
         "workflow"
       ],
       "special": false
@@ -697,6 +747,31 @@
       "special": false
     },
     {
+      "name": "cost-aware-llm-pipeline",
+      "title": "cost-aware-llm-pipeline",
+      "description": "Model routing by task complexity, immutable budget tracking, retry logic and prompt caching composed into one pipeline pattern for LLM-API products.",
+      "why": "There was no LLM-spend engineering skill at all — Ponytail cuts code tokens and workers-profiling is Worker performance. This matches the owner's credit discipline and his bots' multi-model fallback chains.",
+      "category": "development",
+      "source": {
+        "repo": "affaan-m/ECC",
+        "url": "https://github.com/affaan-m/ECC",
+        "path": "skills/cost-aware-llm-pipeline",
+        "commit": "3f14a103a8694e51c1df9a806217a6d0b5f7a6f7"
+      },
+      "license": "MIT",
+      "stars_at_import": 306343,
+      "added": "2026-11-18",
+      "requires": [],
+      "entry": "full",
+      "adapted": false,
+      "adaptations": "",
+      "tags": [
+        "api",
+        "workflow"
+      ],
+      "special": false
+    },
+    {
       "name": "domain-modeling",
       "title": "Domain Modeling",
       "description": "Builds and sharpens a project's domain model: maintains a living glossary of codebase terminology and records architecture decisions as ADRs.",
@@ -741,6 +816,31 @@
       "adaptations": "",
       "tags": [
         "api"
+      ],
+      "special": false
+    },
+    {
+      "name": "eval-harness",
+      "title": "eval-harness",
+      "description": "Eval-driven development for AI agent work: capability and regression evals defined before coding, code/model/rule/human graders, and pass@k / pass^k reliability tracking. Vendored as-is from ECC, where it is framed for Claude Code sessions; the methodology is harness-agnostic.",
+      "why": "The collection had zero eval methodology for prompt or agent changes — the exact gap behind flagship-validation failures in the owner's bots, where a change ships on vibes instead of a regression suite.",
+      "category": "development",
+      "source": {
+        "repo": "affaan-m/ECC",
+        "url": "https://github.com/affaan-m/ECC",
+        "path": "skills/eval-harness",
+        "commit": "3f14a103a8694e51c1df9a806217a6d0b5f7a6f7"
+      },
+      "license": "MIT",
+      "stars_at_import": 306343,
+      "added": "2026-11-18",
+      "requires": [],
+      "entry": "full",
+      "adapted": false,
+      "adaptations": "",
+      "tags": [
+        "harness",
+        "workflow"
       ],
       "special": false
     },
@@ -987,6 +1087,31 @@
       "adapted": false,
       "adaptations": "",
       "tags": [
+        "workflow"
+      ],
+      "special": false
+    },
+    {
+      "name": "prompt-caching-strategy",
+      "title": "prompt-caching-strategy",
+      "description": "Restructuring prompts for cache reuse — stable prefix, dynamic suffix — with provider-aware guidance and honest treatment of unmeasured savings.",
+      "why": "Prompt size is the known biggest cost lever in the owner's bot fleet (established by his own audits) and nothing in the collection covered cache-oriented prompt structure.",
+      "category": "development",
+      "source": {
+        "repo": "affaan-m/ECC",
+        "url": "https://github.com/affaan-m/ECC",
+        "path": "skills/prompt-caching-strategy",
+        "commit": "3f14a103a8694e51c1df9a806217a6d0b5f7a6f7"
+      },
+      "license": "MIT",
+      "stars_at_import": 306343,
+      "added": "2026-11-18",
+      "requires": [],
+      "entry": "full",
+      "adapted": false,
+      "adaptations": "",
+      "tags": [
+        "api",
         "workflow"
       ],
       "special": false
@@ -2230,6 +2355,55 @@
       "special": false
     },
     {
+      "name": "scientific-db-openalex-database",
+      "title": "scientific-db-openalex-database",
+      "description": "Concrete OpenAlex REST API workflows: cross-disciplinary literature search, DOI/PMID metadata resolution, open-access links, citation counts and reproducible search logs.",
+      "why": "OpenAlex sits on the owner's own research-agent reading list, and nothing else in the collection speaks to a scholarly API — the research cluster has process skills but no literature-database playbook.",
+      "category": "research",
+      "source": {
+        "repo": "affaan-m/ECC",
+        "url": "https://github.com/affaan-m/ECC",
+        "path": "skills/scientific-db-openalex-database",
+        "commit": "3f14a103a8694e51c1df9a806217a6d0b5f7a6f7"
+      },
+      "license": "MIT",
+      "stars_at_import": 306343,
+      "added": "2026-11-18",
+      "requires": [],
+      "entry": "full",
+      "adapted": false,
+      "adaptations": "",
+      "tags": [
+        "api",
+        "research-methods"
+      ],
+      "special": false
+    },
+    {
+      "name": "scientific-thinking-scholar-evaluation",
+      "title": "scientific-thinking-scholar-evaluation",
+      "description": "A repeatable rubric for grading papers and proposals: evidence quality, citation support, methods and limitations.",
+      "why": "The planned research agent's core value is verifying credible sources; the collection had review-writing skills but no source-grading rubric. Pairs with the OpenAlex skill.",
+      "category": "research",
+      "source": {
+        "repo": "affaan-m/ECC",
+        "url": "https://github.com/affaan-m/ECC",
+        "path": "skills/scientific-thinking-scholar-evaluation",
+        "commit": "3f14a103a8694e51c1df9a806217a6d0b5f7a6f7"
+      },
+      "license": "MIT",
+      "stars_at_import": 306343,
+      "added": "2026-11-18",
+      "requires": [],
+      "entry": "full",
+      "adapted": false,
+      "adaptations": "",
+      "tags": [
+        "research-methods"
+      ],
+      "special": false
+    },
+    {
       "name": "scrapecreators-api",
       "title": "ScrapeCreators API",
       "description": "Reference and access layer for the ScrapeCreators REST API: public data from 27+ social platforms.",
@@ -2387,6 +2561,30 @@
         "harness"
       ],
       "special": true
+    },
+    {
+      "name": "agent-security-hardening",
+      "title": "agent-security-hardening",
+      "description": "Defensive hardening workflow for agent runtimes that ingest untrusted content and turn model output into tool, file and network actions: trust-boundary mapping, fail-closed rules, per-capability write grants.",
+      "why": "The security shelf was almost entirely offensive (the BugHunter hunts) or API-generic; this is the missing defensive counterpart, and its threat model is exactly the owner's Telegram bots — untrusted messages in, actions out.",
+      "category": "security",
+      "source": {
+        "repo": "affaan-m/ECC",
+        "url": "https://github.com/affaan-m/ECC",
+        "path": "skills/agent-security-hardening",
+        "commit": "3f14a103a8694e51c1df9a806217a6d0b5f7a6f7"
+      },
+      "license": "MIT",
+      "stars_at_import": 306343,
+      "added": "2026-11-18",
+      "requires": [],
+      "entry": "full",
+      "adapted": false,
+      "adaptations": "",
+      "tags": [
+        "security-testing"
+      ],
+      "special": false
     },
     {
       "name": "api-security",

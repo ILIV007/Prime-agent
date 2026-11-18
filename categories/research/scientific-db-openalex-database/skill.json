@@ -1,0 +1,25 @@
+{
+  "name": "scientific-db-openalex-database",
+  "title": "scientific-db-openalex-database",
+  "description": "Concrete OpenAlex REST API workflows: cross-disciplinary literature search, DOI/PMID metadata resolution, open-access links, citation counts and reproducible search logs.",
+  "why": "OpenAlex sits on the owner's own research-agent reading list, and nothing else in the collection speaks to a scholarly API — the research cluster has process skills but no literature-database playbook.",
+  "category": "research",
+  "source": {
+    "repo": "affaan-m/ECC",
+    "url": "https://github.com/affaan-m/ECC",
+    "path": "skills/scientific-db-openalex-database",
+    "commit": "3f14a103a8694e51c1df9a806217a6d0b5f7a6f7"
+  },
+  "license": "MIT",
+  "stars_at_import": 306343,
+  "added": "2026-11-18",
+  "requires": [],
+  "entry": "full",
+  "adapted": false,
+  "adaptations": "",
+  "tags": [
+    "api",
+    "research-methods"
+  ],
+  "special": false
+}
