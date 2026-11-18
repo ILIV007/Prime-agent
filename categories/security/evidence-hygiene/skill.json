@@ -1,0 +1,25 @@
+{
+  "name": "evidence-hygiene",
+  "title": "evidence-hygiene",
+  "description": "PoC capture and redaction discipline: evidence handling, screenshot hygiene and PII redaction for security reports.",
+  "why": "Clean, safe evidence is what separates accepted reports from closed ones — and keeps engagements inside scope.",
+  "category": "security",
+  "source": {
+    "repo": "elementalsouls/Claude-BugHunter",
+    "url": "https://github.com/elementalsouls/Claude-BugHunter",
+    "path": "skills/evidence-hygiene",
+    "commit": "b63ae349afad88772e6d854a277ae9965fd4c369"
+  },
+  "license": "MIT + CC BY 4.0",
+  "stars_at_import": 11036,
+  "added": "2026-11-18",
+  "requires": [],
+  "entry": "full",
+  "adapted": false,
+  "adaptations": "",
+  "tags": [
+    "security-testing",
+    "workflow"
+  ],
+  "special": false
+}

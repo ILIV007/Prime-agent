@@ -1,0 +1,25 @@
+{
+  "name": "hunt-rag-vector",
+  "title": "hunt-rag-vector",
+  "description": "Attacks on RAG pipelines and vector stores: embedding weaknesses, retrieval poisoning and cross-tenant leakage (OWASP LLM08).",
+  "why": "RAG is the planned architecture for the owner's research agent; this maps its failure modes before they ship.",
+  "category": "security",
+  "source": {
+    "repo": "elementalsouls/Claude-BugHunter",
+    "url": "https://github.com/elementalsouls/Claude-BugHunter",
+    "path": "skills/hunt-rag-vector",
+    "commit": "b63ae349afad88772e6d854a277ae9965fd4c369"
+  },
+  "license": "MIT + CC BY 4.0",
+  "stars_at_import": 11036,
+  "added": "2026-11-18",
+  "requires": [],
+  "entry": "full",
+  "adapted": false,
+  "adaptations": "",
+  "tags": [
+    "security-testing",
+    "api"
+  ],
+  "special": false
+}

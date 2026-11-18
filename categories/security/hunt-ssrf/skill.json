@@ -1,0 +1,25 @@
+{
+  "name": "hunt-ssrf",
+  "title": "hunt-ssrf",
+  "description": "Server-side request forgery hunting: cloud metadata endpoints, internal-service reachability, bypass tables and chain templates.",
+  "why": "A crown-jewel class for URL-fetching bots and workers — the owner's services fetch external content constantly.",
+  "category": "security",
+  "source": {
+    "repo": "elementalsouls/Claude-BugHunter",
+    "url": "https://github.com/elementalsouls/Claude-BugHunter",
+    "path": "skills/hunt-ssrf",
+    "commit": "b63ae349afad88772e6d854a277ae9965fd4c369"
+  },
+  "license": "MIT + CC BY 4.0",
+  "stars_at_import": 11036,
+  "added": "2026-11-18",
+  "requires": [],
+  "entry": "full",
+  "adapted": false,
+  "adaptations": "",
+  "tags": [
+    "security-testing",
+    "api"
+  ],
+  "special": false
+}
