@@ -1,0 +1,24 @@
+{
+  "name": "humanizer",
+  "title": "Humanizer",
+  "description": "Rewrites AI-sounding text so it reads like its human writer, without changing what it says: removes not-X-but-Y contrasts, staged openers, forced triads, inflated claims, stock AI words and filler.",
+  "why": "Nothing else in the collection does dedicated AI-tell removal — copy-editing sharpens marketing copy; this de-robots any prose. Directly useful for public-facing text and channel content, where a human voice is the brand.",
+  "category": "marketing",
+  "source": {
+    "repo": "blader/humanizer",
+    "url": "https://github.com/blader/humanizer",
+    "path": ".",
+    "commit": "b48c832f0f809c1b5658edbb838c2521b72f2413"
+  },
+  "license": "MIT",
+  "stars_at_import": 70763,
+  "added": "2026-11-18",
+  "requires": [],
+  "entry": "full",
+  "adapted": false,
+  "adaptations": "",
+  "tags": [
+    "content"
+  ],
+  "special": false
+}

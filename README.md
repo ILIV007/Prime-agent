@@ -117,14 +117,14 @@ categories because provenance, not topic, is its axis.
 ## At a glance
 
 <!-- GENERATED:INDEX:START -->
-**120 skills · 8 categories · 6 link-only**
+**121 skills · 8 categories · 6 link-only**
 
 | Category | Skills | Scope | Page |
 |---|---|---|---|
 | Cookbook | 1 | Original skills written in-house for this collection — recipes distilled from production work, not imported. | [Browse →](categories/cookbook/README.md) |
 | Design | 22 | Visual and interface design: design systems, styling, branding, and generated visuals. | [Browse →](categories/design/README.md) |
 | Development | 36 | Building software: planning, implementation, testing, debugging, and harness workflows. | [Browse →](categories/development/README.md) |
-| Marketing | 12 | Go-to-market: positioning, copy, content, social, and launches. | [Browse →](categories/marketing/README.md) |
+| Marketing | 13 | Go-to-market: positioning, copy, content, social, and launches. | [Browse →](categories/marketing/README.md) |
 | Media | 9 | Media production: video creation and editing, motion, and filmmaking craft. | [Browse →](categories/media/README.md) |
 | Research | 19 | Finding things out: social-media research, deep research, search, and literature. | [Browse →](categories/research/README.md) |
 | Reverse Engineering | 2 | Understanding compiled and shipped artifacts — and hardening your own against it. | [Browse →](categories/reverse-engineering/README.md) |
@@ -255,7 +255,7 @@ categories because provenance, not topic, is its axis.
 | [wrangler](categories/development/wrangler/) | Run or troubleshoot Wrangler CLI commands in projects that have a wrangler.jsonc, wrangler.json, or wrangler.toml file, including local development, Previews, deployment, and resource management. For new projects and projects without a Wrangler configuration file, use the cf CLI instead. | The fleet's actual CLI: deploy/manage Workers, KV, R2, D1, Queues — every live project (TradeAgent, IVAI-bot, Fredy, Proxiv3) ships via wrangler.toml. | — | [cloudflare/skills](https://github.com/cloudflare/skills) @ cbf893b |
 | [writing-plans](categories/development/writing-plans/) | Turns an approved spec or design into a detailed, step-by-step implementation plan that can be executed without guessing. | The missing half of the brainstorming workflow already in this repo; makes multi-step builds land first-try instead of drifting. | — | [obra/superpowers](https://github.com/obra/superpowers) @ 22f0b46 |
 
-### [Marketing](categories/marketing/README.md) (12)
+### [Marketing](categories/marketing/README.md) (13)
 
 | Skill | What it does | Why it's here | Requires | Source |
 |---|---|---|---|---|
@@ -265,6 +265,7 @@ categories because provenance, not topic, is its axis.
 | [copy-editing](categories/marketing/copy-editing/) | Edits and refreshes existing marketing copy: tightening, de-slopping, and sharpening without a rewrite. | Most real work is improving copy that already exists, not starting from zero. | — | [coreyhaines31/marketingskills](https://github.com/coreyhaines31/marketingskills) @ 88c79f6 |
 | [copywriting](categories/marketing/copywriting/) | Writes and improves marketing copy for pages: headlines, CTAs, value propositions, and hero sections. | Sharp copy is the cheapest conversion lever for landing pages and product posts. | — | [coreyhaines31/marketingskills](https://github.com/coreyhaines31/marketingskills) @ 88c79f6 |
 | [customer-research](categories/marketing/customer-research/) | Runs and synthesizes customer research: interviews, surveys, review mining, voice-of-customer, and JTBD. | Decisions grounded in real customer language outperform opinion. | — | [coreyhaines31/marketingskills](https://github.com/coreyhaines31/marketingskills) @ 88c79f6 |
+| [humanizer](categories/marketing/humanizer/) | Rewrites AI-sounding text so it reads like its human writer, without changing what it says: removes not-X-but-Y contrasts, staged openers, forced triads, inflated claims, stock AI words and filler. | Nothing else in the collection does dedicated AI-tell removal — copy-editing sharpens marketing copy; this de-robots any prose. Directly useful for public-facing text and channel content, where a human voice is the brand. | — | [blader/humanizer](https://github.com/blader/humanizer) @ b48c832 |
 | [launch](categories/marketing/launch/) | Plans product launches and feature announcements: checklists, go-to-market, waitlists, and release strategy. | Launches are one-shot events; a checklist prevents unforced errors. | — | [coreyhaines31/marketingskills](https://github.com/coreyhaines31/marketingskills) @ 88c79f6 |
 | [marketing-ideas](categories/marketing/marketing-ideas/) | A bank of proven marketing and growth tactics for software products, matched to the situation. | The fastest way out of 'we need growth but don't know what to try'. | — | [coreyhaines31/marketingskills](https://github.com/coreyhaines31/marketingskills) @ 88c79f6 |
 | [marketing-psychology](categories/marketing/marketing-psychology/) | Applies behavioral science and mental models - anchoring, social proof, scarcity, framing - to marketing. | Explains why people buy, so offers and copy stop being guesswork. | — | [coreyhaines31/marketingskills](https://github.com/coreyhaines31/marketingskills) @ 88c79f6 |
