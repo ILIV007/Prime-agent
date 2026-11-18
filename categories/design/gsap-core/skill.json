@@ -1,0 +1,24 @@
+{
+  "name": "gsap-core",
+  "title": "gsap-core",
+  "description": "The official GreenSock skill for the GSAP core API: tweens, easing, stagger, defaults and matchMedia for responsive, reduced-motion-safe animation.",
+  "why": "GSAP is the web's reference animation engine and this is the vendor's own correct-usage layer — the base the other seven GSAP skills in this set build on.",
+  "category": "design",
+  "source": {
+    "repo": "greensock/gsap-skills",
+    "url": "https://github.com/greensock/gsap-skills",
+    "path": "skills/gsap-core",
+    "commit": "aed9cfd3277740755f6bfc1155c7aa645403b760"
+  },
+  "license": "MIT",
+  "stars_at_import": 18690,
+  "added": "2026-11-18",
+  "requires": [],
+  "entry": "full",
+  "adapted": false,
+  "adaptations": "",
+  "tags": [
+    "generative"
+  ],
+  "special": false
+}

@@ -1,0 +1,24 @@
+{
+  "name": "gsap-performance",
+  "title": "gsap-performance",
+  "description": "The official GreenSock skill for animation performance: transform-first animation, avoiding layout thrash, will-change and batching for a stable 60fps.",
+  "why": "Jank is what makes animated sites feel cheap; this is the performance discipline behind smooth motion.",
+  "category": "design",
+  "source": {
+    "repo": "greensock/gsap-skills",
+    "url": "https://github.com/greensock/gsap-skills",
+    "path": "skills/gsap-performance",
+    "commit": "aed9cfd3277740755f6bfc1155c7aa645403b760"
+  },
+  "license": "MIT",
+  "stars_at_import": 18690,
+  "added": "2026-11-18",
+  "requires": [],
+  "entry": "full",
+  "adapted": false,
+  "adaptations": "",
+  "tags": [
+    "generative"
+  ],
+  "special": false
+}

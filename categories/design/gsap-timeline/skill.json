@@ -1,0 +1,24 @@
+{
+  "name": "gsap-timeline",
+  "title": "gsap-timeline",
+  "description": "The official GreenSock skill for GSAP timelines: sequencing, the position parameter, nesting and playback control.",
+  "why": "Choreography is where hand-rolled animation falls apart; timelines are GSAP's core advantage, and this teaches them properly.",
+  "category": "design",
+  "source": {
+    "repo": "greensock/gsap-skills",
+    "url": "https://github.com/greensock/gsap-skills",
+    "path": "skills/gsap-timeline",
+    "commit": "aed9cfd3277740755f6bfc1155c7aa645403b760"
+  },
+  "license": "MIT",
+  "stars_at_import": 18690,
+  "added": "2026-11-18",
+  "requires": [],
+  "entry": "full",
+  "adapted": false,
+  "adaptations": "",
+  "tags": [
+    "generative"
+  ],
+  "special": false
+}

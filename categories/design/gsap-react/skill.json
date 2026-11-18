@@ -1,0 +1,25 @@
+{
+  "name": "gsap-react",
+  "title": "gsap-react",
+  "description": "The official GreenSock skill for GSAP in React and Next.js: the useGSAP hook, refs, context scoping and cleanup on unmount.",
+  "why": "React is where GSAP most often leaks or double-fires; the vendor's own pattern prevents the classic bugs.",
+  "category": "design",
+  "source": {
+    "repo": "greensock/gsap-skills",
+    "url": "https://github.com/greensock/gsap-skills",
+    "path": "skills/gsap-react",
+    "commit": "aed9cfd3277740755f6bfc1155c7aa645403b760"
+  },
+  "license": "MIT",
+  "stars_at_import": 18690,
+  "added": "2026-11-18",
+  "requires": [],
+  "entry": "full",
+  "adapted": false,
+  "adaptations": "",
+  "tags": [
+    "generative",
+    "react"
+  ],
+  "special": false
+}

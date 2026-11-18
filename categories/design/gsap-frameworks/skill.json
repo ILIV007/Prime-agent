@@ -1,0 +1,24 @@
+{
+  "name": "gsap-frameworks",
+  "title": "gsap-frameworks",
+  "description": "The official GreenSock skill for GSAP in Vue, Nuxt, Svelte and SvelteKit: lifecycle integration, scoped selectors and unmount cleanup.",
+  "why": "The non-React half of framework animation, straight from the vendor — completes the set for any frontend stack.",
+  "category": "design",
+  "source": {
+    "repo": "greensock/gsap-skills",
+    "url": "https://github.com/greensock/gsap-skills",
+    "path": "skills/gsap-frameworks",
+    "commit": "aed9cfd3277740755f6bfc1155c7aa645403b760"
+  },
+  "license": "MIT",
+  "stars_at_import": 18690,
+  "added": "2026-11-18",
+  "requires": [],
+  "entry": "full",
+  "adapted": false,
+  "adaptations": "",
+  "tags": [
+    "generative"
+  ],
+  "special": false
+}
