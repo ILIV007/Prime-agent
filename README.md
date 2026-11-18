@@ -97,13 +97,30 @@ Void entries never flow into `skills.json` or `mcps.json`.
 | [youtube-agent-skill](https://github.com/Jakeschincariol/youtube-agent-skill) | Eleven Claude skills that run a YouTube channel: scripts off 21 hook formulas, title+thumbnail linting, edit decisions, comments, planning, viral-hunting, SEO, shorts, retention, chapters, audit. | Eleven real, focused Claude skills that run a whole YouTube channel end to end — the most complete creator skill pack in the harvest. | A skill pack for YouTube, a platform the owner doesn't use; short-form video is already covered by video and reel-story. | [Jakeschincariol/youtube-agent-skill](https://github.com/Jakeschincariol/youtube-agent-skill) @ a2feb21 · MIT · ★ 5,890 |
 <!-- GENERATED:VOID:END -->
 
+## 🍳 Cookbook
+
+The house recipes. Everything else in this collection is imported —
+vetted, pinned, and credited to its upstream. Cookbook skills are the
+opposite: **written here, from scratch**, distilled from production work
+(the curator's own bots, pipelines, and hard lessons) and published as
+original MIT work under [`categories/cookbook/`](categories/cookbook/).
+They are full skills and count like any other entry; their `skill.json`
+says so plainly (`adaptations` records that the skill is original, and
+`source` points back at this repository). A cookbook recipe earns its
+place the same way an import does — it has to be the best available
+answer to a real, recurring job, with no upstream worth importing
+instead. The shelf grows one recipe at a time, whenever the work
+produces one; it is exempt from the two-entry minimum for new topical
+categories because provenance, not topic, is its axis.
+
 ## At a glance
 
 <!-- GENERATED:INDEX:START -->
-**91 skills · 7 categories · 6 link-only**
+**92 skills · 8 categories · 6 link-only**
 
 | Category | Skills | Scope | Page |
 |---|---|---|---|
+| Cookbook | 1 | Original skills written in-house for this collection — recipes distilled from production work, not imported. | [Browse →](categories/cookbook/README.md) |
 | Design | 14 | Visual and interface design: design systems, styling, branding, and generated visuals. | [Browse →](categories/design/README.md) |
 | Development | 31 | Building software: planning, implementation, testing, debugging, and harness workflows. | [Browse →](categories/development/README.md) |
 | Marketing | 12 | Go-to-market: positioning, copy, content, social, and launches. | [Browse →](categories/marketing/README.md) |
@@ -138,6 +155,11 @@ Void entries never flow into `skills.json` or `mcps.json`.
   alone — no cap — each carrying two honest lines — why it is valuable, and why it is not in
   the collection. Void entries are counted nowhere and never flow into
   `skills.json` or `mcps.json`.
+- **Cookbook** (the 🍳 shelf above) holds original skills authored in
+  this repository — full entries under `categories/cookbook/`, counted
+  like any other skill, MIT-licensed, with `source` pointing at this
+  repo and the `adaptations` field declaring the skill as original work
+  rather than an import.
 - Every skill carries 1–3 `tags` from a controlled vocabulary —
   cross-cutting topics only, never a restatement of its category:
   `3d`, `api`, `automation`, `competitor`, `content`, `design-systems`,
@@ -158,6 +180,12 @@ Void entries never flow into `skills.json` or `mcps.json`.
 ## Categories
 
 <!-- GENERATED:START -->
+### [Cookbook](categories/cookbook/README.md) (1)
+
+| Skill | What it does | Why it's here | Requires | Source |
+|---|---|---|---|---|
+| [telegram-bot-workers](categories/cookbook/telegram-bot-workers/) | Build production Telegram bots on Cloudflare Workers with the raw Bot API: secure webhooks, entity-based formatting, Rich Messages, edit-in-place menus, and KV state discipline. | The house recipe behind a working fleet of Telegram bots (channel AI, admin publisher, market poster, prompt optimizer). Every other bot skill out there assumes Python or a framework; this one covers the raw-API-on-Workers pattern those bots actually run on. | — | [ILIV007/prime-skill](https://github.com/ILIV007/prime-skill) @ 0ea9096 |
+
 ### [Design](categories/design/README.md) (14)
 
 | Skill | What it does | Why it's here | Requires | Source |

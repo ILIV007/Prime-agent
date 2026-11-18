@@ -21,7 +21,7 @@ VOID_MANIFEST = ROOT / "void.json"
 OUT = ROOT / "site" / "index.html"
 REPO_URL = "https://github.com/ILIV007/prime-skill"
 CATEGORY_ORDER = ["development", "design", "marketing", "media", "research",
-                  "security", "reverse-engineering"]
+                  "security", "reverse-engineering", "cookbook"]
 # Neon accent per category. Base scheme grounded in ui-ux-pro-max's bundled
 # "Arcade & Retro Game" palette (dark indigo bases, neon red/blue, score
 # green), extended with the classic arcade companions yellow/cyan/purple.
@@ -33,6 +33,7 @@ CATEGORY_COLORS = {
     "research": "#22c55e",
     "security": "#dc2626",
     "reverse-engineering": "#fb923c",
+    "cookbook": "#f472b6",
 }
 
 CSS = """
