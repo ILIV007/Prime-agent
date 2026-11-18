@@ -46,6 +46,7 @@ TAGS = {
 }
 
 SCOPES = {
+    "cookbook": "Original skills written in-house for this collection — recipes distilled from production work, not imported.",
     "development": "Building software: planning, implementation, testing, debugging, and harness workflows.",
     "design": "Visual and interface design: design systems, styling, branding, and generated visuals.",
     "marketing": "Go-to-market: positioning, copy, content, social, and launches.",
