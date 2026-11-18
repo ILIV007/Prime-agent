@@ -1,0 +1,25 @@
+{
+  "name": "canary-watch",
+  "title": "canary-watch",
+  "description": "A post-deploy verification ritual: watch a live URL for HTTP, console, network, performance and content regressions against a baseline during a launch window.",
+  "why": "A small but real gap — the owner's Workers deploy constantly and post-deploy verification was manual. Nothing else in the collection covers the launch window.",
+  "category": "development",
+  "source": {
+    "repo": "affaan-m/ECC",
+    "url": "https://github.com/affaan-m/ECC",
+    "path": "skills/canary-watch",
+    "commit": "3f14a103a8694e51c1df9a806217a6d0b5f7a6f7"
+  },
+  "license": "MIT",
+  "stars_at_import": 306343,
+  "added": "2026-11-18",
+  "requires": [],
+  "entry": "full",
+  "adapted": false,
+  "adaptations": "",
+  "tags": [
+    "automation",
+    "workflow"
+  ],
+  "special": false
+}
