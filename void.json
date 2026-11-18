@@ -1,6 +1,6 @@
 {
   "about": "Void is a link-only shelf for things that were vetted and found genuinely valuable, but do not belong in the collection: they are platforms, plugins, dashboards, or infrastructure — not standalone skills — or they duplicate an entry that already exists. Void entries are NOT skills and are never counted anywhere: not in the skills total, not in any category, not in the MCP count, not in tag statistics. Nothing here is vendored; each entry only links to its source. No cap — admission is by merit alone: vetted, genuinely valuable, and not for the main collection. Void never flows into skills.json or mcps.json.",
-  "count": 12,
+  "count": 13,
   "entries": [
     {
       "added": "2026-11-14",
@@ -181,6 +181,21 @@
       "license": "Apache-2.0",
       "stars_at_import": 14350,
       "added": "2026-11-14"
+    },
+    {
+      "name": "paperclip",
+      "title": "Paperclip",
+      "description": "Self-hosted orchestration platform for companies of AI agents: an org chart of coding agents (CEO, CTO, engineers, marketers) with goal-linked task tickets, scheduled heartbeat wake-ups, per-agent budgets with spend alerts and auto-pause, approval gates, and one dashboard.",
+      "why_valuable": "The breakout agent-orchestration platform (~115k stars in eight months) and the clearest working model of budget governance over autonomous coding agents — its budget and auto-pause layer is a genuinely useful reference design even for agent fleets that never adopt it.",
+      "why_not_included": "A platform, not a skill: a self-hosted server you run, not a SKILL.md. The owner's fleet is Telegram bots on Cloudflare Workers with its own scheduling and coordination, and Paperclip's always-on multi-CLI company model burns tokens continuously, against a strict weekly-credit budget. Revisit if several coding-agent CLIs ever run in parallel on product work.",
+      "source": {
+        "repo": "paperclipai/paperclip",
+        "url": "https://github.com/paperclipai/paperclip",
+        "commit": "651749bdb463aa09d1eb2ae6e61ac3da26161a74"
+      },
+      "license": "MIT",
+      "stars_at_import": 114777,
+      "added": "2026-11-18"
     }
   ]
 }
