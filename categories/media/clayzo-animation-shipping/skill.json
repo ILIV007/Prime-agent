@@ -1,0 +1,27 @@
+{
+  "name": "clayzo-animation-shipping",
+  "title": "clayzo-animation-shipping",
+  "description": "Ship Clayzo animations: package and play interactive animation documents on the web (WebGL/CanvasKit players) or natively in Swift on iOS and macOS.",
+  "why": "The shipping half of the official Clayzo skills: packaging and playback of the interactive animation documents the authoring skill produces. Same link-only reasoning as its sibling — no license on the skills repo, proprietary SDK engine.",
+  "category": "media",
+  "source": {
+    "repo": "Clayzo/agent-skills",
+    "url": "https://github.com/Clayzo/agent-skills",
+    "path": "skills/clayzo-animation-shipping",
+    "commit": "3928d4a7756b64025c5e4bec58a1345c20ebf20d"
+  },
+  "license": "none",
+  "stars_at_import": 5,
+  "added": "2026-11-20",
+  "requires": [
+    "Clayzo CLI (Node.js 22.13+, account sign-in)"
+  ],
+  "entry": "link-only",
+  "adapted": false,
+  "adaptations": "",
+  "tags": [
+    "video",
+    "generative"
+  ],
+  "special": false
+}

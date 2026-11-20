@@ -1,0 +1,27 @@
+{
+  "name": "clayzo-animation-authoring",
+  "title": "clayzo-animation-authoring",
+  "description": "Agent-first interactive animation authoring: write motion graphics as code, frame-check every frame with clayzo review, and ship live on the web or natively in Swift.",
+  "why": "A genuinely distinct capability no existing entry covers: live interactive animation documents (WebGL/CanvasKit, native Swift) with agent frame-level self-review — a different artifact from Remotion's rendered video and Hyperframes' HTML-to-MP4. Link-only: the skills repo declares no license (cannot vendor) and the engine is proprietary (Clayzo SDK License v1.0; Node.js 22.13+ and account sign-in required).",
+  "category": "media",
+  "source": {
+    "repo": "Clayzo/agent-skills",
+    "url": "https://github.com/Clayzo/agent-skills",
+    "path": "skills/clayzo-animation-authoring",
+    "commit": "3928d4a7756b64025c5e4bec58a1345c20ebf20d"
+  },
+  "license": "none",
+  "stars_at_import": 5,
+  "added": "2026-11-20",
+  "requires": [
+    "Clayzo CLI (Node.js 22.13+, account sign-in)"
+  ],
+  "entry": "link-only",
+  "adapted": false,
+  "adaptations": "",
+  "tags": [
+    "video",
+    "generative"
+  ],
+  "special": false
+}

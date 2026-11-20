@@ -1,0 +1,30 @@
+{
+  "name": "skillevaluator",
+  "title": "skillevaluator",
+  "description": "Multi-tier framework for evaluating AI agent skills: quality gates with a 0-100 score, security scanning, harness compatibility checks, semantic overlap detection, synthetic eval datasets, and live agent A/B evaluation of skill lift — with reusable CI templates.",
+  "why": "Skill evaluation is a genuinely distinct, unoccupied cluster: no existing entry scores skill quality/security, detects semantic overlap between skills, or A/B-tests skill lift. Tier 1 runs keyless (no API key, GPU or Docker) and gives every skill a 0-100 quality score plus a security/PII scan — direct curation QA for a 121-skill collection — and Tier 2 overlap detection speaks to the one-skill-per-cluster rule. Honest limit: harness-check and Tier 3 live agents do NOT include Muse (agents: opencode, codex, claude-code), so with/without lift measured there is a proxy, not a measurement on Muse.",
+  "category": "development",
+  "source": {
+    "repo": "NVIDIA/SkillEvaluator",
+    "url": "https://github.com/NVIDIA/SkillEvaluator",
+    "path": "skills/skillevaluator",
+    "commit": "35af6d9ba8b0f5c1fb975d6d8bee7459b73619a7"
+  },
+  "license": "Apache-2.0",
+  "stars_at_import": 4219,
+  "added": "2026-11-20",
+  "requires": [
+    "Python 3.12-3.14",
+    "skillevaluator CLI (Tier 1 keyless)",
+    "provider key for Tier 2/3",
+    "Docker for Tier 3"
+  ],
+  "entry": "full",
+  "adapted": false,
+  "adaptations": "",
+  "tags": [
+    "harness",
+    "workflow"
+  ],
+  "special": false
+}

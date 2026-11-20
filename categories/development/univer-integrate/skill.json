@@ -1,0 +1,27 @@
+{
+  "name": "univer-integrate",
+  "title": "univer-integrate",
+  "description": "Embed Office-like Sheets and Docs editing (formulas, Facade APIs, plugin system) into a web app — the official Univer SDK skill, with framework templates for React, Vue, plain HTML and Node.",
+  "why": "The collection has no office / document-editing / spreadsheet entry — this capability was genuinely missing. Main repo dream-num/univer has 30,832 stars (Apache-2.0). Version note: written for Univer v0.21.x; current Univer is v1.5.2 — the plugin-mode API it teaches (new Univer() + registerPlugins, createUnit) is still valid, and the newer recommended quick start is presets (createUniver + UniverSheetsCorePreset). Honest limit: charts, pivot tables, Slides and real-time collaboration are commercial Pro features, not open source.",
+  "category": "development",
+  "source": {
+    "repo": "dream-num/univer-sdk-skills",
+    "url": "https://github.com/dream-num/univer-sdk-skills",
+    "path": "skills/univer-integrate",
+    "commit": "60e9cbbdbbde9594ad61bad58ad9fbb4d5e17112"
+  },
+  "license": "Apache-2.0",
+  "stars_at_import": 13,
+  "added": "2026-11-20",
+  "requires": [
+    "Web app project (React, Vue or plain HTML)",
+    "@univerjs packages"
+  ],
+  "entry": "full",
+  "adapted": false,
+  "adaptations": "",
+  "tags": [
+    "api"
+  ],
+  "special": false
+}
