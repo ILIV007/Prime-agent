@@ -1,5 +1,5 @@
 {
-  "count": 127,
+  "count": 131,
   "skills": [
     {
       "adaptations": "Original skill, authored in this repository (the Cookbook section's first entry) by Rick on 2026-11-18 — not imported from upstream. It distils production practice from the fleet's own Telegram bots; facts drawn from public third-party references are credited at the end of SKILL.md and all text is original. source.commit records main's HEAD at authoring time; the skill's own history is this repo's history.",
@@ -1141,6 +1141,36 @@
       "special": false
     },
     {
+      "name": "skillevaluator",
+      "title": "skillevaluator",
+      "description": "Multi-tier framework for evaluating AI agent skills: quality gates with a 0-100 score, security scanning, harness compatibility checks, semantic overlap detection, synthetic eval datasets, and live agent A/B evaluation of skill lift — with reusable CI templates.",
+      "why": "Skill evaluation is a genuinely distinct, unoccupied cluster: no existing entry scores skill quality/security, detects semantic overlap between skills, or A/B-tests skill lift. Tier 1 runs keyless (no API key, GPU or Docker) and gives every skill a 0-100 quality score plus a security/PII scan — direct curation QA for a 121-skill collection — and Tier 2 overlap detection speaks to the one-skill-per-cluster rule. Honest limit: harness-check and Tier 3 live agents do NOT include Muse (agents: opencode, codex, claude-code), so with/without lift measured there is a proxy, not a measurement on Muse.",
+      "category": "development",
+      "source": {
+        "repo": "NVIDIA/SkillEvaluator",
+        "url": "https://github.com/NVIDIA/SkillEvaluator",
+        "path": "skills/skillevaluator",
+        "commit": "35af6d9ba8b0f5c1fb975d6d8bee7459b73619a7"
+      },
+      "license": "Apache-2.0",
+      "stars_at_import": 4219,
+      "added": "2026-11-20",
+      "requires": [
+        "Python 3.12-3.14",
+        "skillevaluator CLI (Tier 1 keyless)",
+        "provider key for Tier 2/3",
+        "Docker for Tier 3"
+      ],
+      "entry": "full",
+      "adapted": false,
+      "adaptations": "",
+      "tags": [
+        "harness",
+        "workflow"
+      ],
+      "special": false
+    },
+    {
       "name": "strategic-compact",
       "title": "Strategic Compact",
       "description": "Suggests manual context compaction at logical task-phase boundaries, so long sessions compact deliberately instead of at arbitrary auto-compaction points.",
@@ -1266,6 +1296,33 @@
       "tags": [
         "3d",
         "react"
+      ],
+      "special": false
+    },
+    {
+      "name": "univer-integrate",
+      "title": "univer-integrate",
+      "description": "Embed Office-like Sheets and Docs editing (formulas, Facade APIs, plugin system) into a web app — the official Univer SDK skill, with framework templates for React, Vue, plain HTML and Node.",
+      "why": "The collection has no office / document-editing / spreadsheet entry — this capability was genuinely missing. Main repo dream-num/univer has 30,832 stars (Apache-2.0). Version note: written for Univer v0.21.x; current Univer is v1.5.2 — the plugin-mode API it teaches (new Univer() + registerPlugins, createUnit) is still valid, and the newer recommended quick start is presets (createUniver + UniverSheetsCorePreset). Honest limit: charts, pivot tables, Slides and real-time collaboration are commercial Pro features, not open source.",
+      "category": "development",
+      "source": {
+        "repo": "dream-num/univer-sdk-skills",
+        "url": "https://github.com/dream-num/univer-sdk-skills",
+        "path": "skills/univer-integrate",
+        "commit": "60e9cbbdbbde9594ad61bad58ad9fbb4d5e17112"
+      },
+      "license": "Apache-2.0",
+      "stars_at_import": 13,
+      "added": "2026-11-20",
+      "requires": [
+        "Web app project (React, Vue or plain HTML)",
+        "@univerjs packages"
+      ],
+      "entry": "full",
+      "adapted": false,
+      "adaptations": "",
+      "tags": [
+        "api"
       ],
       "special": false
     },
@@ -1944,6 +2001,60 @@
       "stars_at_import": 1,
       "added": "2026-11-04",
       "requires": [],
+      "entry": "link-only",
+      "adapted": false,
+      "adaptations": "",
+      "tags": [
+        "video",
+        "generative"
+      ],
+      "special": false
+    },
+    {
+      "name": "clayzo-animation-authoring",
+      "title": "clayzo-animation-authoring",
+      "description": "Agent-first interactive animation authoring: write motion graphics as code, frame-check every frame with clayzo review, and ship live on the web or natively in Swift.",
+      "why": "A genuinely distinct capability no existing entry covers: live interactive animation documents (WebGL/CanvasKit, native Swift) with agent frame-level self-review — a different artifact from Remotion's rendered video and Hyperframes' HTML-to-MP4. Link-only: the skills repo declares no license (cannot vendor) and the engine is proprietary (Clayzo SDK License v1.0; Node.js 22.13+ and account sign-in required).",
+      "category": "media",
+      "source": {
+        "repo": "Clayzo/agent-skills",
+        "url": "https://github.com/Clayzo/agent-skills",
+        "path": "skills/clayzo-animation-authoring",
+        "commit": "3928d4a7756b64025c5e4bec58a1345c20ebf20d"
+      },
+      "license": "none",
+      "stars_at_import": 5,
+      "added": "2026-11-20",
+      "requires": [
+        "Clayzo CLI (Node.js 22.13+, account sign-in)"
+      ],
+      "entry": "link-only",
+      "adapted": false,
+      "adaptations": "",
+      "tags": [
+        "video",
+        "generative"
+      ],
+      "special": false
+    },
+    {
+      "name": "clayzo-animation-shipping",
+      "title": "clayzo-animation-shipping",
+      "description": "Ship Clayzo animations: package and play interactive animation documents on the web (WebGL/CanvasKit players) or natively in Swift on iOS and macOS.",
+      "why": "The shipping half of the official Clayzo skills: packaging and playback of the interactive animation documents the authoring skill produces. Same link-only reasoning as its sibling — no license on the skills repo, proprietary SDK engine.",
+      "category": "media",
+      "source": {
+        "repo": "Clayzo/agent-skills",
+        "url": "https://github.com/Clayzo/agent-skills",
+        "path": "skills/clayzo-animation-shipping",
+        "commit": "3928d4a7756b64025c5e4bec58a1345c20ebf20d"
+      },
+      "license": "none",
+      "stars_at_import": 5,
+      "added": "2026-11-20",
+      "requires": [
+        "Clayzo CLI (Node.js 22.13+, account sign-in)"
+      ],
       "entry": "link-only",
       "adapted": false,
       "adaptations": "",
