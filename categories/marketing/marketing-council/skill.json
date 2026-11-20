@@ -1,0 +1,25 @@
+{
+  "name": "marketing-council",
+  "title": "marketing-council",
+  "description": "Convenes a simulated board of famous marketers — Godin, Ogilvy, Dunford, Sharp, Hormozi and more — each grounded in their documented frameworks, surfaces where they disagree, and lands on a recommendation.",
+  "why": "One perspective is a bias; a structured disagreement between proven frameworks is the cheapest strategy review available.",
+  "category": "marketing",
+  "source": {
+    "repo": "coreyhaines31/marketingskills",
+    "url": "https://github.com/coreyhaines31/marketingskills",
+    "path": "skills/marketing-council",
+    "commit": "5b2b400eec1e7e1cec76245a715d0b0d4fd2a9c1"
+  },
+  "license": "MIT",
+  "stars_at_import": 61654,
+  "added": "2026-11-20",
+  "requires": [],
+  "entry": "full",
+  "adapted": false,
+  "adaptations": "",
+  "tags": [
+    "content",
+    "workflow"
+  ],
+  "special": false
+}

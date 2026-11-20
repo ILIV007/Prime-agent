@@ -1,0 +1,24 @@
+{
+  "name": "emails",
+  "title": "emails",
+  "description": "Builds and improves automated email sequences — welcome, onboarding, nurture and win-back flows — with timing, content and deliverability guidance and a strict no-AI-tells copy standard.",
+  "why": "Email is still the highest-ROI channel most projects underuse; this makes sequences a craft instead of an afterthought.",
+  "category": "marketing",
+  "source": {
+    "repo": "coreyhaines31/marketingskills",
+    "url": "https://github.com/coreyhaines31/marketingskills",
+    "path": "skills/emails",
+    "commit": "5b2b400eec1e7e1cec76245a715d0b0d4fd2a9c1"
+  },
+  "license": "MIT",
+  "stars_at_import": 61654,
+  "added": "2026-11-20",
+  "requires": [],
+  "entry": "full",
+  "adapted": false,
+  "adaptations": "",
+  "tags": [
+    "content"
+  ],
+  "special": false
+}
