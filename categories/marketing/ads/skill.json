@@ -1,0 +1,24 @@
+{
+  "name": "ads",
+  "title": "ads",
+  "description": "Plans, runs and audits paid ads on Google, Meta and LinkedIn: channel and budget judgement, CPA diagnosis, kill-or-keep calls and platform playbooks, ending in facts, hypotheses and explicitly missing data.",
+  "why": "Paid spend burns money fastest when it is vibes-driven; this one insists on evidence and labels what it does not know.",
+  "category": "marketing",
+  "source": {
+    "repo": "coreyhaines31/marketingskills",
+    "url": "https://github.com/coreyhaines31/marketingskills",
+    "path": "skills/ads",
+    "commit": "5b2b400eec1e7e1cec76245a715d0b0d4fd2a9c1"
+  },
+  "license": "MIT",
+  "stars_at_import": 61654,
+  "added": "2026-11-20",
+  "requires": [],
+  "entry": "full",
+  "adapted": false,
+  "adaptations": "",
+  "tags": [
+    "content"
+  ],
+  "special": false
+}

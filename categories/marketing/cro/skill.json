@@ -1,0 +1,24 @@
+{
+  "name": "cro",
+  "title": "cro",
+  "description": "Diagnoses why a page or form is not converting and what to change first: landing and pricing pages, lead forms, and URL reviews, with a prioritised fix list.",
+  "why": "Conversion fixes are the highest-leverage marketing work there is — this makes them systematic instead of guesswork.",
+  "category": "marketing",
+  "source": {
+    "repo": "coreyhaines31/marketingskills",
+    "url": "https://github.com/coreyhaines31/marketingskills",
+    "path": "skills/cro",
+    "commit": "5b2b400eec1e7e1cec76245a715d0b0d4fd2a9c1"
+  },
+  "license": "MIT",
+  "stars_at_import": 61654,
+  "added": "2026-11-20",
+  "requires": [],
+  "entry": "full",
+  "adapted": false,
+  "adaptations": "",
+  "tags": [
+    "content"
+  ],
+  "special": false
+}

@@ -1,0 +1,24 @@
+{
+  "name": "ab-testing",
+  "title": "ab-testing",
+  "description": "Plans, runs and reads A/B tests with statistical discipline: sample size, duration, significance, hypotheses and experiment backlogs, plus the judgement calls — is the result real, can we stop, was it worth testing.",
+  "why": "Turns 'let's test it' into experiments whose results can actually be trusted, instead of noise dressed as data.",
+  "category": "marketing",
+  "source": {
+    "repo": "coreyhaines31/marketingskills",
+    "url": "https://github.com/coreyhaines31/marketingskills",
+    "path": "skills/ab-testing",
+    "commit": "5b2b400eec1e7e1cec76245a715d0b0d4fd2a9c1"
+  },
+  "license": "MIT",
+  "stars_at_import": 61654,
+  "added": "2026-11-20",
+  "requires": [],
+  "entry": "full",
+  "adapted": false,
+  "adaptations": "",
+  "tags": [
+    "content"
+  ],
+  "special": false
+}

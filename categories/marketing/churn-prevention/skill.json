@@ -1,0 +1,24 @@
+{
+  "name": "churn-prevention",
+  "title": "churn-prevention",
+  "description": "Reduces churn end to end: cancellation flows, exit surveys, save offers, dunning and failed-payment recovery, with playbooks for each lever.",
+  "why": "Keeping a customer is cheaper than winning one; this covers the retention side the rest of the marketing shelf ignores.",
+  "category": "marketing",
+  "source": {
+    "repo": "coreyhaines31/marketingskills",
+    "url": "https://github.com/coreyhaines31/marketingskills",
+    "path": "skills/churn-prevention",
+    "commit": "5b2b400eec1e7e1cec76245a715d0b0d4fd2a9c1"
+  },
+  "license": "MIT",
+  "stars_at_import": 61654,
+  "added": "2026-11-20",
+  "requires": [],
+  "entry": "full",
+  "adapted": false,
+  "adaptations": "",
+  "tags": [
+    "content"
+  ],
+  "special": false
+}
