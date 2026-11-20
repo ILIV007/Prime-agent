@@ -1,6 +1,6 @@
 {
   "about": "Void is a link-only shelf for things that were vetted and found genuinely valuable, but do not belong in the collection: they are platforms, plugins, dashboards, or infrastructure — not standalone skills — or they duplicate an entry that already exists. Void entries are NOT skills and are never counted anywhere: not in the skills total, not in any category, not in the MCP count, not in tag statistics. Nothing here is vendored; each entry only links to its source. No cap — admission is by merit alone: vetted, genuinely valuable, and not for the main collection. Void never flows into skills.json or mcps.json.",
-  "count": 13,
+  "count": 14,
   "entries": [
     {
       "added": "2026-11-14",
@@ -196,6 +196,21 @@
       "license": "MIT",
       "stars_at_import": 114777,
       "added": "2026-11-18"
+    },
+    {
+      "name": "craft-anything",
+      "title": "Craft Anything",
+      "description": "A pure-Rust clean-room reverse-engineering and rebuild platform: point it at a website, app or game and its ~320 inspection tools study the original (screenshots and layout in clean-room mode, or code, disassembly and decompilation in the opt-in Deep mode), then it drives your own coding agent to build a fresh version in a stack you name, compares the result against the original at three screen widths, and refines. Ships as a desktop app, a CLI and an MCP server.",
+      "why_valuable": "A genuinely novel capability with no equivalent in the collection: an automated study, build and verify rebuild loop, not just reverse-engineering assistance. Licence-clean (MIT OR Apache-2.0), real and very actively developed — 39k stars and 7.7k forks in its first three weeks.",
+      "why_not_included": "A platform, not a skill: the repo contains zero SKILL.md files; it is a standalone Rust application (13-crate workspace) with its own inspection engine and workbench. It neighbours REA's territory from a different class — REA is a skill riding existing tools, this is a full RE platform. Caveats: three weeks old, self-declared early alpha (parts built but not yet run live), hype-velocity star growth, and using it means running an alpha desktop app that executes build commands on a local machine. Its MCP server is the piece to remember if the capability is ever wanted on tap.",
+      "source": {
+        "repo": "storytold/craft-anything",
+        "url": "https://github.com/storytold/craft-anything",
+        "commit": "b8d7d79090871af648c55b4b57641b7d6be5fe20"
+      },
+      "license": "MIT OR Apache-2.0",
+      "stars_at_import": 39032,
+      "added": "2026-11-20"
     }
   ]
 }
