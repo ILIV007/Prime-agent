@@ -1,6 +1,6 @@
 {
   "about": "Void is a link-only shelf for things that were vetted and found genuinely valuable, but do not belong in the collection: they are platforms, plugins, dashboards, or infrastructure — not standalone skills — or they duplicate an entry that already exists. Void entries are NOT skills and are never counted anywhere: not in the skills total, not in any category, not in the MCP count, not in tag statistics. Nothing here is vendored; each entry only links to its source. No cap — admission is by merit alone: vetted, genuinely valuable, and not for the main collection. Void never flows into skills.json or mcps.json.",
-  "count": 16,
+  "count": 17,
   "entries": [
     {
       "added": "2026-11-14",
@@ -240,6 +240,21 @@
       },
       "license": "Unknown",
       "stars_at_import": 0,
+      "added": "2026-11-21"
+    },
+    {
+      "name": "artex",
+      "title": "ARTEX",
+      "description": "Self-hosted autonomous multi-agent penetration-testing platform (planner/worker loop, traffic capture, evidence-bound findings, human approvals + scope gates); 10 shipped skills, Docker + PostgreSQL, model-agnostic (Anthropic/OpenAI-compatible/Ollama). Upstream is the English translation/continuation of the now-unlisted Autumn-27 original.",
+      "why_valuable": "Autonomous multi-agent pentesting with evidence graphs is something no entry does: findings are bound to the exact request/response proving them, and the platform runs its own planner/worker loops with approvals and audit trails. BugHunter is human-driven skill hunting; ARTEX is an autonomous system with its own runtime.",
+      "why_not_included": "Its 10 SKILL.md files are ARTEX-internal components that cannot be split out — they reference \"your system prompt\" and ARTEX image paths, and assume the ARTEX runtime. api-security is a direct name duplicate of an existing entry; rea and playwright-cli duplicate existing entries (reverse-engineer-anything, playwright on the MCP shelf).",
+      "source": {
+        "repo": "BaaRai/ARTEX",
+        "url": "https://github.com/BaaRai/ARTEX",
+        "commit": "c65034c50f946e80f89489d32dd92981f883cb1d"
+      },
+      "license": "AGPL-3.0",
+      "stars_at_import": 14772,
       "added": "2026-11-21"
     }
   ]

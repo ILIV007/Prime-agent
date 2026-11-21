@@ -1,5 +1,5 @@
 {
-  "count": 132,
+  "count": 133,
   "skills": [
     {
       "adaptations": "Original skill, authored in this repository (the Cookbook section's first entry) by Rick on 2026-11-18 — not imported from upstream. It distils production practice from the fleet's own Telegram bots; facts drawn from public third-party references are credited at the end of SKILL.md and all text is original. source.commit records main's HEAD at authoring time; the skill's own history is this repo's history.",
@@ -546,6 +546,34 @@
       "adaptations": "",
       "tags": [
         "content",
+        "design-systems"
+      ],
+      "special": false
+    },
+    {
+      "name": "stageshow",
+      "title": "stageshow",
+      "description": "Build faux product UI that looks like a real product — a still illustration or an animated demo with a cursor — for marketing pages, feature cards and docs heroes: browser/app windows, dashboards, phones, notifications, terminals, bento grids and cursor walkthroughs, framed, masked and cropped like a polished marketing site. React and plain CSS.",
+      "why": "No entry does faux product UI stills + animated cursor demos for marketing — the capability was genuinely unoccupied. Closest neighbours do different jobs: emil-design-eng is motion-craft judgment for real products, ui-ux-pro-max/ui-styling build real UIs, and the GSAP skills animate real products; stageshow stages fake-but-believable product UI as illustrations, with a copyable React kit (Stage/Window/Phone/Act API), 60+ gold examples and a film/--gate rehearsal loop. Honest limits: React-only kit; third-party brand/app-icon assets are excluded from the MIT (NOTICE.md + kit/brands/SOURCES.md travel with the import); one-month maintenance record (repo created 2026-10-26, last push 2026-11-05); minor version mismatch (frontmatter 1.1.1 vs package.json 0.1.0).",
+      "category": "design",
+      "source": {
+        "repo": "benjitaylor/skills",
+        "url": "https://github.com/benjitaylor/skills",
+        "path": "stageshow",
+        "commit": "299140fafd08df55a9c234e610c3f64af3f45531"
+      },
+      "license": "MIT",
+      "stars_at_import": 3940,
+      "added": "2026-11-21",
+      "requires": [
+        "Node >= 20.19 + npm deps for kit/playground",
+        "browser binary for the film/--gate loop (optional)"
+      ],
+      "entry": "full",
+      "adapted": false,
+      "adaptations": "",
+      "tags": [
+        "react",
         "design-systems"
       ],
       "special": false
