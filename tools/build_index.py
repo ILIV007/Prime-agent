@@ -153,8 +153,13 @@ def skill_row(meta, folder):
     source = meta["source"]
     commit = source["commit"][:7]
     if meta.get("entry") == "link-only":
-        tree_url = f"{source['url']}/tree/{source['commit']}/{source['path']}"
-        name_cell = f"[{name}]({tree_url}) · link-only"
+        # Website sources have commit "n/a" (no repo to pin) — link the
+        # name straight to the site instead of a dead /tree/n/a/... URL.
+        if source["commit"] == "n/a":
+            name_cell = f"[{name}]({source['url']}) · link-only"
+        else:
+            tree_url = f"{source['url']}/tree/{source['commit']}/{source['path']}"
+            name_cell = f"[{name}]({tree_url}) · link-only"
     else:
         name_cell = f"[{name}]({folder})"
     return (f"| {name_cell} | {esc(meta['description'])} | {esc(meta['why'])} "

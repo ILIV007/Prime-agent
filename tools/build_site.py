@@ -296,7 +296,9 @@ def source_url(skill):
     url = src.get("url") or REPO_URL
     commit = src.get("commit")
     path = (src.get("path") or "").strip("/")
-    if commit:
+    # Website sources have commit "n/a" (no repo to pin) — link straight
+    # to the site instead of building a dead /tree/n/a/... URL.
+    if commit and commit != "n/a":
         url = f"{url}/tree/{commit}"
         if path and path != ".":
             url = f"{url}/{path}"
