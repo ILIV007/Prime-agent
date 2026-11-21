@@ -1,0 +1,27 @@
+{
+  "name": "fontshare",
+  "title": "Fontshare",
+  "description": "Free font service from the Indian Type Foundry — 100 families / 926 styles (Satoshi, General Sans, Clash Display, Switzer, Cabinet Grotesk, Zodiak, Boska) with a public JSON catalogue API and a Google-Fonts-style CSS API.",
+  "why": "An agent can query the public JSON catalogue API (https://api.fontshare.com/v2/fonts) and the CSS API (https://api.fontshare.com/v2/css) to pick fonts and emit @font-face rules — no font-source entry exists anywhere in the collection. LICENSE WARNING: mixed — 64 families under the ITF Free Font License (free for personal and commercial use, but no modification, subsetting, format conversion or renaming, and files may not be passed to clients or agencies; each user must download from Fontshare) and 36 under SIL OFL. Always check license_type per family before use; never vendor FFL files.",
+  "category": "design",
+  "source": {
+    "repo": "fontshare.com",
+    "url": "https://fontshare.com",
+    "path": "api/v2/fonts",
+    "commit": "n/a"
+  },
+  "license": "Mixed: ITF Free Font License (64) + SIL OFL (36)",
+  "stars_at_import": 0,
+  "added": "2026-11-21",
+  "requires": [
+    "Internet access"
+  ],
+  "entry": "link-only",
+  "adapted": false,
+  "adaptations": "",
+  "tags": [
+    "api",
+    "design-systems"
+  ],
+  "special": false
+}

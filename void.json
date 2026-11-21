@@ -1,6 +1,6 @@
 {
   "about": "Void is a link-only shelf for things that were vetted and found genuinely valuable, but do not belong in the collection: they are platforms, plugins, dashboards, or infrastructure — not standalone skills — or they duplicate an entry that already exists. Void entries are NOT skills and are never counted anywhere: not in the skills total, not in any category, not in the MCP count, not in tag statistics. Nothing here is vendored; each entry only links to its source. No cap — admission is by merit alone: vetted, genuinely valuable, and not for the main collection. Void never flows into skills.json or mcps.json.",
-  "count": 14,
+  "count": 16,
   "entries": [
     {
       "added": "2026-11-14",
@@ -211,6 +211,36 @@
       "license": "MIT OR Apache-2.0",
       "stars_at_import": 39032,
       "added": "2026-11-20"
+    },
+    {
+      "name": "jiro-build",
+      "title": "Jiro",
+      "description": "Commercial AI-prompt library for vibe-coding websites — 1525+ sections and templates with source code, plus a Jiro MCP server that connects the library to Claude Code, Cursor and Codex (paid plans only).",
+      "why_valuable": "The largest ready-made prompt + source-code library for AI website builders, with an MCP an agent can pull sections from once a paid account exists — a prompt library, not just inspiration.",
+      "why_not_included": "Proprietary and paywalled (from $39/3 months; MCP only on the $65/yr and $99 lifetime plans); no importable skill, no free tier, no public repo.",
+      "source": {
+        "repo": "jiro.build",
+        "url": "https://jiro.build",
+        "commit": "n/a"
+      },
+      "license": "Proprietary (paid)",
+      "stars_at_import": 0,
+      "added": "2026-11-21"
+    },
+    {
+      "name": "fontinlogo",
+      "title": "FontInLogo",
+      "description": "Brand-to-font lookup database — which typeface powers famous logos (Netflix → Bebas Neue, Star Wars → Orbitron), with verification status per entry and free lookalike suggestions.",
+      "why_valuable": "The only font-identification reference in the orbit of the collection: a genuine lookup ('what font is behind X, what is the closest free font') with 30,000+ users.",
+      "why_not_included": "Read-only reference database with no API, no MCP and no skill — useful to consult, not importable.",
+      "source": {
+        "repo": "fontinlogo.com",
+        "url": "https://fontinlogo.com",
+        "commit": "n/a"
+      },
+      "license": "Unknown",
+      "stars_at_import": 0,
+      "added": "2026-11-21"
     }
   ]
 }
