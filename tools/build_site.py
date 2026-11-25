@@ -17,6 +17,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 MANIFEST = ROOT / "skills.json"
 MCP_MANIFEST = ROOT / "mcps.json"
+SUBAGENTS_MANIFEST = ROOT / "subagents.json"
 VOID_MANIFEST = ROOT / "void.json"
 OUT = ROOT / "site" / "index.html"
 REPO_URL = "https://github.com/ILIV007/prime-skill"
@@ -389,6 +390,40 @@ def mcp_section(servers):
 </section>"""
 
 
+def subagents_section(agents):
+    """Sub-agents: delegable agent definitions, link-only like the MCP shelf."""
+    if not agents:
+        return ""
+    rows = []
+    for agent in sorted(agents, key=lambda a: (a.get("name") or "").lower()):
+        src = agent.get("source") or {}
+        url = src.get("url") or REPO_URL
+        stars = agent.get("stars_at_import")
+        stars_txt = f"{stars:,}" if isinstance(stars, int) else "—"
+        meta = " · ".join(x for x in [
+            str(agent.get("kind") or ""),
+            ", ".join(agent.get("harnesses") or []),
+            str(agent.get("license") or ""),
+            f"★ {stars_txt}",
+        ] if x)
+        paid = ""
+        if agent.get("paid"):
+            paid = f' <span class="badge linkonly">{esc(agent["paid"])}</span>'
+        rows.append(
+            f'<li><a class="mcp-name" href="{esc(url)}" target="_blank" rel="noopener">'
+            f'{esc(agent.get("title") or agent.get("name") or "")}</a>{paid} '
+            f'<span class="mcp-meta">{esc(meta)}</span><br>'
+            f'{esc(agent.get("description") or "")}'
+            f'<span class="mcp-access">Access: {esc(agent.get("access") or "")}</span></li>')
+    return f"""<section class="mcp">
+  <h2>🤖 Sub-agents</h2>
+  <p class="mcp-note">Delegable agent definitions, not skills — recommendations only, nothing vendored. Each entry states what tools and permissions the agent expects; paid services are labelled. Full list with provenance in <a href="{REPO_URL}/blob/main/subagents.json">subagents.json</a>.</p>
+  <ul>
+{''.join(rows)}
+  </ul>
+</section>"""
+
+
 def void_section(entries):
     """Void: vetted, valuable, not adopted — link-only, and NOT skills.
 
@@ -431,6 +466,9 @@ def main():
     mcp_servers = []
     if MCP_MANIFEST.exists():
         mcp_servers = json.loads(MCP_MANIFEST.read_text(encoding="utf-8")).get("servers") or []
+    subagents = []
+    if SUBAGENTS_MANIFEST.exists():
+        subagents = json.loads(SUBAGENTS_MANIFEST.read_text(encoding="utf-8")).get("agents") or []
     void_entries = []
     if VOID_MANIFEST.exists():
         void_entries = json.loads(VOID_MANIFEST.read_text(encoding="utf-8")).get("entries") or []
@@ -502,6 +540,7 @@ def main():
 </main>
 <p id="empty">No skills match your filters. Try clearing a tag or the search.</p>
 {mcp_section(mcp_servers)}
+{subagents_section(subagents)}
 {void_section(void_entries)}
 <p class="site-footer">Generated from <a href="{REPO_URL}/blob/main/skills.json">skills.json</a> · “Link-only” entries are listed with metadata and a source link only, because their license does not permit redistribution.</p>
 </div>
@@ -513,7 +552,7 @@ def main():
 """
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(page, encoding="utf-8")
-    print(f"wrote {OUT} ({total} skills, {special_count} specials, {link_only_count} link-only, {len(tag_counts)} tags, {len(mcp_servers)} MCP servers, {len(void_entries)} Void entries)")
+    print(f"wrote {OUT} ({total} skills, {special_count} specials, {link_only_count} link-only, {len(tag_counts)} tags, {len(mcp_servers)} MCP servers, {len(subagents)} sub-agents, {len(void_entries)} Void entries)")
 
 
 if __name__ == "__main__":
