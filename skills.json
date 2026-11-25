@@ -14,8 +14,8 @@
       "source": {
         "commit": "c0460b32b4ad5c85a0345fb0266e34020d81a15e",
         "path": "categories/cookbook/policy",
-        "repo": "ILIV007/prime-skill",
-        "url": "https://github.com/ILIV007/prime-skill"
+        "repo": "ILIV007/Prime-agent",
+        "url": "https://github.com/ILIV007/Prime-agent"
       },
       "stars_at_import": null,
       "tags": [
@@ -37,8 +37,8 @@
       "source": {
         "commit": "0ea909601c354b34f6ef543dafae128bb57db184",
         "path": "categories/cookbook/telegram-bot-workers",
-        "repo": "ILIV007/prime-skill",
-        "url": "https://github.com/ILIV007/prime-skill"
+        "repo": "ILIV007/Prime-agent",
+        "url": "https://github.com/ILIV007/Prime-agent"
       },
       "stars_at_import": null,
       "tags": [
@@ -2387,7 +2387,7 @@
       "name": "ffmpeg-skill",
       "title": "ffmpeg-skill",
       "description": "A complete local FFmpeg editing system: 42 scripted tools to cut, join, reframe, caption, remove silence, check loudness and export audio/video.",
-      "why": "Deterministic media-file work, fully local and scriptable — nothing else in Prime Skill touches actual audio or video files.",
+      "why": "Deterministic media-file work, fully local and scriptable — nothing else in Prime-agent touches actual audio or video files.",
       "category": "media",
       "source": {
         "repo": "kajisho5/ffmpeg-skill",
@@ -2605,7 +2605,7 @@
       "name": "voicestudio",
       "title": "voicestudio",
       "description": "Drives a locally running VoiceStudio backend (REST API or MCP): text-to-speech with saved or designed voices, voice cloning, transcription, and automated dubbing or narration workflows.",
-      "why": "The collection's only voice skill: local-first speech generation and cloning, no cloud TTS account — nothing else in Prime Skill makes or processes spoken audio.",
+      "why": "The collection's only voice skill: local-first speech generation and cloning, no cloud TTS account — nothing else in Prime-agent makes or processes spoken audio.",
       "category": "media",
       "source": {
         "repo": "debpalash/VoiceStudio",

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate the Prime Skill catalog site (site/index.html).
+"""Generate the Prime-agent catalog site (site/index.html).
 
 Stdlib only. The output is a single self-contained HTML page (inline CSS
 and JS, no external requests) organized around the collection's four
@@ -30,7 +30,7 @@ PACKS_MANIFEST = ROOT / "packs.json"
 TOOLS_MANIFEST = ROOT / "tools.json"
 VOID_MANIFEST = ROOT / "void.json"
 OUT = ROOT / "site" / "index.html"
-REPO_URL = "https://github.com/ILIV007/prime-skill"
+REPO_URL = "https://github.com/ILIV007/Prime-agent"
 CATEGORY_ORDER = ["development", "design", "marketing", "media", "research",
                   "security", "reverse-engineering", "cookbook"]
 # One vivid accent per category and per branch: the catalog is colour-coded
@@ -588,15 +588,15 @@ def main():
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Prime Skill — skills, MCP servers and sub-agents for AI agents</title>
-<meta name="description" content="Prime Skill: a curated collection of agent skills, recommended MCP servers and delegable sub-agents — one representative per capability, vetted and categorized.">
+<title>Prime-agent — skills, MCP servers and sub-agents for AI agents</title>
+<meta name="description" content="Prime-agent: a curated collection of agent skills, recommended MCP servers and delegable sub-agents — one representative per capability, vetted and categorized.">
 <style>{CSS}</style>
 </head>
 <body>
 <header class="site">
   <canvas id="hero3d" aria-hidden="true"></canvas>
   <p class="kicker">Curated for AI agents</p>
-  <h1>Prime Skill</h1>
+  <h1>Prime-agent</h1>
   <p class="tagline">Skills tell an agent how to work, MCP servers give it hands, sub-agents give it a team. One vetted representative per capability — no duplicates, every entry licence-checked.</p>
   <div class="stats">
     <span class="stat" style="--c:#22d3ee"><b>{total}</b> skills</span>
