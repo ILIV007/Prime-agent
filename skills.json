@@ -1,5 +1,5 @@
 {
-  "count": 133,
+  "count": 134,
   "skills": [
     {
       "adaptations": "Original skill, authored in this repository (the Cookbook section's first entry) by Rick on 2026-11-18 — not imported from upstream. It distils production practice from the fleet's own Telegram bots; facts drawn from public third-party references are credited at the end of SKILL.md and all text is original. source.commit records main's HEAD at authoring time; the skill's own history is this repo's history.",
@@ -896,6 +896,30 @@
       "tags": [
         "harness",
         "workflow"
+      ],
+      "special": false
+    },
+    {
+      "name": "fast-anything",
+      "title": "fast-anything",
+      "description": "Speeds up a slow app by porting only its hottest pure functions to Rust — profiles under real workload, records real calls, and proves each port identical before enabling it.",
+      "why": "The first performance skill in the collection: a measured, verified hot-path port with a strong equivalence guarantee, instead of a full rewrite or blind optimisation.",
+      "category": "development",
+      "source": {
+        "repo": "EL4CTEO/fast-anything",
+        "url": "https://github.com/EL4CTEO/fast-anything",
+        "path": "skills/fast-anything",
+        "commit": "1fdf12ef68defc80e2624c5c5bcd94be70c90641"
+      },
+      "license": "MIT",
+      "stars_at_import": null,
+      "added": "2026-11-25",
+      "requires": [],
+      "entry": "full",
+      "adapted": false,
+      "adaptations": "",
+      "tags": [
+        "automation"
       ],
       "special": false
     },

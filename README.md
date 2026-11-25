@@ -121,13 +121,13 @@ categories because provenance, not topic, is its axis.
 ## At a glance
 
 <!-- GENERATED:INDEX:START -->
-**133 skills · 8 categories · 9 link-only**
+**134 skills · 8 categories · 9 link-only**
 
 | Category | Skills | Scope | Page |
 |---|---|---|---|
 | Cookbook | 1 | Original skills written in-house for this collection — recipes distilled from production work, not imported. | [Browse →](categories/cookbook/README.md) |
 | Design | 24 | Visual and interface design: design systems, styling, branding, and generated visuals. | [Browse →](categories/design/README.md) |
-| Development | 38 | Building software: planning, implementation, testing, debugging, and harness workflows. | [Browse →](categories/development/README.md) |
+| Development | 39 | Building software: planning, implementation, testing, debugging, and harness workflows. | [Browse →](categories/development/README.md) |
 | Marketing | 19 | Go-to-market: positioning, copy, content, social, and launches. | [Browse →](categories/marketing/README.md) |
 | Media | 11 | Media production: video creation and editing, motion, and filmmaking craft. | [Browse →](categories/media/README.md) |
 | Research | 19 | Finding things out: social-media research, deep research, search, and literature. | [Browse →](categories/research/README.md) |
@@ -220,7 +220,7 @@ categories because provenance, not topic, is its axis.
 | [ui-styling](categories/design/ui-styling/) | Builds accessible UIs with shadcn/ui, Radix, and Tailwind, plus canvas-based visual designs. | The practical implementation partner to the design-system rules. | — | [nextlevelbuilder/ui-ux-pro-max-skill](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) @ dd9a1b4 |
 | [ui-ux-pro-max](categories/design/ui-ux-pro-max/) | Design intelligence for web, mobile, and desktop UIs, with searchable local data on styles, palettes, font pairings, UX guidelines, and stacks. | Gives interface work a real design database instead of guesswork; the flagship of the design set. | — | [nextlevelbuilder/ui-ux-pro-max-skill](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) @ dd9a1b4 |
 
-### [Development](categories/development/README.md) (38)
+### [Development](categories/development/README.md) (39)
 
 | Skill | What it does | Why it's here | Requires | Source |
 |---|---|---|---|---|
@@ -235,6 +235,7 @@ categories because provenance, not topic, is its axis.
 | [domain-modeling](categories/development/domain-modeling/) | Builds and sharpens a project's domain model: maintains a living glossary of codebase terminology and records architecture decisions as ADRs. | Shared vocabulary keeps agents and humans from talking past each other; this makes terminology a maintained artifact, not folklore. | — | [mattpocock/skills](https://github.com/mattpocock/skills) @ 4ae2317 |
 | [durable-objects](categories/development/durable-objects/) | Build, debug, or review Cloudflare Durable Objects code for persistent state and coordination. | The one missing platform primitive: persistent state/coordination (rooms, games, booking, alarms, WebSockets) — completes Workers + DOs coverage. | — | [cloudflare/skills](https://github.com/cloudflare/skills) @ cbf893b |
 | [eval-harness](categories/development/eval-harness/) | Eval-driven development for AI agent work: capability and regression evals defined before coding, code/model/rule/human graders, and pass@k / pass^k reliability tracking. Vendored as-is from ECC, where it is framed for Claude Code sessions; the methodology is harness-agnostic. | The collection had zero eval methodology for prompt or agent changes — the exact gap behind flagship-validation failures in the owner's bots, where a change ships on vibes instead of a regression suite. | — | [affaan-m/ECC](https://github.com/affaan-m/ECC) @ 3f14a10 |
+| [fast-anything](categories/development/fast-anything/) | Speeds up a slow app by porting only its hottest pure functions to Rust — profiles under real workload, records real calls, and proves each port identical before enabling it. | The first performance skill in the collection: a measured, verified hot-path port with a strong equivalence guarantee, instead of a full rewrite or blind optimisation. | — | [EL4CTEO/fast-anything](https://github.com/EL4CTEO/fast-anything) @ 1fdf12e |
 | [find-skills](categories/development/find-skills/) | Finds and installs agent skills from the open ecosystem through the Skills CLI and the skills.sh registry. | Skill discovery is a different job from skill authoring — and the front door for growing this very collection. | Node.js; skills.sh access | [vercel-labs/skills](https://github.com/vercel-labs/skills) @ 9197d91 |
 | [frameworks-on-cloudflare](categories/development/frameworks-on-cloudflare/) | Build, migrate, and deploy web-framework applications on Cloudflare Workers. Use when a framework project such as Astro, SvelteKit, React Router, TanStack Start, Nuxt, Hono, or a React or Vue SPA targets Cloudflare, or when a framework repository contains Workers deployment configuration. | Framework apps on Workers (Astro, SvelteKit, React Router, TanStack, Nuxt, Hono, SPAs) — the deploy side his vercel-react-best-practices (code rules) doesn't cover. | — | [cloudflare/skills](https://github.com/cloudflare/skills) @ cbf893b |
 | [grill-me](categories/development/grill-me/) | A relentless one-question-at-a-time interview that stress-tests a plan or design until every branch of the decision tree is resolved. | The sharp end of requirements work: it surfaces the decisions brainstorming leaves unmade, before they turn into rework. | — | [mattpocock/skills](https://github.com/mattpocock/skills) @ 4ae2317 |
