@@ -26,11 +26,31 @@ ROOT = Path(__file__).resolve().parent.parent
 MANIFEST = ROOT / "skills.json"
 MCP_MANIFEST = ROOT / "mcps.json"
 SUBAGENTS_MANIFEST = ROOT / "subagents.json"
+PACKS_MANIFEST = ROOT / "packs.json"
 VOID_MANIFEST = ROOT / "void.json"
 OUT = ROOT / "site" / "index.html"
 REPO_URL = "https://github.com/ILIV007/prime-skill"
 CATEGORY_ORDER = ["development", "design", "marketing", "media", "research",
                   "security", "reverse-engineering", "cookbook"]
+# One vivid accent per category and per branch: the catalog is colour-coded
+# so a visitor can tell branches and categories apart at a glance.
+CATEGORY_COLORS = {
+    "development": "#22d3ee",
+    "design": "#ff2e63",
+    "marketing": "#ffd319",
+    "media": "#a855f7",
+    "research": "#22c55e",
+    "security": "#f97316",
+    "reverse-engineering": "#fb7185",
+    "cookbook": "#f472b6",
+}
+BRANCH_COLORS = {
+    "skills": "#22d3ee",
+    "mcp": "#a855f7",
+    "subagents": "#ff2e63",
+    "packs": "#ffd319",
+    "void": "#7c8499",
+}
 
 CSS = """
 :root{
@@ -46,13 +66,28 @@ a{color:var(--accent);text-decoration:none}
 a:hover{text-decoration:underline}
 a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 .wrap{max-width:1180px;margin:0 auto;padding:0 20px 72px}
-header.site{padding:56px 20px 8px;text-align:center}
-.kicker{color:var(--faint);font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;margin:0 0 10px}
-h1{font-size:2.4rem;line-height:1.15;margin:0 0 12px;font-weight:750;letter-spacing:-.01em}
+header.site{position:relative;overflow:hidden;padding:64px 20px 14px;text-align:center;
+  background:
+    radial-gradient(640px 260px at 12% 0%,rgba(255,46,99,.22),transparent 60%),
+    radial-gradient(720px 280px at 88% 8%,rgba(34,211,238,.20),transparent 60%),
+    radial-gradient(560px 320px at 50% 115%,rgba(168,85,247,.22),transparent 60%),
+    linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px),
+    #11141c;
+  background-size:auto,auto,auto,26px 26px,26px 26px,auto;
+  border-bottom:1px solid var(--line)}
+#hero3d{position:absolute;inset:0;width:100%;height:100%;display:block;opacity:.6}
+header.site>*{position:relative;z-index:1}
+.kicker{color:#ffd319;font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;margin:0 0 10px;font-weight:700}
+h1{font-size:2.7rem;line-height:1.15;margin:0 0 12px;font-weight:800;letter-spacing:-.01em;
+  background:linear-gradient(92deg,#22d3ee,#a855f7 45%,#ff2e63 75%,#ffd319);
+  -webkit-background-clip:text;background-clip:text;color:transparent}
 .tagline{color:var(--muted);max-width:680px;margin:0 auto;font-size:1.05rem}
 .stats{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:26px auto 4px}
-.stat{background:var(--panel);border:1px solid var(--line);border-radius:999px;
+.stat{background:rgba(23,26,33,.85);border:1px solid var(--line);border-radius:999px;
   padding:7px 16px;font-size:.92rem;color:var(--muted)}
+.stat::before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;
+  background:var(--c,var(--accent));margin-right:8px;box-shadow:0 0 8px var(--c,var(--accent))}
 .stat b{color:var(--text);font-weight:700}
 .toolbar{position:sticky;top:0;z-index:5;background:rgba(15,17,21,.94);
   backdrop-filter:blur(6px);border-bottom:1px solid var(--line);
@@ -63,6 +98,10 @@ h1{font-size:2.4rem;line-height:1.15;margin:0 0 12px;font-weight:750;letter-spac
   font-weight:600;cursor:pointer;font-family:inherit}
 .tab:hover{color:var(--text);border-color:var(--faint)}
 .tab[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.tab[data-branch="skills"][aria-pressed="true"]{background:#22d3ee;border-color:#22d3ee}
+.tab[data-branch="mcp"][aria-pressed="true"]{background:#a855f7;border-color:#a855f7;color:#fff}
+.tab[data-branch="subagents"][aria-pressed="true"]{background:#ff2e63;border-color:#ff2e63;color:#fff}
+.tab[data-branch="void"][aria-pressed="true"]{background:#7c8499;border-color:#7c8499;color:#fff}
 .tab .n{opacity:.75;font-size:.85em;margin-left:5px}
 #search{width:100%;margin-top:12px;padding:12px 16px;font-size:1rem;color:var(--text);
   background:var(--panel);border:1px solid var(--line);border-radius:10px;outline:none}
@@ -70,6 +109,14 @@ h1{font-size:2.4rem;line-height:1.15;margin:0 0 12px;font-weight:750;letter-spac
 section.branch{margin-top:44px}
 .branch-head{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
 .branch-head h2{font-size:1.45rem;margin:0;font-weight:700}
+.branch-head h2::before{content:"";display:inline-block;width:11px;height:11px;border-radius:3px;
+  background:var(--bc,var(--accent));margin-right:10px;box-shadow:0 0 10px var(--bc,var(--accent));
+  transform:rotate(45deg)}
+section.branch[data-branch="skills"]{--bc:#22d3ee}
+section.branch[data-branch="mcp"]{--bc:#a855f7}
+section.branch[data-branch="subagents"]{--bc:#ff2e63}
+section.branch[data-branch="packs"]{--bc:#ffd319}
+section.branch[data-branch="void"]{--bc:#7c8499}
 .branch-head .shown{color:var(--faint);font-size:.9rem}
 .branch-note{color:var(--muted);max-width:780px;margin:8px 0 0}
 .filters{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px;align-items:center}
@@ -81,9 +128,15 @@ section.branch{margin-top:44px}
 .chip[aria-pressed="true"]{background:var(--text);border-color:var(--text);color:var(--bg)}
 .chip .n{opacity:.7;font-size:.85em;margin-left:4px}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:16px;margin-top:18px}
-.card{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);
-  padding:18px;display:flex;flex-direction:column;gap:8px}
-.card:hover{border-color:var(--faint)}
+.card{position:relative;background:linear-gradient(180deg,var(--panel2),var(--panel) 55%);
+  border:1px solid var(--line);border-radius:var(--radius);
+  padding:20px 18px 18px;display:flex;flex-direction:column;gap:8px;overflow:hidden;
+  transform-style:preserve-3d;will-change:transform;
+  transition:border-color .18s ease,box-shadow .18s ease}
+.card::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;
+  background:linear-gradient(90deg,var(--catc,var(--accent)),transparent 85%)}
+.card:hover{border-color:var(--catc,var(--faint));
+  box-shadow:0 14px 34px rgba(0,0,0,.45),0 0 0 1px var(--catc,var(--line)),0 0 22px -6px var(--catc,var(--accent))}
 .card h3{margin:0;font-size:1.08rem;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
 .badge{font-size:.68rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;
   padding:2px 8px;border-radius:999px;border:1px solid var(--line);color:var(--muted)}
@@ -196,6 +249,98 @@ for(const t of document.querySelectorAll('.card .tag')){
   });
 }
 apply();
+
+/* --- 3D hero: rotating wireframe cubes + particles, vanilla canvas --- */
+(function(){
+  const canvas=document.getElementById('hero3d');
+  if(!canvas) return;
+  const ctx=canvas.getContext('2d');
+  if(!ctx) return;
+  const reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const COLORS=['#22d3ee','#a855f7','#ff2e63','#ffd319','#22c55e','#f97316'];
+  const V=[[-1,-1,-1],[1,-1,-1],[1,1,-1],[-1,1,-1],[-1,-1,1],[1,-1,1],[1,1,1],[-1,1,1]];
+  const E=[[0,1],[1,2],[2,3],[3,0],[4,5],[5,6],[6,7],[7,4],[0,4],[1,5],[2,6],[3,7]];
+  let seed=11;
+  const rnd=()=>{seed=(seed*16807)%2147483647;return seed/2147483647;};
+  const cubes=[];
+  for(let i=0;i<16;i++){
+    cubes.push({x:(rnd()-0.5)*9,y:(rnd()-0.5)*3.4,z:rnd()*3-1,s:0.28+rnd()*0.5,
+      c:COLORS[i%COLORS.length],ph:rnd()*6.28,sp:0.5+rnd()});
+  }
+  const dots=[];
+  for(let i=0;i<70;i++) dots.push({x:rnd(),y:rnd(),r:0.6+rnd()*1.6,c:COLORS[i%COLORS.length],ph:rnd()*6.28});
+  let W=0,H=0,mx=0,my=0,tx=0,ty=0,t=0,visible=true;
+  function resize(){
+    const r=canvas.getBoundingClientRect();
+    W=canvas.width=Math.max(2,Math.round(r.width));
+    H=canvas.height=Math.max(2,Math.round(r.height));
+  }
+  function project(x,y,z){
+    const f=5.2/(5.2+z+3);
+    return [W/2+x*f*H*0.42, H/2+y*f*H*0.42, f];
+  }
+  function draw(){
+    ctx.clearRect(0,0,W,H);
+    tx+=(mx-tx)*0.05; ty+=(my-ty)*0.05;
+    const ay=t*0.45+tx*0.8, ax=0.55+ty*0.4;
+    const cy=Math.cos(ay),sy=Math.sin(ay),cx=Math.cos(ax),sx=Math.sin(ax);
+    for(const d of dots){
+      const tw=0.35+0.3*Math.sin(t*1.4+d.ph);
+      ctx.globalAlpha=tw;
+      ctx.fillStyle=d.c;
+      ctx.beginPath();
+      ctx.arc(d.x*W,d.y*H,d.r,0,6.29);
+      ctx.fill();
+    }
+    ctx.globalAlpha=1;
+    for(const cube of cubes){
+      const bob=Math.sin(t*cube.sp+cube.ph)*0.14;
+      const pts=V.map(([x,y,z])=>{
+        let X=x*cube.s,Y=y*cube.s,Z=z*cube.s;
+        let X1=X*cy+Z*sy, Z1=-X*sy+Z*cy;
+        let Y1=Y*cx-Z1*sx, Z2=Y*sx+Z1*cx;
+        return project(X1+cube.x, Y1+cube.y+bob, Z2+cube.z);
+      });
+      ctx.strokeStyle=cube.c;
+      ctx.lineWidth=1.4;
+      ctx.globalAlpha=0.85;
+      ctx.beginPath();
+      for(const [a,b] of E){ ctx.moveTo(pts[a][0],pts[a][1]); ctx.lineTo(pts[b][0],pts[b][1]); }
+      ctx.stroke();
+    }
+    ctx.globalAlpha=1;
+  }
+  function frame(){
+    if(visible){ t+=0.012; draw(); }
+    if(!reduced) requestAnimationFrame(frame);
+  }
+  window.addEventListener('pointermove',e=>{
+    mx=e.clientX/window.innerWidth-0.5;
+    my=e.clientY/window.innerHeight-0.5;
+  },{passive:true});
+  window.addEventListener('resize',()=>{ resize(); draw(); });
+  if('IntersectionObserver' in window){
+    new IntersectionObserver(en=>{ visible=en[0].isIntersecting; },{threshold:0.02}).observe(canvas);
+  }
+  resize();
+  draw();
+  if(!reduced) requestAnimationFrame(frame);
+})();
+
+/* --- Card tilt: subtle 3D lean toward the pointer --- */
+(function(){
+  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if(!window.matchMedia('(pointer: fine)').matches) return;
+  for(const card of document.querySelectorAll('.card')){
+    card.addEventListener('pointermove',e=>{
+      const r=card.getBoundingClientRect();
+      const px=(e.clientX-r.left)/r.width-0.5;
+      const py=(e.clientY-r.top)/r.height-0.5;
+      card.style.transform=`perspective(900px) rotateX(${(-py*6).toFixed(2)}deg) rotateY(${(px*7).toFixed(2)}deg) translateY(-3px)`;
+    });
+    card.addEventListener('pointerleave',()=>{ card.style.transform=''; });
+  }
+})();
 """
 
 
@@ -260,7 +405,8 @@ def skill_card(skill):
                        skill.get("why"), category, " ".join(tags),
                        "special" if special else "",
                        (skill.get("source") or {}).get("repo"))
-    return f"""<article class="card" data-branch="skills" data-category="{esc(category)}" data-tags="{esc(' '.join(tags))}" data-special="{'1' if special else ''}" data-search="{blob}">
+    color = CATEGORY_COLORS.get(category, BRANCH_COLORS["skills"])
+    return f"""<article class="card" style="--catc:{color}" data-branch="skills" data-category="{esc(category)}" data-tags="{esc(' '.join(tags))}" data-special="{'1' if special else ''}" data-search="{blob}">
   <h3>{esc(name)} {badges}</h3>
   <p class="desc">{esc(skill.get('description') or '')}</p>
   <p class="why">{esc(skill.get('why') or '')}</p>
@@ -282,7 +428,7 @@ def shelf_card(entry, branch, meta_parts, access_label):
     meta = " · ".join(x for x in meta_parts if x)
     blob = search_blob(entry.get("name"), name, entry.get("description"),
                        entry.get("why"), meta, src.get("repo"))
-    return f"""<article class="card" data-branch="{branch}" data-search="{blob}">
+    return f"""<article class="card" style="--catc:{BRANCH_COLORS.get(branch, '#5ea8ff')}" data-branch="{branch}" data-search="{blob}">
   <h3>{esc(name)} {badges}</h3>
   <p class="desc">{esc(entry.get('description') or '')}</p>
   <p class="why">{esc(entry.get('why') or '')}</p>
@@ -299,13 +445,41 @@ def void_card(entry):
     blob = search_blob(entry.get("name"), name, entry.get("description"),
                        entry.get("why_valuable"), entry.get("why_not_included"),
                        src.get("repo"))
-    return f"""<article class="card" data-branch="void" data-search="{blob}">
+    return f"""<article class="card" style="--catc:{BRANCH_COLORS['void']}" data-branch="void" data-search="{blob}">
   <h3>{esc(name)}</h3>
   <p class="desc">{esc(entry.get('description') or '')}</p>
   <p class="why"><b>Why it's valuable:</b> {esc(entry.get('why_valuable') or '')}</p>
   <p class="why"><b>Why it's not in the collection:</b> {esc(entry.get('why_not_included') or '')}</p>
   <div class="meta"><span>License: {esc(license_txt(entry))}</span><span>★ {esc(stars_txt(entry))} at import</span></div>
   <footer><a href="{esc(url)}" target="_blank" rel="noopener">Source ↗</a></footer>
+</article>"""
+
+
+def pack_card(pack, lookups):
+    """A pack card: the job, why this set, and its entries grouped by branch."""
+    name = pack.get("title") or pack.get("name") or ""
+    groups = []
+    blob_parts = [pack.get("name"), name, pack.get("description"), pack.get("why")]
+    for branch, label in (("skills", "Skills"), ("mcp", "MCP"), ("subagents", "Sub-agents")):
+        links = []
+        for ref in pack.get("entries") or []:
+            if ref.get("branch") != branch:
+                continue
+            entry = lookups[branch].get(ref.get("name")) or {}
+            title = entry.get("title") or ref.get("name") or ""
+            blob_parts.append(ref.get("name"))
+            if branch == "skills":
+                url = folder_url(entry) if entry else REPO_URL
+            else:
+                url = (entry.get("source") or {}).get("url") or REPO_URL
+            links.append(f'<a href="{esc(url)}" target="_blank" rel="noopener">{esc(title)}</a>')
+        if links:
+            groups.append(f'<p class="why"><b>{label}:</b> {", ".join(links)}</p>')
+    return f"""<article class="card" style="--catc:{BRANCH_COLORS['packs']}" data-branch="packs" data-search="{search_blob(*blob_parts)}">
+  <h3>{esc(name)}</h3>
+  <p class="desc">{esc(pack.get('description') or '')}</p>
+  <p class="why">{esc(pack.get('why') or '')}</p>
+  {''.join(groups)}
 </article>"""
 
 
@@ -333,6 +507,7 @@ def main():
     mcp_servers = load_list(MCP_MANIFEST, "servers")
     subagents = load_list(SUBAGENTS_MANIFEST, "agents")
     void_entries = load_list(VOID_MANIFEST, "entries")
+    packs = load_list(PACKS_MANIFEST, "packs")
     total = data.get("count", len(skills))
     link_only_count = sum(1 for s in skills if s.get("entry") == "link-only")
     special_count = sum(1 for s in skills if s.get("special"))
@@ -378,6 +553,14 @@ def main():
     void_cards = [void_card(e) for e in
                   sorted(void_entries, key=lambda e: (e.get("name") or "").lower())]
 
+    lookups = {
+        "skills": {s.get("name"): s for s in skills},
+        "mcp": {s.get("name"): s for s in mcp_servers},
+        "subagents": {a.get("name"): a for a in subagents},
+    }
+    pack_cards = [pack_card(p, lookups) for p in
+                  sorted(packs, key=lambda p: (p.get("name") or "").lower())]
+
     tabs = [("all", "All branches", total + len(mcp_servers) + len(subagents) + len(void_entries)),
             ("skills", "Skills", total),
             ("mcp", "MCP servers", len(mcp_servers)),
@@ -399,15 +582,17 @@ def main():
 </head>
 <body>
 <header class="site">
+  <canvas id="hero3d" aria-hidden="true"></canvas>
   <p class="kicker">Curated for AI agents</p>
   <h1>Prime Skill</h1>
   <p class="tagline">Skills tell an agent how to work, MCP servers give it hands, sub-agents give it a team. One vetted representative per capability — no duplicates, every entry licence-checked.</p>
   <div class="stats">
-    <span class="stat"><b>{total}</b> skills</span>
-    <span class="stat"><b>{len(mcp_servers)}</b> MCP servers</span>
-    <span class="stat"><b>{len(subagents)}</b> sub-agents</span>
-    <span class="stat"><b>{len(void_entries)}</b> Void entries</span>
-    <span class="stat"><b>{special_count}</b> ⭐ specials</span>
+    <span class="stat" style="--c:#22d3ee"><b>{total}</b> skills</span>
+    <span class="stat" style="--c:#a855f7"><b>{len(mcp_servers)}</b> MCP servers</span>
+    <span class="stat" style="--c:#ff2e63"><b>{len(subagents)}</b> sub-agents</span>
+    <span class="stat" style="--c:#7c8499"><b>{len(void_entries)}</b> Void entries</span>
+    <span class="stat" style="--c:#ffd319"><b>{len(packs)}</b> packs</span>
+    <span class="stat" style="--c:#e3b341"><b>{special_count}</b> ⭐ specials</span>
   </div>
 </header>
 <div class="wrap">
@@ -416,6 +601,10 @@ def main():
   <input id="search" type="search" placeholder="Search every branch — names, descriptions, tags, sources…" aria-label="Search the collection">
 </div>
 <main>
+{branch_section("packs", "Packs",
+    "Curated cross-branch sets for one job — references only, no new entries. "
+    f'Every reference is validated against its branch manifest. Full list in <a href="{REPO_URL}/blob/main/packs.json">packs.json</a>.',
+    "".join(pack_cards))}
 {branch_section("skills", "Skills",
     "Vendored procedures an agent can load and follow, categorized by function. "
     "“Link-only” entries carry metadata and a source link only, because their licence does not permit redistribution.",
@@ -441,7 +630,7 @@ def main():
 """
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(page, encoding="utf-8")
-    print(f"wrote {OUT} ({total} skills, {special_count} specials, {link_only_count} link-only, {len(tag_counts)} tags, {len(mcp_servers)} MCP servers, {len(subagents)} sub-agents, {len(void_entries)} Void entries)")
+    print(f"wrote {OUT} ({total} skills, {special_count} specials, {link_only_count} link-only, {len(tag_counts)} tags, {len(mcp_servers)} MCP servers, {len(subagents)} sub-agents, {len(void_entries)} Void entries, {len(packs)} packs)")
 
 
 if __name__ == "__main__":

@@ -87,6 +87,24 @@ themselves.
 | [the-agency](https://github.com/msitarzewski/agency-agents) | collection | A roster of ~270 specialized agent definitions across 19 divisions — engineering, design, marketing, sales, security and more — each a single Markdown file with identity, mission, workflows and deliverables, installable into Claude Code and other harnesses. | The shelf's founding entry and the broadest proven roster: one curated collection covers the specialist-team job, so the shelf does not need dozens of single-agent entries — pick divisions, not the whole roster, and review each agent before use. | Claude Code, Codex, Gemini CLI, Cursor, OpenCode, GitHub Copilot, OpenClaw, Hermes | Installs agent definition files into your harness's agents directory; each agent then runs with whatever tools that harness grants it — review an agent's definition and scope its tool permissions before use. The agents are free; the harness and model access are not. | [msitarzewski/agency-agents](https://github.com/msitarzewski/agency-agents) @ 8ae6164 · MIT · ★ 170,192 |
 <!-- GENERATED:SUBAGENTS:END -->
 
+## 🎒 Packs
+
+Categories answer "what kind of thing is this?"; packs answer "what do
+I need for this job?". A pack is a curated set of existing entries —
+drawn from any branch — that together cover one job end to end. Packs
+are references only ([`packs.json`](packs.json)): they add no entries,
+change no counts, and every reference is validated against its branch
+manifest. Capped at 8 packs of 3–12 entries each; Void entries are
+never packable, because they are not adopted.
+
+<!-- GENERATED:PACKS:START -->
+| Pack | What it's for | Why this set | Entries |
+|---|---|---|---|
+| Bug Bounty Hunter | Run a bug bounty engagement from scope to report — methodology, recon triage, the highest-yield hunt classes, evidence discipline and reporting. | The security category's working core in engagement order: scope first, then the hunt classes that pay, with evidence and reporting discipline wrapped around them. | Skills: bb-methodology, bug-bounty, recon-scope-triage, hunt-idor, hunt-ssrf, hunt-auth-bypass, evidence-hygiene, triage-validation, report-writing |
+| Research Analyst | Research a question to a citable answer — deep research workflow, literature review, scholarly sources, web search tooling and a delegable research team. | One job across all three branches: skills for method and sources, the Exa MCP server for search, and The Agency's research division when the work should be delegated. | Skills: deep-research, literature-review, scientific-db-openalex-database, scientific-thinking-scholar-evaluation, agent-reach · MCP: exa · Sub-agents: the-agency |
+| Telegram Bot Builder | Build, deploy and watch a Telegram bot on Cloudflare Workers — bot patterns, the Workers platform skills, and the Cloudflare MCP server for account operations. | The bot-building job end to end: the in-house Workers bot cookbook skill, the platform skills it builds on, post-deploy monitoring, and the MCP server that operates the account. | Skills: telegram-bot-workers, cloudflare, durable-objects, frameworks-on-cloudflare, canary-watch · MCP: cloudflare |
+<!-- GENERATED:PACKS:END -->
+
 ## 🕳️ Void
 
 Vetted, valuable, not adopted. Void lists things that were checked and
@@ -182,6 +200,10 @@ categories because provenance, not topic, is its axis.
   a procedure (procedures belong in the skills) — licence-checked and
   pinned, carrying a plain `access` statement of the tools and
   permissions it expects.
+- **Packs** (the 🎒 shelf above) are curated cross-branch sets for one
+  job, stored as references in `packs.json` and capped at 8. A pack
+  adds no entries and changes no counts; every reference must exist in
+  its branch manifest, and Void entries are never packable.
 - **Void** (the 🕳️ shelf above) is separate from the skills and from the
   MCPs: link-only entries in `void.json`, vetted only, admitted on merit
   alone — no cap — each carrying two honest lines — why it is valuable, and why it is not in
