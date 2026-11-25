@@ -27,6 +27,7 @@ MANIFEST = ROOT / "skills.json"
 MCP_MANIFEST = ROOT / "mcps.json"
 SUBAGENTS_MANIFEST = ROOT / "subagents.json"
 PACKS_MANIFEST = ROOT / "packs.json"
+TOOLS_MANIFEST = ROOT / "tools.json"
 VOID_MANIFEST = ROOT / "void.json"
 OUT = ROOT / "site" / "index.html"
 REPO_URL = "https://github.com/ILIV007/prime-skill"
@@ -48,6 +49,7 @@ BRANCH_COLORS = {
     "skills": "#22d3ee",
     "mcp": "#a855f7",
     "subagents": "#ff2e63",
+    "tools": "#22c55e",
     "packs": "#ffd319",
     "void": "#7c8499",
 }
@@ -101,6 +103,7 @@ h1{font-size:2.7rem;line-height:1.15;margin:0 0 12px;font-weight:800;letter-spac
 .tab[data-branch="skills"][aria-pressed="true"]{background:#22d3ee;border-color:#22d3ee}
 .tab[data-branch="mcp"][aria-pressed="true"]{background:#a855f7;border-color:#a855f7;color:#fff}
 .tab[data-branch="subagents"][aria-pressed="true"]{background:#ff2e63;border-color:#ff2e63;color:#fff}
+.tab[data-branch="tools"][aria-pressed="true"]{background:#22c55e;border-color:#22c55e}
 .tab[data-branch="void"][aria-pressed="true"]{background:#7c8499;border-color:#7c8499;color:#fff}
 .tab .n{opacity:.75;font-size:.85em;margin-left:5px}
 #search{width:100%;margin-top:12px;padding:12px 16px;font-size:1rem;color:var(--text);
@@ -115,6 +118,7 @@ section.branch{margin-top:44px}
 section.branch[data-branch="skills"]{--bc:#22d3ee}
 section.branch[data-branch="mcp"]{--bc:#a855f7}
 section.branch[data-branch="subagents"]{--bc:#ff2e63}
+section.branch[data-branch="tools"]{--bc:#22c55e}
 section.branch[data-branch="packs"]{--bc:#ffd319}
 section.branch[data-branch="void"]{--bc:#7c8499}
 .branch-head .shown{color:var(--faint);font-size:.9rem}
@@ -460,7 +464,7 @@ def pack_card(pack, lookups):
     name = pack.get("title") or pack.get("name") or ""
     groups = []
     blob_parts = [pack.get("name"), name, pack.get("description"), pack.get("why")]
-    for branch, label in (("skills", "Skills"), ("mcp", "MCP"), ("subagents", "Sub-agents")):
+    for branch, label in (("skills", "Skills"), ("mcp", "MCP"), ("subagents", "Sub-agents"), ("tools", "Tools")):
         links = []
         for ref in pack.get("entries") or []:
             if ref.get("branch") != branch:
@@ -508,6 +512,7 @@ def main():
     subagents = load_list(SUBAGENTS_MANIFEST, "agents")
     void_entries = load_list(VOID_MANIFEST, "entries")
     packs = load_list(PACKS_MANIFEST, "packs")
+    tools = load_list(TOOLS_MANIFEST, "tools")
     total = data.get("count", len(skills))
     link_only_count = sum(1 for s in skills if s.get("entry") == "link-only")
     special_count = sum(1 for s in skills if s.get("special"))
@@ -557,14 +562,21 @@ def main():
         "skills": {s.get("name"): s for s in skills},
         "mcp": {s.get("name"): s for s in mcp_servers},
         "subagents": {a.get("name"): a for a in subagents},
+        "tools": {t.get("name"): t for t in tools},
     }
     pack_cards = [pack_card(p, lookups) for p in
                   sorted(packs, key=lambda p: (p.get("name") or "").lower())]
 
-    tabs = [("all", "All branches", total + len(mcp_servers) + len(subagents) + len(void_entries)),
+    tool_cards = [shelf_card(tool, "tools",
+                             [str(tool.get("kind") or "")],
+                             "Access")
+                  for tool in sorted(tools, key=lambda t: (t.get("name") or "").lower())]
+
+    tabs = [("all", "All branches", total + len(mcp_servers) + len(subagents) + len(tools) + len(void_entries)),
             ("skills", "Skills", total),
             ("mcp", "MCP servers", len(mcp_servers)),
             ("subagents", "Sub-agents", len(subagents)),
+            ("tools", "Tools", len(tools)),
             ("void", "Void", len(void_entries))]
     tabs_html = "".join(
         f'<button class="tab" data-branch="{b}" aria-pressed="{"true" if b == "all" else "false"}">'
@@ -590,6 +602,7 @@ def main():
     <span class="stat" style="--c:#22d3ee"><b>{total}</b> skills</span>
     <span class="stat" style="--c:#a855f7"><b>{len(mcp_servers)}</b> MCP servers</span>
     <span class="stat" style="--c:#ff2e63"><b>{len(subagents)}</b> sub-agents</span>
+    <span class="stat" style="--c:#22c55e"><b>{len(tools)}</b> tools</span>
     <span class="stat" style="--c:#7c8499"><b>{len(void_entries)}</b> Void entries</span>
     <span class="stat" style="--c:#ffd319"><b>{len(packs)}</b> packs</span>
     <span class="stat" style="--c:#e3b341"><b>{special_count}</b> ⭐ specials</span>
@@ -617,6 +630,10 @@ def main():
     "Delegable agent definitions with their own context, role and tool scope — link-only, nothing vendored. "
     f'Every entry states the tools and permissions the agent expects. Full list in <a href="{REPO_URL}/blob/main/subagents.json">subagents.json</a>.',
     "".join(agent_cards))}
+{branch_section("tools", "Tools",
+    "Standalone utilities an agent picks up directly — link-only, nothing vendored. "
+    f'Every entry states what it runs, reaches, or costs; paid services are labelled. Full list in <a href="{REPO_URL}/blob/main/tools.json">tools.json</a>.',
+    "".join(tool_cards))}
 {branch_section("void", "Void",
     "Vetted, valuable, not adopted — link-only, and <b>not skills</b>: platforms, plugins or infrastructure that do not belong in the collection, "
     f'or duplicates of an entry that already exists. Full list in <a href="{REPO_URL}/blob/main/void.json">void.json</a>.',
@@ -630,7 +647,7 @@ def main():
 """
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(page, encoding="utf-8")
-    print(f"wrote {OUT} ({total} skills, {special_count} specials, {link_only_count} link-only, {len(tag_counts)} tags, {len(mcp_servers)} MCP servers, {len(subagents)} sub-agents, {len(void_entries)} Void entries, {len(packs)} packs)")
+    print(f"wrote {OUT} ({total} skills, {special_count} specials, {link_only_count} link-only, {len(tag_counts)} tags, {len(mcp_servers)} MCP servers, {len(subagents)} sub-agents, {len(tools)} tools, {len(void_entries)} Void entries, {len(packs)} packs)")
 
 
 if __name__ == "__main__":

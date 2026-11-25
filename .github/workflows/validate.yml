@@ -20,6 +20,8 @@ jobs:
         run: python3 tools/build_subagents.py --check
       - name: Packs are fresh and references are valid
         run: python3 tools/build_packs.py --check
+      - name: Tools shelf is fresh and tools are valid
+        run: python3 tools/build_tools.py --check
       - name: Void shelf is fresh and entries are valid
         run: python3 tools/build_void.py --check
       - name: skills.json parses

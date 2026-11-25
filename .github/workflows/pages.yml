@@ -8,6 +8,7 @@ on:
       - mcps.json
       - subagents.json
       - packs.json
+      - tools.json
       - void.json
       - tools/build_site.py
       - .github/workflows/pages.yml
