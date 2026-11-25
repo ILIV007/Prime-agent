@@ -1,6 +1,6 @@
 {
   "about": "Void is a link-only shelf for things that were vetted and found genuinely valuable, but do not belong in the collection: they are platforms, plugins, dashboards, or infrastructure — not standalone skills — or they duplicate an entry that already exists. Void entries are NOT skills and are never counted anywhere: not in the skills total, not in any category, not in the MCP count, not in tag statistics. Nothing here is vendored; each entry only links to its source. No cap — admission is by merit alone: vetted, genuinely valuable, and not for the main collection. Void never flows into skills.json or mcps.json.",
-  "count": 17,
+  "count": 18,
   "entries": [
     {
       "added": "2026-11-14",
@@ -256,6 +256,21 @@
       "license": "AGPL-3.0",
       "stars_at_import": 14772,
       "added": "2026-11-21"
+    },
+    {
+      "added": "2026-11-25",
+      "description": "Self-hosted AI image and video studio (web and desktop) aggregating hundreds of hosted models — Flux, Kling, Sora, Veo and more — across image, video, lip-sync, music and cinema workflows, powered by the MuAPI backend.",
+      "license": "MIT",
+      "name": "open-generative-ai",
+      "source": {
+        "commit": "7746dd22068175ede684c455529bdd3d12a2f07d",
+        "repo": "Anil-matcha/Open-Generative-AI",
+        "url": "https://github.com/Anil-matcha/Open-Generative-AI"
+      },
+      "stars_at_import": 36235,
+      "title": "Open Generative AI",
+      "why_not_included": "It is a creator-facing application, not an agent skill, MCP server or sub-agent definition, and generation runs on MuAPI's paid credits rather than locally by default (local engines are desktop-only) — recorded as a vetted platform link with the paid-backend caveat stated plainly.",
+      "why_valuable": "A complete, MIT-licensed reference for what a multi-model generative-media studio looks like, and a usable self-hosted front end for creators who already pay for MuAPI access."
     }
   ]
 }
