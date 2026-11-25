@@ -1,0 +1,24 @@
+{
+  "name": "requesting-code-review",
+  "title": "requesting-code-review",
+  "description": "Requests a focused code review at the right moments — after tasks, major features, and before merging — dispatching a reviewer with a prompt template that checks the work against its requirements and plan.",
+  "why": "Pairs with receiving-code-review as the two halves of review discipline; the collection had review-adjacent skills but none for dispatching a requirements-focused review at merge time.",
+  "category": "development",
+  "source": {
+    "repo": "obra/superpowers",
+    "url": "https://github.com/obra/superpowers",
+    "path": "skills/requesting-code-review",
+    "commit": "22f0b463e7a5e579904dd6211a520321035526f7"
+  },
+  "license": "MIT",
+  "stars_at_import": 326302,
+  "added": "2026-11-25",
+  "requires": [],
+  "entry": "full",
+  "adapted": false,
+  "adaptations": "",
+  "tags": [
+    "workflow"
+  ],
+  "special": false
+}

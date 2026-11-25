@@ -1,0 +1,24 @@
+{
+  "name": "finishing-a-development-branch",
+  "title": "finishing-a-development-branch",
+  "description": "Decides how completed work integrates once implementation is done and tests pass: verify the suite, detect the environment, present merge / pull-request / keep / discard options, execute the choice, and clean up the worktree safely.",
+  "why": "Closes the loop the other workflow skills open — worktrees and plans get you to done; this makes the merge-or-discard decision explicit and the cleanup safe instead of improvised.",
+  "category": "development",
+  "source": {
+    "repo": "obra/superpowers",
+    "url": "https://github.com/obra/superpowers",
+    "path": "skills/finishing-a-development-branch",
+    "commit": "22f0b463e7a5e579904dd6211a520321035526f7"
+  },
+  "license": "MIT",
+  "stars_at_import": 326302,
+  "added": "2026-11-25",
+  "requires": [],
+  "entry": "full",
+  "adapted": false,
+  "adaptations": "",
+  "tags": [
+    "workflow"
+  ],
+  "special": false
+}

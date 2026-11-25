@@ -1,0 +1,26 @@
+{
+  "name": "dispatching-parallel-agents",
+  "title": "dispatching-parallel-agents",
+  "description": "Dispatches independent tasks to parallel agents when the work has no shared state or sequential dependencies: one agent per problem domain, self-contained prompts with constraints and expected output, then integration and a full verification pass.",
+  "why": "The parallel counterpart to subagent-driven-development: SDD runs one plan task-by-task behind review gates; this fans independent problems out at once and merges the results — the missing gear for multi-front debugging and research.",
+  "category": "development",
+  "source": {
+    "repo": "obra/superpowers",
+    "url": "https://github.com/obra/superpowers",
+    "path": "skills/dispatching-parallel-agents",
+    "commit": "22f0b463e7a5e579904dd6211a520321035526f7"
+  },
+  "license": "MIT",
+  "stars_at_import": 326302,
+  "added": "2026-11-25",
+  "requires": [
+    "Subagent-capable harness"
+  ],
+  "entry": "full",
+  "adapted": false,
+  "adaptations": "",
+  "tags": [
+    "workflow"
+  ],
+  "special": false
+}

@@ -1,0 +1,24 @@
+{
+  "name": "executing-plans",
+  "title": "executing-plans",
+  "description": "Executes a written implementation plan inline in the current session: task briefs and a progress ledger shared with subagent-driven-development, test-gated task completion via its task-start/task-done scripts, and stop-and-ask rules for genuine blockers. For when the human chose inline execution or no subagent tool exists.",
+  "why": "writing-plans produces the plan and SDD executes it with subagents; this is the inline path for harnesses without subagents — the same ledger discipline, with no fabricated dispatches.",
+  "category": "development",
+  "source": {
+    "repo": "obra/superpowers",
+    "url": "https://github.com/obra/superpowers",
+    "path": "skills/executing-plans",
+    "commit": "22f0b463e7a5e579904dd6211a520321035526f7"
+  },
+  "license": "MIT",
+  "stars_at_import": 326302,
+  "added": "2026-11-25",
+  "requires": [],
+  "entry": "full",
+  "adapted": false,
+  "adaptations": "",
+  "tags": [
+    "workflow"
+  ],
+  "special": false
+}

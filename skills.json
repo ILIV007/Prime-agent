@@ -1,5 +1,5 @@
 {
-  "count": 138,
+  "count": 143,
   "skills": [
     {
       "adaptations": "Original skill, authored in this repository (Cookbook) by Rick on 2026-11-25 — not imported from upstream. The checklist topics were prompted by a short-form video (\"20 things to have Claude do so your app doesn't get sued\"); that list reached us via a search-engine summary rather than a full transcript, so the skill uses checklist topics only, every instruction is written from scratch, and no penalty figures are invented. source.commit records main's HEAD at authoring time; the skill's own history is this repo's history.",
@@ -921,6 +921,32 @@
       "special": false
     },
     {
+      "name": "dispatching-parallel-agents",
+      "title": "dispatching-parallel-agents",
+      "description": "Dispatches independent tasks to parallel agents when the work has no shared state or sequential dependencies: one agent per problem domain, self-contained prompts with constraints and expected output, then integration and a full verification pass.",
+      "why": "The parallel counterpart to subagent-driven-development: SDD runs one plan task-by-task behind review gates; this fans independent problems out at once and merges the results — the missing gear for multi-front debugging and research.",
+      "category": "development",
+      "source": {
+        "repo": "obra/superpowers",
+        "url": "https://github.com/obra/superpowers",
+        "path": "skills/dispatching-parallel-agents",
+        "commit": "22f0b463e7a5e579904dd6211a520321035526f7"
+      },
+      "license": "MIT",
+      "stars_at_import": 326302,
+      "added": "2026-11-25",
+      "requires": [
+        "Subagent-capable harness"
+      ],
+      "entry": "full",
+      "adapted": false,
+      "adaptations": "",
+      "tags": [
+        "workflow"
+      ],
+      "special": false
+    },
+    {
       "name": "domain-modeling",
       "title": "Domain Modeling",
       "description": "Builds and sharpens a project's domain model: maintains a living glossary of codebase terminology and records architecture decisions as ADRs.",
@@ -994,6 +1020,30 @@
       "special": false
     },
     {
+      "name": "executing-plans",
+      "title": "executing-plans",
+      "description": "Executes a written implementation plan inline in the current session: task briefs and a progress ledger shared with subagent-driven-development, test-gated task completion via its task-start/task-done scripts, and stop-and-ask rules for genuine blockers. For when the human chose inline execution or no subagent tool exists.",
+      "why": "writing-plans produces the plan and SDD executes it with subagents; this is the inline path for harnesses without subagents — the same ledger discipline, with no fabricated dispatches.",
+      "category": "development",
+      "source": {
+        "repo": "obra/superpowers",
+        "url": "https://github.com/obra/superpowers",
+        "path": "skills/executing-plans",
+        "commit": "22f0b463e7a5e579904dd6211a520321035526f7"
+      },
+      "license": "MIT",
+      "stars_at_import": 326302,
+      "added": "2026-11-25",
+      "requires": [],
+      "entry": "full",
+      "adapted": false,
+      "adaptations": "",
+      "tags": [
+        "workflow"
+      ],
+      "special": false
+    },
+    {
       "name": "fast-anything",
       "title": "fast-anything",
       "description": "Speeds up a slow app by porting only its hottest pure functions to Rust — profiles under real workload, records real calls, and proves each port identical before enabling it.",
@@ -1041,6 +1091,30 @@
       "adaptations": "",
       "tags": [
         "harness"
+      ],
+      "special": false
+    },
+    {
+      "name": "finishing-a-development-branch",
+      "title": "finishing-a-development-branch",
+      "description": "Decides how completed work integrates once implementation is done and tests pass: verify the suite, detect the environment, present merge / pull-request / keep / discard options, execute the choice, and clean up the worktree safely.",
+      "why": "Closes the loop the other workflow skills open — worktrees and plans get you to done; this makes the merge-or-discard decision explicit and the cleanup safe instead of improvised.",
+      "category": "development",
+      "source": {
+        "repo": "obra/superpowers",
+        "url": "https://github.com/obra/superpowers",
+        "path": "skills/finishing-a-development-branch",
+        "commit": "22f0b463e7a5e579904dd6211a520321035526f7"
+      },
+      "license": "MIT",
+      "stars_at_import": 326302,
+      "added": "2026-11-25",
+      "requires": [],
+      "entry": "full",
+      "adapted": false,
+      "adaptations": "",
+      "tags": [
+        "workflow"
       ],
       "special": false
     },
@@ -1285,6 +1359,54 @@
       "adaptations": "",
       "tags": [
         "api",
+        "workflow"
+      ],
+      "special": false
+    },
+    {
+      "name": "receiving-code-review",
+      "title": "receiving-code-review",
+      "description": "Receives code review feedback with technical rigor: verify each suggestion against the codebase before implementing it, push back with evidence when feedback is wrong, and never perform agreement or blindly implement.",
+      "why": "The underrated half of code review — it stops agents from cargo-culting reviewer suggestions and turns feedback into verified fixes instead of performative compliance.",
+      "category": "development",
+      "source": {
+        "repo": "obra/superpowers",
+        "url": "https://github.com/obra/superpowers",
+        "path": "skills/receiving-code-review",
+        "commit": "22f0b463e7a5e579904dd6211a520321035526f7"
+      },
+      "license": "MIT",
+      "stars_at_import": 326302,
+      "added": "2026-11-25",
+      "requires": [],
+      "entry": "full",
+      "adapted": false,
+      "adaptations": "",
+      "tags": [
+        "workflow"
+      ],
+      "special": false
+    },
+    {
+      "name": "requesting-code-review",
+      "title": "requesting-code-review",
+      "description": "Requests a focused code review at the right moments — after tasks, major features, and before merging — dispatching a reviewer with a prompt template that checks the work against its requirements and plan.",
+      "why": "Pairs with receiving-code-review as the two halves of review discipline; the collection had review-adjacent skills but none for dispatching a requirements-focused review at merge time.",
+      "category": "development",
+      "source": {
+        "repo": "obra/superpowers",
+        "url": "https://github.com/obra/superpowers",
+        "path": "skills/requesting-code-review",
+        "commit": "22f0b463e7a5e579904dd6211a520321035526f7"
+      },
+      "license": "MIT",
+      "stars_at_import": 326302,
+      "added": "2026-11-25",
+      "requires": [],
+      "entry": "full",
+      "adapted": false,
+      "adaptations": "",
+      "tags": [
         "workflow"
       ],
       "special": false

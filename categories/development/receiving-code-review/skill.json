@@ -1,0 +1,24 @@
+{
+  "name": "receiving-code-review",
+  "title": "receiving-code-review",
+  "description": "Receives code review feedback with technical rigor: verify each suggestion against the codebase before implementing it, push back with evidence when feedback is wrong, and never perform agreement or blindly implement.",
+  "why": "The underrated half of code review — it stops agents from cargo-culting reviewer suggestions and turns feedback into verified fixes instead of performative compliance.",
+  "category": "development",
+  "source": {
+    "repo": "obra/superpowers",
+    "url": "https://github.com/obra/superpowers",
+    "path": "skills/receiving-code-review",
+    "commit": "22f0b463e7a5e579904dd6211a520321035526f7"
+  },
+  "license": "MIT",
+  "stars_at_import": 326302,
+  "added": "2026-11-25",
+  "requires": [],
+  "entry": "full",
+  "adapted": false,
+  "adaptations": "",
+  "tags": [
+    "workflow"
+  ],
+  "special": false
+}
