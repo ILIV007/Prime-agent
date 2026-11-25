@@ -54,6 +54,7 @@ h1{font-size:2.7rem;line-height:1.15;margin:0 0 12px;font-weight:800;letter-spac
 .tab[data-branch="skills"][aria-pressed="true"]{background:#22d3ee;border-color:#22d3ee}
 .tab[data-branch="mcp"][aria-pressed="true"]{background:#a855f7;border-color:#a855f7;color:#fff}
 .tab[data-branch="subagents"][aria-pressed="true"]{background:#ff2e63;border-color:#ff2e63;color:#fff}
+.tab[data-branch="tools"][aria-pressed="true"]{background:#22c55e;border-color:#22c55e}
 .tab[data-branch="void"][aria-pressed="true"]{background:#7c8499;border-color:#7c8499;color:#fff}
 .tab .n{opacity:.75;font-size:.85em;margin-left:5px}
 #search{width:100%;margin-top:12px;padding:12px 16px;font-size:1rem;color:var(--text);
@@ -68,6 +69,7 @@ section.branch{margin-top:44px}
 section.branch[data-branch="skills"]{--bc:#22d3ee}
 section.branch[data-branch="mcp"]{--bc:#a855f7}
 section.branch[data-branch="subagents"]{--bc:#ff2e63}
+section.branch[data-branch="tools"]{--bc:#22c55e}
 section.branch[data-branch="packs"]{--bc:#ffd319}
 section.branch[data-branch="void"]{--bc:#7c8499}
 .branch-head .shown{color:var(--faint);font-size:.9rem}
@@ -133,6 +135,7 @@ section.branch[data-branch="void"]{--bc:#7c8499}
     <span class="stat" style="--c:#22d3ee"><b>144</b> skills</span>
     <span class="stat" style="--c:#a855f7"><b>7</b> MCP servers</span>
     <span class="stat" style="--c:#ff2e63"><b>1</b> sub-agents</span>
+    <span class="stat" style="--c:#22c55e"><b>2</b> tools</span>
     <span class="stat" style="--c:#7c8499"><b>18</b> Void entries</span>
     <span class="stat" style="--c:#ffd319"><b>3</b> packs</span>
     <span class="stat" style="--c:#e3b341"><b>8</b> ⭐ specials</span>
@@ -140,7 +143,7 @@ section.branch[data-branch="void"]{--bc:#7c8499}
 </header>
 <div class="wrap">
 <div class="toolbar">
-  <div class="tabs" role="group" aria-label="Collection branches"><button class="tab" data-branch="all" aria-pressed="true">All branches<span class="n">170</span></button><button class="tab" data-branch="skills" aria-pressed="false">Skills<span class="n">144</span></button><button class="tab" data-branch="mcp" aria-pressed="false">MCP servers<span class="n">7</span></button><button class="tab" data-branch="subagents" aria-pressed="false">Sub-agents<span class="n">1</span></button><button class="tab" data-branch="void" aria-pressed="false">Void<span class="n">18</span></button></div>
+  <div class="tabs" role="group" aria-label="Collection branches"><button class="tab" data-branch="all" aria-pressed="true">All branches<span class="n">172</span></button><button class="tab" data-branch="skills" aria-pressed="false">Skills<span class="n">144</span></button><button class="tab" data-branch="mcp" aria-pressed="false">MCP servers<span class="n">7</span></button><button class="tab" data-branch="subagents" aria-pressed="false">Sub-agents<span class="n">1</span></button><button class="tab" data-branch="tools" aria-pressed="false">Tools<span class="n">2</span></button><button class="tab" data-branch="void" aria-pressed="false">Void<span class="n">18</span></button></div>
   <input id="search" type="search" placeholder="Search every branch — names, descriptions, tags, sources…" aria-label="Search the collection">
 </div>
 <main>
@@ -1400,6 +1403,29 @@ section.branch[data-branch="void"]{--bc:#7c8499}
   <div class="meta"><span>collection · Claude Code, Codex, Gemini CLI, Cursor, OpenCode, GitHub Copilot, OpenClaw, Hermes</span><span>License: MIT</span><span>★ 170,192 at import</span></div>
   <div class="access"><b>Tools / permissions:</b> Installs agent definition files into your harness&#x27;s agents directory; each agent then runs with whatever tools that harness grants it — review an agent&#x27;s definition and scope its tool permissions before use. The agents are free; the harness and model access are not.</div>
   <footer><a href="https://github.com/msitarzewski/agency-agents" target="_blank" rel="noopener">Source ↗</a></footer>
+</article>
+  </div>
+  <p class="empty-note">Nothing here matches the current search or filters.</p>
+</section>
+<section class="branch" data-branch="tools" id="tools">
+  <div class="branch-head"><h2>Tools</h2><span class="shown"></span></div>
+  <p class="branch-note">Standalone utilities an agent picks up directly — link-only, nothing vendored. Every entry states what it runs, reaches, or costs; paid services are labelled. Full list in <a href="https://github.com/ILIV007/prime-skill/blob/main/tools.json">tools.json</a>.</p>
+  
+  <div class="grid">
+<article class="card" style="--catc:#22c55e" data-branch="tools" data-search="graphify graphify turns a codebase — code, docs, sql schemas, configs and pdfs — into a queryable knowledge graph an agent can traverse instead of grepping blind. the shelf&#x27;s founding entry: codebase comprehension as a tool, not a procedure — the one genuinely new capability from its reel checkup, finally given a home that is neither a skill nor the void. cli graphify-labs/graphify">
+  <h3>Graphify </h3>
+  <p class="desc">Turns a codebase — code, docs, SQL schemas, configs and PDFs — into a queryable knowledge graph an agent can traverse instead of grepping blind.</p>
+  <p class="why">The shelf&#x27;s founding entry: codebase comprehension as a tool, not a procedure — the one genuinely new capability from its reel checkup, finally given a home that is neither a skill nor the Void.</p>
+  <div class="meta"><span>cli</span><span>License: Apache-2.0</span><span>★ 153,315 at import</span></div>
+  <div class="access"><b>Access:</b> Runs locally as a CLI over your repository and writes graph artifacts to disk; no account needed for local use.</div>
+  <footer><a href="https://github.com/Graphify-Labs/graphify" target="_blank" rel="noopener">Source ↗</a></footer>
+</article><article class="card" style="--catc:#22c55e" data-branch="tools" data-search="repomix repomix packs an entire repository into a single ai-friendly file with token counting and ignore handling, for feeding a codebase to a model in one shot. the complement to graphify: when the job is handing a model the whole repository rather than querying it, this is the proven packer. cli yamadashy/repomix">
+  <h3>Repomix </h3>
+  <p class="desc">Packs an entire repository into a single AI-friendly file with token counting and ignore handling, for feeding a codebase to a model in one shot.</p>
+  <p class="why">The complement to Graphify: when the job is handing a model the whole repository rather than querying it, this is the proven packer.</p>
+  <div class="meta"><span>cli</span><span>License: MIT</span><span>★ 29,435 at import</span></div>
+  <div class="access"><b>Access:</b> Runs locally as a CLI (or via its web packer) and reads only the repository you point it at; the output is a local file.</div>
+  <footer><a href="https://github.com/yamadashy/repomix" target="_blank" rel="noopener">Source ↗</a></footer>
 </article>
   </div>
   <p class="empty-note">Nothing here matches the current search or filters.</p>

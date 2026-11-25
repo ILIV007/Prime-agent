@@ -87,6 +87,25 @@ themselves.
 | [the-agency](https://github.com/msitarzewski/agency-agents) | collection | A roster of ~270 specialized agent definitions across 19 divisions — engineering, design, marketing, sales, security and more — each a single Markdown file with identity, mission, workflows and deliverables, installable into Claude Code and other harnesses. | The shelf's founding entry and the broadest proven roster: one curated collection covers the specialist-team job, so the shelf does not need dozens of single-agent entries — pick divisions, not the whole roster, and review each agent before use. | Claude Code, Codex, Gemini CLI, Cursor, OpenCode, GitHub Copilot, OpenClaw, Hermes | Installs agent definition files into your harness's agents directory; each agent then runs with whatever tools that harness grants it — review an agent's definition and scope its tool permissions before use. The agents are free; the harness and model access are not. | [msitarzewski/agency-agents](https://github.com/msitarzewski/agency-agents) @ 8ae6164 · MIT · ★ 170,192 |
 <!-- GENERATED:SUBAGENTS:END -->
 
+## 🛠️ Tools
+
+Skills tell an agent *how* to work; MCP servers give it hands;
+sub-agents give it a team; tools are what it picks up directly. This
+shelf lists standalone utilities and resources an agent (or its human)
+uses as-is — CLIs, web tools, apps, APIs, datasets: recommendations,
+not skills, nothing vendored, each entry only links to its source
+([`tools.json`](tools.json)). Every entry states plainly what it runs,
+reaches, or costs, and the shelf is capped at 12 — one tool per job.
+A procedure belongs in the skills, a protocol server on the MCP shelf,
+and a platform deliberately not adopted stays in the Void.
+
+<!-- GENERATED:TOOLS:START -->
+| Tool | Kind | What it does | Why it's here | What it runs / costs | Source |
+|---|---|---|---|---|---|
+| [graphify](https://github.com/Graphify-Labs/graphify) | cli | Turns a codebase — code, docs, SQL schemas, configs and PDFs — into a queryable knowledge graph an agent can traverse instead of grepping blind. | The shelf's founding entry: codebase comprehension as a tool, not a procedure — the one genuinely new capability from its reel checkup, finally given a home that is neither a skill nor the Void. | Runs locally as a CLI over your repository and writes graph artifacts to disk; no account needed for local use. | [Graphify-Labs/graphify](https://github.com/Graphify-Labs/graphify) @ 02c27dc · Apache-2.0 · ★ 153,315 |
+| [repomix](https://github.com/yamadashy/repomix) | cli | Packs an entire repository into a single AI-friendly file with token counting and ignore handling, for feeding a codebase to a model in one shot. | The complement to Graphify: when the job is handing a model the whole repository rather than querying it, this is the proven packer. | Runs locally as a CLI (or via its web packer) and reads only the repository you point it at; the output is a local file. | [yamadashy/repomix](https://github.com/yamadashy/repomix) @ 7bde93e · MIT · ★ 29,435 |
+<!-- GENERATED:TOOLS:END -->
+
 ## 🎒 Packs
 
 Categories answer "what kind of thing is this?"; packs answer "what do
@@ -201,6 +220,13 @@ categories because provenance, not topic, is its axis.
   a procedure (procedures belong in the skills) — licence-checked and
   pinned, carrying a plain `access` statement of the tools and
   permissions it expects.
+- **Tools** (the 🛠️ shelf above) are separate from the skills, the MCPs
+  and the sub-agents: link-only entries in `tools.json`, capped at 12,
+  one per job. An entry must be a standalone utility used directly —
+  not a procedure (a skill), not a protocol server (MCP), not a
+  delegable worker (a sub-agent), and not a platform deliberately not
+  adopted (Void) — licence-checked and pinned, carrying a plain
+  `access` statement of what it runs, reaches, or costs.
 - **Packs** (the 🎒 shelf above) are curated cross-branch sets for one
   job, stored as references in `packs.json` and capped at 8. A pack
   adds no entries and changes no counts; every reference must exist in

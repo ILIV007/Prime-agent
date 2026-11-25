@@ -29,8 +29,9 @@ BRANCH_MANIFESTS = {
     "skills": ("skills.json", "skills"),
     "mcp": ("mcps.json", "servers"),
     "subagents": ("subagents.json", "agents"),
+    "tools": ("tools.json", "tools"),
 }
-BRANCH_LABELS = {"skills": "Skills", "mcp": "MCP", "subagents": "Sub-agents"}
+BRANCH_LABELS = {"skills": "Skills", "mcp": "MCP", "subagents": "Sub-agents", "tools": "Tools"}
 
 
 def esc(text):
@@ -102,7 +103,7 @@ def validate(data, packs, errors):
 
 def entries_cell(pack):
     groups = []
-    for branch in ("skills", "mcp", "subagents"):
+    for branch in ("skills", "mcp", "subagents", "tools"):
         names = [e["name"] for e in pack["entries"] if e["branch"] == branch]
         if names:
             groups.append(f"{BRANCH_LABELS[branch]}: {', '.join(names)}")
