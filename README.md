@@ -68,6 +68,25 @@ skills' one-per-cluster rule.
 | [rea](https://github.com/morluto/rea) | Reverse-engineering toolkit — native binaries, managed and Electron apps, firmware, and web targets — exposed as MCP tools for agents. | The engine behind this collection's reverse-engineer-anything pick, callable directly over MCP; the curator's own RE workhorse, in daily use. | stdio | REA toolchain installed locally | Runs local analysis tooling on your own machine and reads the files and artifacts you point it at; it executes the REA toolchain locally, with no hosted component. | [morluto/rea](https://github.com/morluto/rea) @ 3c0e9d8 · MIT · ★ 451,233 |
 <!-- GENERATED:MCP:END -->
 
+## 🤖 Sub-agents
+
+Skills tell an agent *how* to work; MCP servers give it hands; sub-agents
+give it a team. This shelf lists delegable agent definitions — workers
+with their own context, role and tool scope — that are vetted here:
+recommendations, not skills, nothing vendored, each entry only links to
+its source ([`subagents.json`](subagents.json)). Every entry states
+plainly what tools and permissions the agent expects, and the shelf is
+capped at 12 — one agent, or one curated collection, per job.
+Orchestration *procedures* stay skills (`subagent-driven-development`,
+`dispatching-parallel-agents`); this shelf holds the agent definitions
+themselves.
+
+<!-- GENERATED:SUBAGENTS:START -->
+| Sub-agent | Kind | What it is | Why it's here | Harnesses | Tools / permissions it expects | Source |
+|---|---|---|---|---|---|---|
+| [the-agency](https://github.com/msitarzewski/agency-agents) | collection | A roster of ~270 specialized agent definitions across 19 divisions — engineering, design, marketing, sales, security and more — each a single Markdown file with identity, mission, workflows and deliverables, installable into Claude Code and other harnesses. | The shelf's founding entry and the broadest proven roster: one curated collection covers the specialist-team job, so the shelf does not need dozens of single-agent entries — pick divisions, not the whole roster, and review each agent before use. | Claude Code, Codex, Gemini CLI, Cursor, OpenCode, GitHub Copilot, OpenClaw, Hermes | Installs agent definition files into your harness's agents directory; each agent then runs with whatever tools that harness grants it — review an agent's definition and scope its tool permissions before use. The agents are free; the harness and model access are not. | [msitarzewski/agency-agents](https://github.com/msitarzewski/agency-agents) @ 8ae6164 · MIT · ★ 170,192 |
+<!-- GENERATED:SUBAGENTS:END -->
+
 ## 🕳️ Void
 
 Vetted, valuable, not adopted. Void lists things that were checked and
@@ -79,7 +98,7 @@ source ([`void.json`](void.json)), and Void entries appear in no count
 anywhere — not the skills total, not any category, not the MCP count,
 not tag statistics. The shelf has no cap: an entry goes in only on
 merit — vetted, genuinely valuable, and not for the main collection.
-Void entries never flow into `skills.json` or `mcps.json`.
+Void entries never flow into `skills.json`, `mcps.json` or `subagents.json`.
 
 <!-- GENERATED:VOID:START -->
 | Entry | What it is | Why it's valuable | Why it's not in the collection | Source |
@@ -156,6 +175,13 @@ categories because provenance, not topic, is its axis.
   skills: link-only entries in `mcps.json`, capped at 12, one per job,
   each carrying a plain `access` statement of what it can run or reach;
   paid services are labelled in the entry.
+- **Sub-agents** (the 🤖 shelf above) are separate from the skills and
+  the MCPs: link-only entries in `subagents.json`, capped at 12, one per
+  job. An entry must be a real delegable agent definition — its own
+  context, role and deliverables, not a persona with no workflow and not
+  a procedure (procedures belong in the skills) — licence-checked and
+  pinned, carrying a plain `access` statement of the tools and
+  permissions it expects.
 - **Void** (the 🕳️ shelf above) is separate from the skills and from the
   MCPs: link-only entries in `void.json`, vetted only, admitted on merit
   alone — no cap — each carrying two honest lines — why it is valuable, and why it is not in

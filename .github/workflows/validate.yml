@@ -16,6 +16,8 @@ jobs:
         run: python3 tools/build_index.py --check
       - name: MCP shelf is fresh and servers are valid
         run: python3 tools/build_mcps.py --check
+      - name: Sub-agents shelf is fresh and agents are valid
+        run: python3 tools/build_subagents.py --check
       - name: Void shelf is fresh and entries are valid
         run: python3 tools/build_void.py --check
       - name: skills.json parses
