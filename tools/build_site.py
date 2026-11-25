@@ -26,6 +26,7 @@ ROOT = Path(__file__).resolve().parent.parent
 MANIFEST = ROOT / "skills.json"
 MCP_MANIFEST = ROOT / "mcps.json"
 SUBAGENTS_MANIFEST = ROOT / "subagents.json"
+PACKS_MANIFEST = ROOT / "packs.json"
 VOID_MANIFEST = ROOT / "void.json"
 OUT = ROOT / "site" / "index.html"
 REPO_URL = "https://github.com/ILIV007/prime-skill"
@@ -309,6 +310,34 @@ def void_card(entry):
 </article>"""
 
 
+def pack_card(pack, lookups):
+    """A pack card: the job, why this set, and its entries grouped by branch."""
+    name = pack.get("title") or pack.get("name") or ""
+    groups = []
+    blob_parts = [pack.get("name"), name, pack.get("description"), pack.get("why")]
+    for branch, label in (("skills", "Skills"), ("mcp", "MCP"), ("subagents", "Sub-agents")):
+        links = []
+        for ref in pack.get("entries") or []:
+            if ref.get("branch") != branch:
+                continue
+            entry = lookups[branch].get(ref.get("name")) or {}
+            title = entry.get("title") or ref.get("name") or ""
+            blob_parts.append(ref.get("name"))
+            if branch == "skills":
+                url = folder_url(entry) if entry else REPO_URL
+            else:
+                url = (entry.get("source") or {}).get("url") or REPO_URL
+            links.append(f'<a href="{esc(url)}" target="_blank" rel="noopener">{esc(title)}</a>')
+        if links:
+            groups.append(f'<p class="why"><b>{label}:</b> {", ".join(links)}</p>')
+    return f"""<article class="card" data-branch="packs" data-search="{search_blob(*blob_parts)}">
+  <h3>{esc(name)}</h3>
+  <p class="desc">{esc(pack.get('description') or '')}</p>
+  <p class="why">{esc(pack.get('why') or '')}</p>
+  {''.join(groups)}
+</article>"""
+
+
 def branch_section(branch, title, note, cards_html, extra=""):
     return f"""<section class="branch{' void' if branch == 'void' else ''}" data-branch="{branch}" id="{branch}">
   <div class="branch-head"><h2>{esc(title)}</h2><span class="shown"></span></div>
@@ -333,6 +362,7 @@ def main():
     mcp_servers = load_list(MCP_MANIFEST, "servers")
     subagents = load_list(SUBAGENTS_MANIFEST, "agents")
     void_entries = load_list(VOID_MANIFEST, "entries")
+    packs = load_list(PACKS_MANIFEST, "packs")
     total = data.get("count", len(skills))
     link_only_count = sum(1 for s in skills if s.get("entry") == "link-only")
     special_count = sum(1 for s in skills if s.get("special"))
@@ -378,6 +408,14 @@ def main():
     void_cards = [void_card(e) for e in
                   sorted(void_entries, key=lambda e: (e.get("name") or "").lower())]
 
+    lookups = {
+        "skills": {s.get("name"): s for s in skills},
+        "mcp": {s.get("name"): s for s in mcp_servers},
+        "subagents": {a.get("name"): a for a in subagents},
+    }
+    pack_cards = [pack_card(p, lookups) for p in
+                  sorted(packs, key=lambda p: (p.get("name") or "").lower())]
+
     tabs = [("all", "All branches", total + len(mcp_servers) + len(subagents) + len(void_entries)),
             ("skills", "Skills", total),
             ("mcp", "MCP servers", len(mcp_servers)),
@@ -407,6 +445,7 @@ def main():
     <span class="stat"><b>{len(mcp_servers)}</b> MCP servers</span>
     <span class="stat"><b>{len(subagents)}</b> sub-agents</span>
     <span class="stat"><b>{len(void_entries)}</b> Void entries</span>
+    <span class="stat"><b>{len(packs)}</b> packs</span>
     <span class="stat"><b>{special_count}</b> ⭐ specials</span>
   </div>
 </header>
@@ -416,6 +455,10 @@ def main():
   <input id="search" type="search" placeholder="Search every branch — names, descriptions, tags, sources…" aria-label="Search the collection">
 </div>
 <main>
+{branch_section("packs", "Packs",
+    "Curated cross-branch sets for one job — references only, no new entries. "
+    f'Every reference is validated against its branch manifest. Full list in <a href="{REPO_URL}/blob/main/packs.json">packs.json</a>.',
+    "".join(pack_cards))}
 {branch_section("skills", "Skills",
     "Vendored procedures an agent can load and follow, categorized by function. "
     "“Link-only” entries carry metadata and a source link only, because their licence does not permit redistribution.",
@@ -441,7 +484,7 @@ def main():
 """
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(page, encoding="utf-8")
-    print(f"wrote {OUT} ({total} skills, {special_count} specials, {link_only_count} link-only, {len(tag_counts)} tags, {len(mcp_servers)} MCP servers, {len(subagents)} sub-agents, {len(void_entries)} Void entries)")
+    print(f"wrote {OUT} ({total} skills, {special_count} specials, {link_only_count} link-only, {len(tag_counts)} tags, {len(mcp_servers)} MCP servers, {len(subagents)} sub-agents, {len(void_entries)} Void entries, {len(packs)} packs)")
 
 
 if __name__ == "__main__":
