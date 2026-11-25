@@ -121,11 +121,11 @@ categories because provenance, not topic, is its axis.
 ## At a glance
 
 <!-- GENERATED:INDEX:START -->
-**137 skills · 8 categories · 9 link-only**
+**138 skills · 8 categories · 9 link-only**
 
 | Category | Skills | Scope | Page |
 |---|---|---|---|
-| Cookbook | 2 | Original skills written in-house for this collection — recipes distilled from production work, not imported. | [Browse →](categories/cookbook/README.md) |
+| Cookbook | 3 | Original skills written in-house for this collection — recipes distilled from production work, not imported. | [Browse →](categories/cookbook/README.md) |
 | Design | 26 | Visual and interface design: design systems, styling, branding, and generated visuals. | [Browse →](categories/design/README.md) |
 | Development | 39 | Building software: planning, implementation, testing, debugging, and harness workflows. | [Browse →](categories/development/README.md) |
 | Marketing | 19 | Go-to-market: positioning, copy, content, social, and launches. | [Browse →](categories/marketing/README.md) |
@@ -185,10 +185,11 @@ categories because provenance, not topic, is its axis.
 ## Categories
 
 <!-- GENERATED:START -->
-### [Cookbook](categories/cookbook/README.md) (2)
+### [Cookbook](categories/cookbook/README.md) (3)
 
 | Skill | What it does | Why it's here | Requires | Source |
 |---|---|---|---|---|
+| [policy](categories/cookbook/policy/) | Runs a pre-launch legal and policy audit over an app or website codebase: policies matched against what the code actually does, consent and data discipline, honesty in marketing and pricing, accessibility basics, and asset rights — audit first with evidence, then fixes one item at a time. Explicitly not legal advice: uncertain items go on a "take to a lawyer" list and penalty figures are never invented. | The collection's pre-launch conscience: it turns "we should probably check the legal stuff" into an evidence-backed audit an agent can actually run, with guardrails that keep it honest about jurisdiction and uncertainty instead of hallucinating statutes. | — | [ILIV007/prime-skill](https://github.com/ILIV007/prime-skill) @ c0460b3 |
 | [telegram-bot-workers](categories/cookbook/telegram-bot-workers/) | Build production Telegram bots on Cloudflare Workers with the raw Bot API: secure webhooks, entity-based formatting, Rich Messages, edit-in-place menus, and KV state discipline. | The house recipe behind a working fleet of Telegram bots (channel AI, admin publisher, market poster, prompt optimizer). Every other bot skill out there assumes Python or a framework; this one covers the raw-API-on-Workers pattern those bots actually run on. | — | [ILIV007/prime-skill](https://github.com/ILIV007/prime-skill) @ 0ea9096 |
 | [xdesign-export-builder](categories/cookbook/xdesign-export-builder/) | Build a working Telegram bot from an xDesign export zip: read spec.json as the source of truth, turn its steps into a state machine, and implement it on Cloudflare Workers or any webhook bot stack. | The design half of bot building had no skill: designers can now draw a bot in xDesign's no-code editor and an agent can implement it faithfully from the export, step for step, without re-deciding anything — the first skill that treats a bot design file as a build contract. | — | [Sir-MmD/xdesign](https://github.com/Sir-MmD/xdesign) @ 7ed1da0 |
 
