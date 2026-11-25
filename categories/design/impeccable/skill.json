@@ -1,0 +1,24 @@
+{
+  "name": "impeccable",
+  "title": "impeccable",
+  "description": "Designs, redesigns, critiques, audits, polishes and animates frontends — websites, dashboards, app UI, native screens and design systems — with 24 design commands, per-mode craft rules and a 62-rule anti-slop detector that verifies the rendered result. Runtime note: its launcher downloads the design engine binary from the project's own GitHub releases, SHA-256-verified against the manifest vendored in the skill; the per-edit detector hook is opt-in per project.",
+  "why": "The design shelf's heavyweight: a design director's full command set plus a mechanical detector that catches slop after every edit — the closest thing to a standing design review in the collection.",
+  "category": "design",
+  "source": {
+    "repo": "pbakaus/impeccable",
+    "url": "https://github.com/pbakaus/impeccable",
+    "path": ".agents/skills/impeccable",
+    "commit": "9e460a87ef338ee9d12c7beed8fedc597a5af5f7"
+  },
+  "license": "Apache-2.0",
+  "stars_at_import": 116627,
+  "added": "2026-11-25",
+  "requires": [],
+  "entry": "full",
+  "adapted": false,
+  "adaptations": "",
+  "tags": [
+    "design-systems"
+  ],
+  "special": false
+}

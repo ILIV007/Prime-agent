@@ -1,5 +1,5 @@
 {
-  "count": 135,
+  "count": 137,
   "skills": [
     {
       "adaptations": "Original skill, authored in this repository (the Cookbook section's first entry) by Rick on 2026-11-18 — not imported from upstream. It distils production practice from the fleet's own Telegram bots; facts drawn from public third-party references are credited at the end of SKILL.md and all text is original. source.commit records main's HEAD at authoring time; the skill's own history is this repo's history.",
@@ -521,6 +521,30 @@
       "special": false
     },
     {
+      "name": "impeccable",
+      "title": "impeccable",
+      "description": "Designs, redesigns, critiques, audits, polishes and animates frontends — websites, dashboards, app UI, native screens and design systems — with 24 design commands, per-mode craft rules and a 62-rule anti-slop detector that verifies the rendered result. Runtime note: its launcher downloads the design engine binary from the project's own GitHub releases, SHA-256-verified against the manifest vendored in the skill; the per-edit detector hook is opt-in per project.",
+      "why": "The design shelf's heavyweight: a design director's full command set plus a mechanical detector that catches slop after every edit — the closest thing to a standing design review in the collection.",
+      "category": "design",
+      "source": {
+        "repo": "pbakaus/impeccable",
+        "url": "https://github.com/pbakaus/impeccable",
+        "path": ".agents/skills/impeccable",
+        "commit": "9e460a87ef338ee9d12c7beed8fedc597a5af5f7"
+      },
+      "license": "Apache-2.0",
+      "stars_at_import": 116627,
+      "added": "2026-11-25",
+      "requires": [],
+      "entry": "full",
+      "adapted": false,
+      "adaptations": "",
+      "tags": [
+        "design-systems"
+      ],
+      "special": false
+    },
+    {
       "name": "kubai-icons",
       "title": "kubai-icons",
       "description": "Generates new icons in one fixed, consistent house style: a rulebook-driven design engine with a headless visual self-check and a static SVG exporter, companion to the Kubai icon library (2,600+ icons for React, Vue and plain SVG).",
@@ -597,6 +621,30 @@
       "adaptations": "",
       "tags": [
         "react",
+        "design-systems"
+      ],
+      "special": false
+    },
+    {
+      "name": "taste-skill",
+      "title": "design-taste-frontend",
+      "description": "Builds professional company and product websites with an anti-slop finish gate: plain copy in its own voice, one system, one section per screen, real photographs, dealt moments and quiet micro-interactions, enforced by a checker that screenshots the page in a real browser. Runtime note: needs Node 22+ and Chrome (it launches its own headless Chrome with its own profile, never the user's browser) and fetches icons from jsdelivr and CC/public-domain photos from Wikimedia Commons.",
+      "why": "Where Impeccable directs, Taste finishes: its screenshot-and-judge gate makes 'looks done' a measured claim instead of a vibe, and its photo/icon pipeline solves the stand-in asset problem honestly.",
+      "category": "design",
+      "source": {
+        "repo": "Leonxlnx/taste-skill",
+        "url": "https://github.com/Leonxlnx/taste-skill",
+        "path": "skills/taste-skill",
+        "commit": "d1a2bb41d927083ac7118f60cfc9cdf711810ea0"
+      },
+      "license": "MIT",
+      "stars_at_import": 121375,
+      "added": "2026-11-25",
+      "requires": [],
+      "entry": "full",
+      "adapted": false,
+      "adaptations": "",
+      "tags": [
         "design-systems"
       ],
       "special": false

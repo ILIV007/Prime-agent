@@ -1,0 +1,24 @@
+{
+  "name": "taste-skill",
+  "title": "design-taste-frontend",
+  "description": "Builds professional company and product websites with an anti-slop finish gate: plain copy in its own voice, one system, one section per screen, real photographs, dealt moments and quiet micro-interactions, enforced by a checker that screenshots the page in a real browser. Runtime note: needs Node 22+ and Chrome (it launches its own headless Chrome with its own profile, never the user's browser) and fetches icons from jsdelivr and CC/public-domain photos from Wikimedia Commons.",
+  "why": "Where Impeccable directs, Taste finishes: its screenshot-and-judge gate makes 'looks done' a measured claim instead of a vibe, and its photo/icon pipeline solves the stand-in asset problem honestly.",
+  "category": "design",
+  "source": {
+    "repo": "Leonxlnx/taste-skill",
+    "url": "https://github.com/Leonxlnx/taste-skill",
+    "path": "skills/taste-skill",
+    "commit": "d1a2bb41d927083ac7118f60cfc9cdf711810ea0"
+  },
+  "license": "MIT",
+  "stars_at_import": 121375,
+  "added": "2026-11-25",
+  "requires": [],
+  "entry": "full",
+  "adapted": false,
+  "adaptations": "",
+  "tags": [
+    "design-systems"
+  ],
+  "special": false
+}
