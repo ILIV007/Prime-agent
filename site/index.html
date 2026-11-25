@@ -135,7 +135,7 @@ section.branch[data-branch="void"]{--bc:#7c8499}
     <span class="stat" style="--c:#22d3ee"><b>144</b> skills</span>
     <span class="stat" style="--c:#a855f7"><b>7</b> MCP servers</span>
     <span class="stat" style="--c:#ff2e63"><b>1</b> sub-agents</span>
-    <span class="stat" style="--c:#22c55e"><b>2</b> tools</span>
+    <span class="stat" style="--c:#22c55e"><b>6</b> tools</span>
     <span class="stat" style="--c:#7c8499"><b>18</b> Void entries</span>
     <span class="stat" style="--c:#ffd319"><b>3</b> packs</span>
     <span class="stat" style="--c:#e3b341"><b>8</b> ⭐ specials</span>
@@ -143,7 +143,7 @@ section.branch[data-branch="void"]{--bc:#7c8499}
 </header>
 <div class="wrap">
 <div class="toolbar">
-  <div class="tabs" role="group" aria-label="Collection branches"><button class="tab" data-branch="all" aria-pressed="true">All branches<span class="n">172</span></button><button class="tab" data-branch="skills" aria-pressed="false">Skills<span class="n">144</span></button><button class="tab" data-branch="mcp" aria-pressed="false">MCP servers<span class="n">7</span></button><button class="tab" data-branch="subagents" aria-pressed="false">Sub-agents<span class="n">1</span></button><button class="tab" data-branch="tools" aria-pressed="false">Tools<span class="n">2</span></button><button class="tab" data-branch="void" aria-pressed="false">Void<span class="n">18</span></button></div>
+  <div class="tabs" role="group" aria-label="Collection branches"><button class="tab" data-branch="all" aria-pressed="true">All branches<span class="n">176</span></button><button class="tab" data-branch="skills" aria-pressed="false">Skills<span class="n">144</span></button><button class="tab" data-branch="mcp" aria-pressed="false">MCP servers<span class="n">7</span></button><button class="tab" data-branch="subagents" aria-pressed="false">Sub-agents<span class="n">1</span></button><button class="tab" data-branch="tools" aria-pressed="false">Tools<span class="n">6</span></button><button class="tab" data-branch="void" aria-pressed="false">Void<span class="n">18</span></button></div>
   <input id="search" type="search" placeholder="Search every branch — names, descriptions, tags, sources…" aria-label="Search the collection">
 </div>
 <main>
@@ -1412,7 +1412,28 @@ section.branch[data-branch="void"]{--bc:#7c8499}
   <p class="branch-note">Standalone utilities an agent picks up directly — link-only, nothing vendored. Every entry states what it runs, reaches, or costs; paid services are labelled. Full list in <a href="https://github.com/ILIV007/prime-skill/blob/main/tools.json">tools.json</a>.</p>
   
   <div class="grid">
-<article class="card" style="--catc:#22c55e" data-branch="tools" data-search="graphify graphify turns a codebase — code, docs, sql schemas, configs and pdfs — into a queryable knowledge graph an agent can traverse instead of grepping blind. the shelf&#x27;s founding entry: codebase comprehension as a tool, not a procedure — the one genuinely new capability from its reel checkup, finally given a home that is neither a skill nor the void. cli graphify-labs/graphify">
+<article class="card" style="--catc:#22c55e" data-branch="tools" data-search="cc-switch cc-switch cross-platform desktop assistant for switching providers, models and mcp configuration across claude code, codex, opencode and other harnesses from one place. the harness-management job in one app: anyone running several coding harnesses otherwise hand-edits the same provider and mcp settings in each. app farion1231/cc-switch">
+  <h3>CC-Switch </h3>
+  <p class="desc">Cross-platform desktop assistant for switching providers, models and MCP configuration across Claude Code, Codex, OpenCode and other harnesses from one place.</p>
+  <p class="why">The harness-management job in one app: anyone running several coding harnesses otherwise hand-edits the same provider and MCP settings in each.</p>
+  <div class="meta"><span>app</span><span>License: MIT</span><span>★ 157,147 at import</span></div>
+  <div class="access"><b>Access:</b> Desktop app that writes harness configuration files and stores provider API keys locally on your machine — review what it writes before enabling a profile.</div>
+  <footer><a href="https://github.com/farion1231/cc-switch" target="_blank" rel="noopener">Source ↗</a></footer>
+</article><article class="card" style="--catc:#22c55e" data-branch="tools" data-search="claude-mem claude-mem persistent cross-session memory for coding agents: captures what the agent does, compresses it, and injects the relevant context into later sessions. the most adopted agent-memory tool in the wild; recorded with its capture-and-compress reach stated plainly so adopters decide with eyes open. app thedotmack/claude-mem">
+  <h3>Claude-Mem </h3>
+  <p class="desc">Persistent cross-session memory for coding agents: captures what the agent does, compresses it, and injects the relevant context into later sessions.</p>
+  <p class="why">The most adopted agent-memory tool in the wild; recorded with its capture-and-compress reach stated plainly so adopters decide with eyes open.</p>
+  <div class="meta"><span>app</span><span>License: Apache-2.0</span><span>★ 119,733 at import</span></div>
+  <div class="access"><b>Access:</b> Installs session hooks and a background worker; captures session activity and sends it to a model for compression and recall — review what it captures before enabling.</div>
+  <footer><a href="https://github.com/thedotmack/claude-mem" target="_blank" rel="noopener">Source ↗</a></footer>
+</article><article class="card" style="--catc:#22c55e" data-branch="tools" data-search="defuddle defuddle extracts the main content of any web page as clean markdown, stripping navigation, ads and boilerplate. the web-reading utility agents reach for first: page-to-markdown extraction as a tool, not a procedure, from the obsidian team. library kepano/defuddle">
+  <h3>Defuddle </h3>
+  <p class="desc">Extracts the main content of any web page as clean Markdown, stripping navigation, ads and boilerplate.</p>
+  <p class="why">The web-reading utility agents reach for first: page-to-Markdown extraction as a tool, not a procedure, from the Obsidian team.</p>
+  <div class="meta"><span>library</span><span>License: MIT</span><span>★ 10,189 at import</span></div>
+  <div class="access"><b>Access:</b> Runs locally as a library or CLI and fetches only the pages you point it at; no account needed.</div>
+  <footer><a href="https://github.com/kepano/defuddle" target="_blank" rel="noopener">Source ↗</a></footer>
+</article><article class="card" style="--catc:#22c55e" data-branch="tools" data-search="graphify graphify turns a codebase — code, docs, sql schemas, configs and pdfs — into a queryable knowledge graph an agent can traverse instead of grepping blind. the shelf&#x27;s founding entry: codebase comprehension as a tool, not a procedure — the one genuinely new capability from its reel checkup, finally given a home that is neither a skill nor the void. cli graphify-labs/graphify">
   <h3>Graphify </h3>
   <p class="desc">Turns a codebase — code, docs, SQL schemas, configs and PDFs — into a queryable knowledge graph an agent can traverse instead of grepping blind.</p>
   <p class="why">The shelf&#x27;s founding entry: codebase comprehension as a tool, not a procedure — the one genuinely new capability from its reel checkup, finally given a home that is neither a skill nor the Void.</p>
@@ -1426,6 +1447,13 @@ section.branch[data-branch="void"]{--bc:#7c8499}
   <div class="meta"><span>cli</span><span>License: MIT</span><span>★ 29,435 at import</span></div>
   <div class="access"><b>Access:</b> Runs locally as a CLI (or via its web packer) and reads only the repository you point it at; the output is a local file.</div>
   <footer><a href="https://github.com/yamadashy/repomix" target="_blank" rel="noopener">Source ↗</a></footer>
+</article><article class="card" style="--catc:#22c55e" data-branch="tools" data-search="rtk rtk cli proxy that compresses common dev-command output (git, tests, builds) so agents spend far fewer tokens reading it. token economy as a tool rather than a prompt trick: one binary between the agent and its shell, chosen over headroom for the same job (simpler surface, no proxy layer). cli rtk-ai/rtk">
+  <h3>RTK </h3>
+  <p class="desc">CLI proxy that compresses common dev-command output (git, tests, builds) so agents spend far fewer tokens reading it.</p>
+  <p class="why">Token economy as a tool rather than a prompt trick: one binary between the agent and its shell, chosen over Headroom for the same job (simpler surface, no proxy layer).</p>
+  <div class="meta"><span>cli</span><span>License: Apache-2.0</span><span>★ 87,820 at import</span></div>
+  <div class="access"><b>Access:</b> Single local Rust binary that proxies common dev commands and compresses their output before it reaches the model; no account needed.</div>
+  <footer><a href="https://github.com/rtk-ai/rtk" target="_blank" rel="noopener">Source ↗</a></footer>
 </article>
   </div>
   <p class="empty-note">Nothing here matches the current search or filters.</p>
