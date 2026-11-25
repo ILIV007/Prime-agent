@@ -1,5 +1,5 @@
 {
-  "count": 144,
+  "count": 145,
   "skills": [
     {
       "adaptations": "Original skill, authored in this repository (Cookbook) by Rick on 2026-11-25 — not imported from upstream. The checklist topics were prompted by a short-form video (\"20 things to have Claude do so your app doesn't get sued\"); that list reached us via a search-engine summary rather than a full transcript, so the skill uses checklist topics only, every instruction is written from scratch, and no penalty figures are invented. source.commit records main's HEAD at authoring time; the skill's own history is this repo's history.",
@@ -295,6 +295,30 @@
       "tags": [
         "design-systems",
         "content"
+      ],
+      "special": false
+    },
+    {
+      "name": "draw-icons",
+      "title": "Draw Icons",
+      "description": "Designs and generates a custom SVG icon set matched to the product's visual identity: a per-project icons.yaml DNA (corners, caps, grid, stroke), shared geometry parts, and a bundled CLI that lints, renders and checks every icon at real pixel sizes before wiring the built SVGs into the UI.",
+      "why": "The icon-generation job done as a system rather than one-off drawings: strict shared rules plus rendered proof at 16px. Complements kubai-icons (a ready-made library, link-only here) by drawing icons that do not exist in any pack. Scripts reviewed: local Node CLI, no network or credential access; needs a one-time npm install of yaml and a prebuilt SVG renderer.",
+      "category": "design",
+      "source": {
+        "repo": "ronykax/skills",
+        "url": "https://github.com/ronykax/skills",
+        "path": "skills/draw-icons",
+        "commit": "4b64f8f38b381441d3cb3eb437efebcffff52f80"
+      },
+      "license": "Apache-2.0",
+      "stars_at_import": 130,
+      "added": "2026-11-25",
+      "requires": [],
+      "entry": "full",
+      "adapted": false,
+      "adaptations": "",
+      "tags": [
+        "design-systems"
       ],
       "special": false
     },
