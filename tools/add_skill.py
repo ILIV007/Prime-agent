@@ -53,7 +53,7 @@ def slug_from_url(url):
 
 def api_json(url):
     request = urllib.request.Request(url, headers={"Accept": "application/vnd.github+json",
-                                                   "User-Agent": "prime-skill-add"})
+                                                   "User-Agent": "prime-agent-add"})
     with urllib.request.urlopen(request, timeout=30) as response:
         return json.loads(response.read().decode("utf-8"))
 
@@ -133,7 +133,7 @@ def main():
         raise SystemExit(f"unknown tag(s): {', '.join(unknown)} — vocabulary: "
                          f"{', '.join(sorted(TAGS))}")
 
-    tmp = Path(tempfile.mkdtemp(prefix="prime-skill-import-"))
+    tmp = Path(tempfile.mkdtemp(prefix="prime-agent-import-"))
     try:
         clone = tmp / "repo"
         run(["git", "clone", "--filter=blob:none", "--sparse", "--depth", "1", args.url, str(clone)])

@@ -2,7 +2,7 @@
   "name": "ffmpeg-skill",
   "title": "ffmpeg-skill",
   "description": "A complete local FFmpeg editing system: 42 scripted tools to cut, join, reframe, caption, remove silence, check loudness and export audio/video.",
-  "why": "Deterministic media-file work, fully local and scriptable — nothing else in Prime Skill touches actual audio or video files.",
+  "why": "Deterministic media-file work, fully local and scriptable — nothing else in Prime-agent touches actual audio or video files.",
   "category": "media",
   "source": {
     "repo": "kajisho5/ffmpeg-skill",

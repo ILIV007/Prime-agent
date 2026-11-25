@@ -2,7 +2,7 @@
   "name": "voicestudio",
   "title": "voicestudio",
   "description": "Drives a locally running VoiceStudio backend (REST API or MCP): text-to-speech with saved or designed voices, voice cloning, transcription, and automated dubbing or narration workflows.",
-  "why": "The collection's only voice skill: local-first speech generation and cloning, no cloud TTS account — nothing else in Prime Skill makes or processes spoken audio.",
+  "why": "The collection's only voice skill: local-first speech generation and cloning, no cloud TTS account — nothing else in Prime-agent makes or processes spoken audio.",
   "category": "media",
   "source": {
     "repo": "debpalash/VoiceStudio",
