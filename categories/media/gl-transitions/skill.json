@@ -1,0 +1,24 @@
+{
+  "name": "gl-transitions",
+  "title": "gl-transitions",
+  "description": "Adds image and video transitions — fades, wipes, zooms, glitches, page curls — from the gl-transitions collection of 125 GLSL shaders, with SkSL, GLSL ES 3.00, WGSL and Metal versions where they translate. Covers picking a transition from the catalog and wiring it into WebGL, WebGPU, Skia, Remotion, FFmpeg and native stacks; shaders and catalog come from the npm package or jsdelivr.",
+  "why": "The collection's only shader-transition skill: GSAP animates DOM timelines, but crossfades between images, clips and scenes in shader pipelines need exactly this catalog-plus-integration know-how, and the skill is doc-only with no scripts to trust.",
+  "category": "media",
+  "source": {
+    "repo": "gl-transitions/gl-transitions",
+    "url": "https://github.com/gl-transitions/gl-transitions",
+    "path": "skills/gl-transitions",
+    "commit": "37aef2839ba3fb967b1a6b7f2d5a511dee519487"
+  },
+  "license": "MIT",
+  "stars_at_import": 2275,
+  "added": "2026-11-25",
+  "requires": [],
+  "entry": "full",
+  "adapted": false,
+  "adaptations": "",
+  "tags": [
+    "video"
+  ],
+  "special": false
+}
